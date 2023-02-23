@@ -1,8 +1,21 @@
 import { replaceColor } from 'lottie-colorify'
 import Lottie from 'lottie-react'
+import { useEffect, useState } from 'react'
 import MarketingLottie from '../lotties/marketing.json'
 
 const LottieMkw = ({ color }) => {
+  const [animationData, setAnimationData] = useState(null)
+
+  useEffect(() => {
+    setTimeout(() => {
+      import('../lotties/marketing.json').then(setAnimationData)
+    }, 2000)
+  }, [])
+
+  if (!animationData) {
+    return null
+  }
+
   if (color === 'dark') {
     return (
       <Lottie
