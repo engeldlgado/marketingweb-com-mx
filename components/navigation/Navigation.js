@@ -70,7 +70,7 @@ export default function Navigation ({ setTheme, theme }) {
         </ul>
       </div>
       <div className='navbar-end'>
-        <a className='btn mr-9'>Contacta Ahora</a>
+        <a className='hidden btn mr-9 md:flex'>Contacta Ahora</a>
         {/* Dark/Light button */}
         <label
           className='mr-5 swap swap-rotate'

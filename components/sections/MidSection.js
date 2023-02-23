@@ -1,16 +1,11 @@
 import {
-  GlobeIcon,
-  DesktopComputerIcon,
-  CodeIcon,
-  SupportIcon,
-  FastForwardIcon,
-  RefreshIcon
+  CodeIcon, DesktopComputerIcon, FastForwardIcon, GlobeIcon, RefreshIcon, SupportIcon
 } from '@heroicons/react/outline'
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
 import Logo from '../svg/Logo'
-import MainBlog from '../blog/MainBlog'
-import { PhoneIcon, MailIcon } from '@heroicons/react/solid'
+// import MainBlog from '../blog/MainBlog'
+import { MailIcon, PhoneIcon } from '@heroicons/react/solid'
 const features = [
   {
     name: 'Sitios web personalizados',
@@ -48,12 +43,11 @@ export default function MidSection ({ posts }) {
   return (
     <>
       {/* Feature section with grid */}
-      <div id='about' className='relative py-16 bg-white sm:py-24 dark:bg-base-100'>
+      {/* <div id='about' className='relative py-16 bg-white sm:py-24 dark:bg-gradient-to-b dark:from-black dark:to-base-100'>
         <h1 className='max-w-2xl mx-auto text-2xl font-extrabold tracking-tight text-center text-gray-900 dark:text-indigo-500 sm:text-3xl'>Soluciones de desarrollo web y marketing con 10 años de experiencia</h1>
         <div className='lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
 
           <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
-            {/* Content area */}
             <div className='pt-6'>
               <h2 className='text-base font-semibold tracking-wider uppercase dark:text-white text-secondary'>Acerca de mi</h2>
               <p className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-indigo-500 sm:text-4xl'>
@@ -81,8 +75,8 @@ export default function MidSection ({ posts }) {
             </div>
           </div>
         </div>
-      </div>
-      <div id='work' className='relative bg-white dark:bg-base-100 sm:pt-10 lg:pt-24'>
+      </div> */}
+      <div id='work' className='relative bg-white dark:bg-base-100 sm:pt-10 lg:pt-24 dark:bg-gradient-to-b dark:from-black dark:to-base-100'>
         <div className='max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
           <h2 className='text-base font-semibold tracking-wider uppercase dark:text-white text-secondary'>Soluciones innovadoras para tu presencia en línea</h2>
           <p className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-indigo-500 sm:text-4xl'>
@@ -160,7 +154,7 @@ export default function MidSection ({ posts }) {
               Te mantendré actualizado sobre las últimas tendencias y te guiaré a través de cada paso para convertirte en un experto en el campo. ¡No te pierdas mi información valiosa y únete a mi comunidad de aprendizaje hoy!
             </p>
           </div>
-          <MainBlog posts={posts} postLength={3} />
+          {/* <MainBlog posts={posts} postLength={3} /> */}
         </div>
 
         <div className='flex justify-center mt-12'>

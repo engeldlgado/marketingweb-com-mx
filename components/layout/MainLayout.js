@@ -1,6 +1,7 @@
 import { useStore } from '@/Context/Store'
 import Head from 'next/head'
-import Navigation from '../navigation/Navigation'
+// import Navigation from '../navigation/Navigation'
+import Menu from '../navigation/Menu'
 import { Footer } from '../sections/Footer'
 
 const Layout = ({ children, title, description, ogType, ogUrl, ogImage, ogDescription, schemaObject }) => {
@@ -44,7 +45,11 @@ const Layout = ({ children, title, description, ogType, ogUrl, ogImage, ogDescri
         )}
 
       </Head>
-      <Navigation
+      {/* <Navigation
+        theme={theme}
+        setTheme={setTheme}
+      /> */}
+      <Menu
         theme={theme}
         setTheme={setTheme}
       />
