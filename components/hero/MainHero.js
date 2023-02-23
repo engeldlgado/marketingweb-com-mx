@@ -1,18 +1,11 @@
-import { useStore } from '@/Context/Store'
 import { ChevronRightIcon } from '@heroicons/react/solid'
-import dynamic from 'next/dynamic'
 import Link from 'next/link'
 
 export default function MainHero () {
-  const { theme } = useStore()
-
-  const LottieDynamic = dynamic(() => import('../lotties/LottiePlayer'), {
-    ssr: false
-  })
-
   return (
-    <div id='home' className='pt-10 bg-gradient-to-br from-secondary via-white dark:from-primary dark:via-base-100 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden'>
-      <div className='mx-auto max-w-7xl lg:px-8'>
+    <div id='home' className='lg:pb-14 lg:overflow-hidden'>
+
+      <div className='z-10 mx-auto max-w-7xl lg:px-8'>
         <div className='lg:grid lg:grid-cols-2 lg:gap-8'>
           <div className='max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center'>
             <div className='pt-32 lg:pt-56 lg:pb-24'>
@@ -46,10 +39,15 @@ export default function MainHero () {
           <div className='z-0 mt-12 -mb-0 sm:-mb-0 lg:m-0 lg:mt-16 lg:relative'>
             <div className='max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0'>
               {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
-              <LottieDynamic color={theme} />
+
             </div>
           </div>
         </div>
+      </div>
+      <div className='absolute top-0 w-full h-full bg-gradient-to-br from-secondary via-white to-white dark:from-primary dark:via-black dark:to-black -z-10'>
+        <video autoPlay loop muted playsInline className='absolute top-0 right-0 transform lg:h-full -z-10 -scale-x-100 mix-blend-difference filter hue-rotate-0 dark:hue-rotate-0'>
+          <source src='/videos/mw.mp4' type='video/mp4' />
+        </video>
       </div>
     </div>
   )

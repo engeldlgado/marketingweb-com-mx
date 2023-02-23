@@ -59,10 +59,10 @@ export default function Navigation ({ setTheme, theme }) {
             <Links isNav />
           </ul>
         </div>
-        <Link href='/' aria-label='hidden'><Logo className='hidden w-56 transition-colors duration-500 dark:fill-white fill-black md:ml-20 lg:block' /></Link>
+        <Link href='/' aria-label='hidden'><Logo className='hidden w-32 transition-colors duration-500 dark:fill-white fill-black md:ml-20 lg:block' /></Link>
       </div>
       <div className='flex navbar-center lg:hidden'>
-        <Link href='/' aria-label='hidden'><Logo className='transition-colors duration-500 dark:fill-white w-44 fill-black' /></Link>
+        <Link href='/' aria-label='hidden'><Logo className='w-24 transition-colors duration-500 dark:fill-white fill-black' /></Link>
       </div>
       <div className='hidden navbar-center lg:flex '>
         <ul className='px-1 font-medium menu menu-horizontal'>
@@ -70,7 +70,7 @@ export default function Navigation ({ setTheme, theme }) {
         </ul>
       </div>
       <div className='navbar-end'>
-        <a className='btn'>Get started</a>
+        <a className='btn mr-9'>Contacta Ahora</a>
         {/* Dark/Light button */}
         <label
           className='mr-5 swap swap-rotate'
