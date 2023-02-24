@@ -58,12 +58,12 @@ const FeatureCard = ({ feature }) => {
         </div>
       </div>
       <div
-        className='px-6 pb-8 overflow-hidden rounded-lg backdrop-filter backdrop-blur-sm'
+        className='px-6 pb-8 overflow-hidden bg-opacity-0 rounded-lg backdrop-filter backdrop-blur-[1px]'
       >
         <div className='pt-6 -mt-6 '>
 
-          <h3 className='mt-8 text-lg font-medium tracking-tight text-gray-900'>{feature.name}</h3>
-          <p className='mt-5 text-base text-gray-500 dark:text-gray-50'>{feature.description}</p>
+          <h3 className='mt-8 text-lg font-medium tracking-tight text-transparent'>{feature.name}</h3>
+          <p className='mt-5 text-base text-transparent'>{feature.description}</p>
         </div>
         <div
           className='absolute  bg-gradient-radial from-[rgba(255,255,0,0.25)] dark:from-[rgba(0,255,255,0.5)] dark:via-transparent via-transparent rounded-full opacity-0 pointer-events-none card-pointer w-[500px] h-[500px] -z-10'
