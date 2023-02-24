@@ -8,6 +8,9 @@ module.exports = {
     extend: {
       bgGradientDeg: {
         165: '165deg'
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))'
       }
     }
   },

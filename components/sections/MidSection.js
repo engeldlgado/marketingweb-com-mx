@@ -81,7 +81,7 @@ export default function MidSection ({ posts }) {
       <div id='work' className='relative bg-white dark:bg-base-100 sm:pt-10 lg:pt-24 dark:bg-gradient-to-b dark:from-black dark:to-base-100'>
         <div className='max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
           <h1 className='text-base font-semibold tracking-wider uppercase dark:text-white text-secondary'>Servicios de Marketing Digital para tu Negocio</h1>
-          <p className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-indigo-500 sm:text-4xl'>
+          <p className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
             Destaca en línea con nuestras soluciones personalizadas.
           </p>
           <p className='mx-auto mt-5 text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
