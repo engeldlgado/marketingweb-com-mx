@@ -6,36 +6,38 @@ import Link from 'next/link'
 import Logo from '../svg/Logo'
 // import MainBlog from '../blog/MainBlog'
 import { MailIcon, PhoneIcon } from '@heroicons/react/solid'
+import FeatureCard from '../cards/FeatureCard'
+
 const features = [
   {
-    name: 'Sitios web personalizados',
-    description: 'Te ayudaré a tener un sitio web único y adaptado a tus necesidades, ¡sin preocuparte por el proceso!',
+    name: 'Diseño web personalizado',
+    description: 'Nuestro equipo de diseñadores web creará un sitio web personalizado y atractivo para tu negocio. Adaptamos cada diseño a las necesidades específicas de tu marca.',
     icon: GlobeIcon
   },
   {
-    name: 'Diseño adaptable',
-    description: 'Mi experiencia en diseño web garantizará que tu sitio web sea adaptable a diferentes dispositivos y pantallas, ¡sin esfuerzo adicional por tu parte!',
+    name: 'Diseño responsivo',
+    description: 'Nos aseguramos de que tu sitio web se adapte a diferentes dispositivos y tamaños de pantalla, para garantizar una experiencia óptima para el usuario.',
     icon: DesktopComputerIcon
   },
   {
-    name: 'SPA y WebApps',
-    description: 'Te ofrezco mi experiencia en JavaScript, Nextjs y React para crear aplicaciones web de una sola página y WebApps dinámicas y eficientes.',
-    icon: CodeIcon
-  },
-  {
-    name: 'Rendimiento óptimo',
-    description: 'Mi enfoque en optimización de rendimiento asegurará que tu sitio web sea rápido y eficiente, ¡sin sacrificar la calidad!',
+    name: 'SEO Efectivo',
+    description: 'Implementamos técnicas de SEO probadas y efectivas para mejorar el posicionamiento de tu sitio web en los motores de búsqueda y atraer tráfico orgánico.',
     icon: FastForwardIcon
   },
   {
-    name: 'Integraciones fáciles',
-    description: 'Te ayudaré a integrar servicios externos para añadir funcionalidades y mejorar la experiencia de usuario en tu sitio web, ¡sin complicaciones!',
+    name: 'Gestión de Redes Sociales',
+    description: 'Creamos y gestionamos perfiles en redes sociales para aumentar la visibilidad de tu marca y atraer a nuevos clientes.',
     icon: RefreshIcon
   },
   {
-    name: 'Soporte siempre disponible',
-    description: 'Siempre estaré disponible para brindar soporte técnico y realizar mantenimiento en tu sitio web, ¡sin preocupaciones!',
+    name: 'Contenido de Calidad',
+    description: 'Creamos contenido de calidad y relevante para tu sitio web y redes sociales, para atraer a tu audiencia y aumentar el engagement.',
     icon: SupportIcon
+  },
+  {
+    name: 'Análisis y Optimización',
+    description: 'Analizamos y optimizamos tu sitio web para mejorar la experiencia del usuario y aumentar la tasa de conversión de tu sitio web.',
+    icon: CodeIcon
   }
 ]
 
@@ -78,36 +80,24 @@ export default function MidSection ({ posts }) {
       </div> */}
       <div id='work' className='relative bg-white dark:bg-base-100 sm:pt-10 lg:pt-24 dark:bg-gradient-to-b dark:from-black dark:to-base-100'>
         <div className='max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
-          <h2 className='text-base font-semibold tracking-wider uppercase dark:text-white text-secondary'>Soluciones innovadoras para tu presencia en línea</h2>
+          <h1 className='text-base font-semibold tracking-wider uppercase dark:text-white text-secondary'>Servicios de Marketing Digital para tu Negocio</h1>
           <p className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-indigo-500 sm:text-4xl'>
-            Lo que necesitas para sobresalir en línea
+            Destaca en línea con nuestras soluciones personalizadas.
           </p>
           <p className='mx-auto mt-5 text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
-            Mi experiencia en diseño web y marketing te ayudará a destacar en línea y atraer más clientes potenciales. Echa un vistazo a mi trabajo y contáctame para saber más sobre cómo puedo ayudarte a alcanzar tus metas.
+            En nuestra agencia de marketing digital, nos especializamos en el diseño web, SEO y gestión de redes sociales. Creamos estrategias innovadoras y efectivas para ayudar a tu negocio a sobresalir en línea y atraer más clientes potenciales.
           </p>
 
           <div className='mt-12'>
             <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'>
               {features.map((feature) => (
-                <div key={feature.name} className='pt-6'>
-                  <div className='flow-root px-6 pb-8 rounded-lg bg-gray-50 dark:bg-gray-900'>
-                    <div className='-mt-6'>
-                      <div>
-                        <span className='inline-flex items-center justify-center p-3 rounded-md shadow-lg bg-gradient-to-r dark:from-primary dark:to-indigo-400 from-secondary to-orange-300'>
-                          <feature.icon className='w-6 h-6 text-white' aria-hidden='true' />
-                        </span>
-                      </div>
-                      <h3 className='mt-8 text-lg font-medium tracking-tight text-gray-900 dark:text-indigo-500'>{feature.name}</h3>
-                      <p className='mt-5 text-base text-gray-500 dark:text-gray-50'>{feature.description}</p>
-                    </div>
-                  </div>
-                </div>
+                <FeatureCard key={feature.name} feature={feature} />
               ))}
             </div>
           </div>
 
           <p className='py-16 mx-auto text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
-            Con mi enfoque innovador y llamativo en diseño web y marketing, puedo ayudarte a mejorar tu presencia en línea y atraer más clientes potenciales. No dudes en ponerte en contacto conmigo para obtener más información sobre cómo puedo ayudarte a alcanzar tus metas.
+            En nuestra agencia de marketing digital, te ofrecemos soluciones personalizadas para mejorar la presencia en línea de tu negocio. Contáctanos para obtener más información sobre cómo podemos ayudarte a alcanzar tus objetivos de marketing.
           </p>
         </div>
       </div>
@@ -119,8 +109,8 @@ export default function MidSection ({ posts }) {
             <div className='absolute inset-0 opacity-50 filter saturate-0 mix-blend-multiply'>
               <Image
                 className='object-cover lg:h-full lg:w-full'
-                src='/imagenes/diseno-web-innovador.jpg'
-                alt='La programación es el motor de la innovación'
+                src='/images/marketing-digital-seo.jpg'
+                alt='Desbloquea el potencial de tu negocio en línea'
                 fill
               />
             </div>
@@ -128,12 +118,12 @@ export default function MidSection ({ posts }) {
               <Logo className='w-auto h-12 fill-white' />
               <blockquote className='mt-6 text-white'>
                 <p className='text-xl font-medium sm:text-2xl'>
-                  La programación es el motor de la innovación. Con ella, podemos dar vida a nuestras ideas y transformar el mundo a nuestro alrededor.
+                  El marketing digital y el SEO son las claves para desbloquear el potencial de tu negocio en línea, mientras que el diseño web cautiva a tus clientes potenciales.
                 </p>
                 <footer className='mt-6'>
                   <p className='flex flex-col font-medium'>
-                    <span>Engelbert Vizcaya</span>
-                    <span className='text-sm'>Full-Stack Developer</span>
+                    <span>Armando Desentis</span>
+                    <sp className='text-sm'>SEO Marketing Expert</sp>
                   </p>
                 </footer>
               </blockquote>
