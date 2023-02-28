@@ -76,7 +76,8 @@ export default function MidSection ({ posts }) {
                   className='absolute inset-0 object-cover w-full h-full'
                   src='/images/posicionamiento-seo.jpg'
                   alt='Posicionamiento en Google'
-                  fill
+                  width={768}
+                  height={768}
                 />
                 {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
                 <div className='absolute inset-0 opacity-80 bg-gradient-to-t from-primary to-transparent' />
@@ -137,8 +138,9 @@ export default function MidSection ({ posts }) {
                 <Image
                   className='absolute inset-0 object-cover w-full h-full'
                   src='/images/diseno-web.jpg'
-                  alt='Posicionamiento en Google'
-                  fill
+                  alt='Diseño Web Personalizado y Único'
+                  width={1152}
+                  height={768}
                 />
                 {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
                 <div className='absolute inset-0 opacity-80 bg-gradient-to-t from-primary to-transparent' />
@@ -185,7 +187,8 @@ export default function MidSection ({ posts }) {
                   className='absolute inset-0 object-cover w-full h-full'
                   src='/images/aplicaciones-empresariales.jpg'
                   alt='Aplicaciones Empresariales'
-                  fill
+                  width={1152}
+                  height={768}
                 />
                 {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
                 <div className='absolute inset-0 opacity-80 bg-gradient-to-t from-primary to-transparent' />

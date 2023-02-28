@@ -56,7 +56,7 @@ export default function Menu ({ setTheme, theme }) {
             </Popover.Button>
           </div>
           <div>
-            <Link href='/' aria-label='hidden'><Logo className='w-20 md:w-24' primary='fill-white' secondary='fill-primary' darkSecondary='fill-white' /></Link>
+            <Link href='/' aria-label='hidden'><Logo className='w-20 md:w-24' primary='fill-white' secondary='fill-primary' /></Link>
           </div>
 
           <div className='hidden md:flex-1 md:flex md:items-center md:justify-center'>
