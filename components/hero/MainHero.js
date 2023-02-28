@@ -59,7 +59,6 @@ export default function MainHero () {
       <div className='absolute top-0 w-full h-full overflow-hidden bg-gradient-165 from-primary via-black to-black dark:from-primary dark:via-black dark:to-black -z-10'>
         <video
           autoPlay loop muted playsInline className='absolute top-0 right-0 transform lg:h-full -z-10 mix-blend-multiply dark:right-0 -rotate-6 filter'
-          poster='/images/search.jpg'
         >
           <source src='/videos/search.mp4' type='video/mp4' />
         </video>
