@@ -42,7 +42,7 @@ export default function MainHero () {
           <div className='mt-12 -mb-0 sm:-mb-0 lg:m-0 lg:mt-36 lg:relative'>
             <div className='max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0'>
               {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
-              <Image src='/images/hero.svg' className='z-0 hidden duration-500 transform md:flex hover:scale-105 ' alt='Hero' width={800} height={800} />
+              <Image src='/images/hero.svg' className='z-0 hidden duration-500 transform md:flex hover:scale-105 ' alt='Hero' width={800} height={800} priority />
 
             </div>
           </div>
