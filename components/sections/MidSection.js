@@ -7,6 +7,7 @@ import Logo from '../svg/Logo'
 // import MainBlog from '../blog/MainBlog'
 import { MailIcon, PhoneIcon } from '@heroicons/react/solid'
 import FeatureCard from '../cards/FeatureCard'
+import FlowerLogo from '../svg/LogoFlowers'
 
 const features = [
   {
@@ -44,20 +45,22 @@ const features = [
 export default function MidSection ({ posts }) {
   return (
     <>
+      <div className='z-50 h-32 -mt-10 bg-gradient-to-b from-black via-white to-white dark:from-black dark:to-black md:mt-0' />
       {/* Feature section with grid */}
-      {/* <div id='about' className='relative py-16 bg-white sm:py-24 dark:bg-gradient-to-b dark:from-black dark:to-base-100'>
-        <h1 className='max-w-2xl mx-auto text-2xl font-extrabold tracking-tight text-center text-gray-900 dark:text-indigo-500 sm:text-3xl'>Soluciones de desarrollo web y marketing con 10 años de experiencia</h1>
-        <div className='lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
+      <div id='ventas' className='relative py-16 -mt-24 bg-transparent dark:bg-base-100 sm:pt-10 lg:pt-24 dark:bg-gradient-to-b dark:from-black dark:to-base-100'>
+        <p className='max-w-[90%] md:max-w-[30%] mx-auto text-sm  text-center  font-semibold tracking-wider uppercase dark:text-white text-primary'>Soluciones Innovadoras</p>
+        <h1 className='max-w-[90%] md:max-w-[30%] mx-auto text-2xl font-extrabold tracking-tight text-center text-gray-900 dark:text-primary sm:text-4xl'>Servicios de Marketing Digital para tu Negocio</h1>
+        <div className='md:pt-10 lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
 
           <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
             <div className='pt-6'>
-              <h2 className='text-base font-semibold tracking-wider uppercase dark:text-white text-secondary'>Acerca de mi</h2>
-              <p className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-indigo-500 sm:text-4xl'>
-                El desarrollo web es mi pasión
-              </p>
+              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Llega a los primeros lugares</p>
+              <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+                Incrementa tus ventas
+              </h2>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
-                  Soy Engelbert Vizcaya, Full Stack Developer con más de 10 años de experiencia en la industria. Mi experiencia incluye el uso de tecnologías como JavaScript, React, NextJS, Node.js, GraphQL, MongoDB y WordPress, así como HTML/CSS. Mi objetivo es entregar soluciones innovadoras y centradas en el cliente que superen las expectativas del negocio y cumplan los objetivos del proyecto. Soy una persona emprendedora y siempre busco entregar proyectos de alta calidad y cumplir con los requerimientos del cliente. Soy un buen colaborador en equipo con excelentes habilidades de comunicación y una pasión por la innovación.
+                  En <b>Marketing Web</b>, estamos orgullosos de ofrecer amplias técnicas de servicio de SEO que brindan a nuestros clientes las herramientas necesarias para mejorar el posicionamiento de sus sitios web en Google. Un ejemplo de esto es el caso de un vendedor de productos de floristería en la Ciudad de México que quería mejorar sus métricas de búsqueda. Con nuestra ayuda, lograron convertirse en el vendedor de flores mejor clasificado en su región. Nuestras prácticas de SEO tuvieron un papel importante en impulsar su sitio web al primer puesto de los resultados de búsqueda.
                 </p>
 
               </div>
@@ -67,20 +70,161 @@ export default function MidSection ({ posts }) {
           <div className='relative order-first py-16 lg:py-0 '>
 
             <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20'>
-              <Image
-                className='inset-0 object-cover w-full h-full'
-                src='/imagenes/coding.png'
-                alt='Coding'
-                width={560}
-                height={317}
-              />
+              {/* Testimonial card */}
+              <div className='relative pt-64 pb-10 overflow-hidden duration-500 transform shadow-xl rounded-2xl hover:scale-105'>
+                <Image
+                  className='absolute inset-0 object-cover w-full h-full'
+                  src='/images/posicionamiento-seo.jpg'
+                  alt='Posicionamiento en Google'
+                  fill
+                />
+                {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
+                <div className='absolute inset-0 opacity-80 bg-gradient-to-t from-primary to-transparent' />
+                {/* <div className='absolute inset-0 opacity-30 bg-gradient-to-t from-primary to-accent' /> */}
+                <div className='relative px-8'>
+                  <div>
+
+                    <FlowerLogo className='h-20' />
+                  </div>
+                  <blockquote className='mt-8'>
+                    <div className='relative text-lg font-medium text-white md:flex-grow'>
+                      <svg
+                        className='absolute top-0 left-0 w-8 h-8 transform -translate-x-3 -translate-y-2 text-primary'
+                        fill='currentColor'
+                        viewBox='0 0 32 32'
+                        aria-hidden='true'
+                      >
+                        <path d='M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z' />
+                      </svg>
+                      <p className='relative'>
+                        Marketing Web me ayudó a posicionar mi florería en el primer lugar de búsqueda en mi área. Su experiencia en SEO y enfoque personalizado tuvo un impacto significativo en mi negocio. ¡Los recomiendo altamente!
+                      </p>
+                    </div>
+
+                    <footer className='mt-4'>
+                      <p className='text-base font-semibold text-indigo-200'>Diego Alcantara, CEO de Florerias CDMX</p>
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div> */}
-      <div id='work' className='relative bg-white dark:bg-base-100 sm:pt-10 lg:pt-24 dark:bg-gradient-to-b dark:from-black dark:to-base-100'>
+      </div>
+      <div id='social' className='relative bg-white dark:bg-base-100'>
+        <div className=' lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
+
+          <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
+            <div className='pt-6'>
+              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Destaca entre la competencia con un</p>
+              <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+                Diseño web impactante
+              </h2>
+              <div className='mt-6 space-y-6 text-gray-500'>
+                <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
+                  Nuestro equipo de expertos en diseño web y SEO puede ayudar a crear un sitio web atractivo y fácil de usar que esté optimizado para los motores de búsqueda. Mejore su presencia en línea y aumente sus ventas con nuestro diseño web personalizado.
+                </p>
+
+              </div>
+            </div>
+
+          </div>
+          <div className='relative order-first py-16 md:order-last lg:py-0 '>
+
+            <div className='relative max-w-md px-4 pb-20 mx-auto sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none'>
+              {/* Testimonial card */}
+              <div className='relative pt-64 pb-10 overflow-hidden duration-500 transform shadow-xl rounded-2xl hover:scale-105 min-h-[550px]'>
+                <Image
+                  className='absolute inset-0 object-cover w-full h-full'
+                  src='/images/diseno-web.jpg'
+                  alt='Posicionamiento en Google'
+                  fill
+                />
+                {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
+                <div className='absolute inset-0 opacity-80 bg-gradient-to-t from-primary to-transparent' />
+                <div className='absolute px-8 bottom-10'>
+
+                  <blockquote className='h-full mt-8'>
+
+                    <footer className='mt-4 text-lg font-medium text-white md:flex-grow'>
+                      <p className=' drop-shadow-sm'>
+                        Diseños Únicos y Personalizados
+                      </p>
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='coding' className='relative bg-white dark:bg-base-100'>
+        <div className=' lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
+
+          <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
+            <div className='pt-6'>
+              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Código de calidad</p>
+              <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+                Aplicaciones Empresariales
+              </h2>
+              <div className='mt-6 space-y-6 text-gray-500'>
+                <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
+                  Optimizamos sus aplicaciones empresariales y mejoramos el rendimiento del código para maximizar la eficiencia y la productividad de su negocio. Aproveche al máximo sus aplicaciones y aumente su visibilidad en línea con Marketing Web.
+                </p>
+
+              </div>
+            </div>
+
+          </div>
+          <div className='relative order-first py-16 md:order-first lg:py-16 '>
+
+            <div className='relative max-w-md px-4 pb-20 mx-auto sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none'>
+              {/* Testimonial card */}
+              <div className='relative pt-64 pb-10 overflow-hidden duration-500 transform shadow-xl rounded-2xl hover:scale-105 min-h-[550px]'>
+                <Image
+                  className='absolute inset-0 object-cover w-full h-full'
+                  src='/images/aplicaciones-empresariales.jpg'
+                  alt='Aplicaciones Empresariales'
+                  fill
+                />
+                {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
+                <div className='absolute inset-0 opacity-80 bg-gradient-to-t from-primary to-transparent' />
+                <div className='absolute px-8 bottom-10'>
+
+                  <blockquote className='h-full mt-8'>
+
+                    <footer className='mt-4 text-lg font-medium text-white md:flex-grow'>
+                      <p className=' drop-shadow-sm'>
+                        Aplicaciones Empresariales a la medida
+                      </p>
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='code' className='relative bg-white dark:bg-base-100 sm:pt-10 lg:pt-6'>
         <div className='max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
-          <h1 className='text-base font-semibold tracking-wider uppercase dark:text-white text-secondary'>Servicios de Marketing Digital para tu Negocio</h1>
+          <h2 className='text-base font-semibold tracking-wider uppercase dark:text-white text-primary'>Servicios Garantizado</h2>
+          <p className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+            Soluciones Inmediatas
+          </p>
+          <p className='mx-auto mt-5 text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
+            En Marketing Web, solucionamos tus problemas de código empresarial y te ayudamos a destacar en línea con nuestros servicios de marketing digital. Agenda una cita ahora con nuestros expertos.
+          </p>
+
+          <div className='mt-12'>
+            <Image className='rounded-lg shadow-lg' src='/images/codigo.jpg' alt='Marketing Digital' width='1920' height='980' />
+            <div className='absolute bottom-0 left-0 z-50 w-full h-72 bg-gradient-to-t from-white via-transparent to-transparent dark:from-base-100' />
+          </div>
+        </div>
+      </div>
+
+      <div id='work' className='relative bg-white dark:bg-base-100 sm:pt-10 lg:pt-24'>
+        <div className='max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
+          <h2 className='text-base font-semibold tracking-wider uppercase dark:text-white text-primary'>Servicios de Marketing Digital para tu Negocio</h2>
           <p className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
             Destaca en línea con nuestras soluciones personalizadas.
           </p>
@@ -103,9 +247,9 @@ export default function MidSection ({ posts }) {
       </div>
 
       {/* Testimonial section */}
-      <div className='py-16 bg-white dark:bg-base-100 lg:py-12'>
-        <div className='relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8'>
-          <div className='relative px-8 py-24 overflow-hidden shadow-2xl bg-secondary dark:bg-primary rounded-xl lg:px-16 lg:grid lg:grid-cols-2 lg:gap-x-8'>
+      <div className='py-16 pb-12 bg-white dark:bg-base-100 lg:pt-6'>
+        <div className='relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:pb-12'>
+          <div className='relative px-8 py-24 overflow-hidden shadow-2xl bg-primary dark:bg-primary rounded-xl lg:px-16 lg:grid lg:grid-cols-2 lg:gap-x-8'>
             <div className='absolute inset-0 opacity-50 filter saturate-0 mix-blend-multiply'>
               <Image
                 className='object-cover lg:h-full lg:w-full'
@@ -141,7 +285,7 @@ export default function MidSection ({ posts }) {
               Recursos Útiles
             </p>
             <p className='mx-auto mt-5 text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
-              Te mantendré actualizado sobre las últimas tendencias y te guiaré a través de cada paso para convertirte en un experto en el campo. ¡No te pierdas mi información valiosa y únete a mi comunidad de aprendizaje hoy!
+              Descubre las mejores técnicas de marketing digital, SEO y diseño web en nuestro blog y maximiza tu presencia en línea para atraer más clientes potenciales.
             </p>
           </div>
           {/* <MainBlog posts={posts} postLength={3} /> */}
@@ -156,10 +300,10 @@ export default function MidSection ({ posts }) {
 
       {/* CTA Section */}
       <div id='contact' className='relative bg-gray-900 dark:bg-neutral'>
-        <div className='relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2'>
+        <div className='relative h-56 bg-primary sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2'>
           <Image
             className='object-cover w-full h-full'
-            src='/imagenes/soporte-especializado.jpg'
+            src='/images/contacto.jpg'
             alt='Mentoring y soporte especializado'
             width={927}
             height={504}

@@ -19,6 +19,7 @@
     "lottie-react": "^2.4.0",
     "next": "13.1.6",
     "react": "18.2.0",
+    "react-calendly": "^4.1.1",
     "react-dom": "18.2.0",
     "tailwindcss-gradient": "^1.0.1"
   },

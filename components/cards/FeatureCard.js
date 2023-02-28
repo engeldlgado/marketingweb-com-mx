@@ -47,7 +47,7 @@ const FeatureCard = ({ feature }) => {
     >
       {/* 3d card hover effect framer motion */}
 
-      <span className='relative z-20 inline-flex items-center justify-center p-3 -mb-16 rounded-md shadow-lg bg-gradient-to-r dark:from-primary dark:to-indigo-400 from-secondary to-orange-300'>
+      <span className='relative z-20 inline-flex items-center justify-center p-3 -mb-16 rounded-md shadow-lg bg-gradient-to-r dark:from-primary dark:to-indigo-400 from-primary to-orange-300'>
         <feature.icon className='w-6 h-6 text-white' aria-hidden='true' />
       </span>
       <div className='absolute z-10 w-full px-6 pb-8 overflow-hidden bg-gray-100 bg-opacity-25 rounded-lg shadow-lg backdrop-filter backdrop-blur-sm h-fit dark:bg-gray-900 dark:bg-opacity-25'>

@@ -49,11 +49,13 @@ const Layout = ({ children, title, description, ogType, ogUrl, ogImage, ogDescri
         theme={theme}
         setTheme={setTheme}
       /> */}
+
       <Menu
         theme={theme}
         setTheme={setTheme}
       />
       <main>
+        <section id='contact' data-theme='light' />
         {children}
       </main>
       <Footer />

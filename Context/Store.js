@@ -14,8 +14,8 @@ export function StoreProvider ({ children }) {
       if (theme) {
         setTheme(theme)
       } else {
-        localStorage.setItem('theme', 'light')
-        setTheme('light')
+        localStorage.setItem('theme', 'dark')
+        setTheme('dark')
       }
     }
   }, [])
