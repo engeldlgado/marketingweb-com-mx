@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Logo from '../svg/Logo'
 // import MainBlog from '../blog/MainBlog'
-import { MailIcon, PhoneIcon } from '@heroicons/react/solid'
+import MainBlog from '../blog/MainBlog'
 import FeatureCard from '../cards/FeatureCard'
 import FlowerLogo from '../svg/LogoFlowers'
 
@@ -291,7 +291,7 @@ export default function MidSection ({ posts }) {
               Descubre las mejores técnicas de marketing digital, SEO y diseño web en nuestro blog y maximiza tu presencia en línea para atraer más clientes potenciales.
             </p>
           </div>
-          {/* <MainBlog posts={posts} postLength={3} /> */}
+          <MainBlog posts={posts} postLength={3} />
         </div>
 
         <div className='flex justify-center mt-12'>
@@ -301,79 +301,6 @@ export default function MidSection ({ posts }) {
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div id='contact' className='relative bg-gray-900 dark:bg-neutral'>
-        <div className='relative h-56 bg-primary sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2'>
-          <Image
-            className='object-cover w-full h-full'
-            src='/images/contacto.jpg'
-            alt='Mentoring y soporte especializado'
-            width={927}
-            height={504}
-          />
-          <div
-            aria-hidden='true'
-            className='absolute inset-0 bg-gradient-to-b from-white to-orange-200 dark:from-white dark:to-primary mix-blend-multiply'
-          />
-        </div>
-        <div className='relative max-w-md px-4 py-12 mx-auto sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32'>
-          <div className='md:ml-auto md:w-1/2 md:pl-10'>
-            <h2 className='text-base font-semibold tracking-wider text-gray-300 uppercase'>
-              Mi compromiso contigo
-            </h2>
-            <p className='mt-2 text-3xl font-extrabold tracking-tight text-white sm:text-4xl'>Estoy aquí para ayudarte</p>
-            <p className='mt-3 text-lg text-gray-300'>
-              Mi compromiso contigo es brindarte un soporte excepcional en todo momento. Estoy disponible para ayudarte en cualquier problema o pregunta que puedas tener. ¡No dudes en contactarme!
-            </p>
-            <div className='mt-8'>
-              <div className='inline-flex'>
-                {/* <a
-                  href='#'
-                  className='inline-flex items-center justify-center px-5 py-3 text-base font-medium text-gray-900 bg-white border border-transparent rounded-md hover:bg-gray-50'
-                >
-                  Contacto
-                  <ExternalLinkIcon className='w-5 h-5 ml-3 -mr-1 text-gray-400' aria-hidden='true' />
-                </a> */}
-                {/* Contact Info */}
-                <div className='flex justify-center px-5 py-3 font-medium'>
-                  <div className='flex items-center mr-1 text-white duration-300 hover:text-primary'>
-                    <MailIcon className='w-5 h-5 mr-1 ' aria-hidden='true' />
-                    <a href='mailto:hola@engeldelgado.com' itemProp='email'>
-                      hola@engeldelgado.com
-                    </a>
-                  </div>
-                  <div className='flex items-center ml-5 text-white duration-300 hover:text-primary'>
-                    <PhoneIcon className='w-5 h-5 mr-1' aria-hidden='true' />
-                    <a href='tel:+584242081347' itemProp='telephone'>
-                      +58 424 208 13 47
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='hidden mt-8' itemScope itemType='http://schema.org/Person'>
-              <span itemProp='name'>Engel Delgado</span>
-              <div itemProp='jobTitle'>Full Stack Developer</div>
-              <div itemProp='description'>El desarrollo web es mi pasión. Soy Engelbert Vizcaya, Full Stack Developer con más de 10 años de experiencia en la industria. Mi experiencia incluye el uso de tecnologías como JavaScript, React, NextJS, Node.js, GraphQL, MongoDB y WordPress, así como HTML/CSS. Mi objetivo es entregar soluciones innovadoras y centradas en el cliente que superen las expectativas del negocio y cumplan los objetivos del proyecto. Soy una persona emprendedora y siempre busco entregar proyectos de alta calidad y cumplir con los requerimientos del cliente. Soy un buen colaborador en equipo con excelentes habilidades de comunicación y una pasión por la innovación.</div>
-              <div itemProp='address' itemScope itemType='http://schema.org/PostalAddress'>
-                <span itemProp='streetAddress'>Casco central</span>
-                <span itemProp='addressLocality'>Los Teques</span>,
-                <span itemProp='addressRegion'>Miranda</span>
-                <span itemProp='postalCode'>1201</span>
-                <span itemProp='addressCountry'>Venezuela</span>
-              </div>
-              <div>
-                Tel: <span itemProp='telephone'>+58 424 208 13 47</span>
-                Correo: <span itemProp='email'>hola@engeldelgado.com</span>
-              </div>
-            </div>
-            <div className='hidden' itemScope itemType='http://schema.org/Service'>
-              <span itemProp='name'>Servicios de desarrollo web y marketing</span>
-              <div itemProp='description'>Ofrezco servicios de diseño web personalizado, diseño adaptable, desarrollo de aplicaciones web de una sola página (SPA) y WebApps, optimización de rendimiento, integraciones fáciles y soporte técnico siempre disponible para mejorar tu presencia en línea y atraer más clientes potenciales. </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </>
   )
 }

@@ -1,46 +1,50 @@
+
 import { ChevronRightIcon } from '@heroicons/react/solid'
-import Image from 'next/image'
 import Link from 'next/link'
 
 export default function BlogHero () {
   return (
-    <div className='pt-10 bg-gradient-to-br from-secondary via-white dark:from-primary dark:via-base-100 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden'>
-      <div className='mx-auto max-w-7xl lg:px-8'>
-        <div className='lg:grid lg:grid-cols-2 lg:gap-8'>
-          <div className='max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center'>
-            <div className='pt-32 lg:pt-56 lg:pb-24'>
+    <div className='relative pt-16'>
+      <img
+        src='/images/blog.jpg'
+        className='absolute inset-0 object-cover w-full h-full'
+        alt=''
+      />
+      <div className='relative'>
+        {/* Overlay gradient opacity */}
+        <div className='absolute inset-0 bg-gradient-to-br from-[rgba(255,255,255,0.5)] via-[rgba(199,82,0,0.5)] dark:via-[rgba(13,71,161,0.5)] dark:from-[rgba(0,0,0,0.2)] ' />
+        <svg
+          className='absolute inset-x-0 text-gray-50 -bottom-1 dark:text-base-100'
+          viewBox='0 0 1160 163'
+        >
+          <path
+            fill='currentColor'
+            d='M-164 13L-104 39.7C-44 66 76 120 196 141C316 162 436 152 556 119.7C676 88 796 34 916 13C1036 -8 1156 2 1216 7.7L1276 13V162.5H1216C1156 162.5 1036 162.5 916 162.5C796 162.5 676 162.5 556 162.5C436 162.5 316 162.5 196 162.5C76 162.5 -44 162.5 -104 162.5H-164V13Z'
+          />
+        </svg>
+        <div className='relative px-4 py-16 mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20'>
+          <div className='flex flex-col items-center justify-between xl:flex-row'>
+            <div className='w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12'>
               <Link
                 href='/'
-                className='inline-flex items-center p-1 pr-2 text-white bg-black rounded-full sm:text-base lg:text-sm xl:text-base hover:text-gray-200'
+                className='inline-flex items-center p-1 pr-2 text-[0.5rem] text-white bg-black rounded-full sm:text-base lg:text-sm xl:text-base hover:text-gray-200'
               >
-                <span className='px-3 py-0.5 dark:text-white text-black text-xs font-semibold leading-5 uppercase tracking-wide dark:bg-primary bg-secondary rounded-full'>
-                  Home
+                <span className='px-3 py-0.5 dark:text-white text-white text-[0.6rem] md:text-xs font-semibold leading-5 uppercase tracking-wide dark:bg-primary bg-primary rounded-full'>
+                  Inicio
                 </span>
-                <span className='ml-4 text-sm'>Dev's Blog</span>
+                <span className='ml-4 md:text-sm text-[0.6rem]'>Nuestro Blog</span>
                 <ChevronRightIcon className='w-5 h-5 ml-2 text-gray-500' aria-hidden='true' />
               </Link>
-              <h2 className='mt-4 text-2xl font-extrabold tracking-tight transition-colors duration-500 dark:text-white text-neutral sm:mt-5 sm:text-4xl lg:mt-6 xl:text-4xl'>
-                <span className='block text-secondary dark:text-primary'>&lt;DEV&#39;s /&gt; Blog</span>
+              <h2 className='mt-4 text-4xl font-extrabold tracking-tight text-center text-white transition-colors duration-500 dark:text-white md:text-left sm:mt-5 sm:text-5xl lg:mt-6 xl:text-5xl'>
+                <span className='block'>Nuestro Blog</span>
+                {/* <span className='block text-primary dark:text-primary'> Marketing Digital</span> */}
               </h2>
-              <p className='mt-3 text-base dark:text-gray-300 text-neutral sm:mt-5 sm:text-xl lg:text-lg xl:text-xl'>
-                Únete a mí en el mundo del desarrollo web como Full Stack Developer. Te enseñaré las últimas tecnologías y tendencias para crear proyectos impresionantes. ¡Sigue mi blog para convertirte en un experto en desarrollo Full Stack!
+              <p className='mt-3 text-base text-center text-gray-100 md:text-left dark:text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl'>
+                ¿Quieres impulsar tu negocio en línea? Encuentra consejos y estrategias en nuestro blog de marketing digital, SEO y diseño web.
               </p>
-
-              <div className='min-h-fit' />
             </div>
-          </div>
-
-          <div className='z-0 mt-12 -mb-0 sm:-mb-0 lg:m-0 lg:mt-16 lg:relative'>
-            <div className='max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0'>
-              {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
-              <Image
-                className='w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none'
-                src='/imagenes/blog.svg'
-                alt='Engel Delgado Full Stack Developer'
-                width={769}
-                height={624}
-                priority // This image is critical to the page, so it should be loaded first
-              />
+            <div className='w-full max-w-xl xl:px-8 xl:w-5/6'>
+              <img src='/images/telefono.png' alt='' />
             </div>
           </div>
         </div>

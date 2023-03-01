@@ -5,7 +5,7 @@ import Calendly from '../buttons/Calendly'
 
 export default function MainHero () {
   return (
-    <div id='home' className=' lg:pb-14 lg:overflow-hidden'>
+    <div id='home' className='py-12 lg:py-20 lg:overflow-hidden'>
 
       <div className=' mx-auto max-w-[80%] lg:px-8'>
         <div className='lg:grid lg:grid-cols-2 lg:gap-8'>
@@ -26,7 +26,7 @@ export default function MainHero () {
                 <span className='block'>Tu página en el</span>
                 <span className='block text-primary dark:text-primary'> Primer Lugar</span>
               </h2>
-              <p className='mt-3 text-base text-gray-100 dark:text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl'>
+              <p className='mt-3 text-base text-center text-gray-100 md:text-left dark:text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl'>
                 En nuestra agencia de marketing digital, diseño web y SEO, creemos en el poder de la creatividad y la innovación para llevar a nuestros clientes al éxito en línea. Confía en nuestro equipo de expertos para diseñar estrategias efectivas y personalizadas para tu negocio.
               </p>
               <div className='flex flex-col items-center gap-6 mt-10 text-center duration-700 transform md:flex-row sm:mt-12 hover:scale-110'>
@@ -56,7 +56,7 @@ export default function MainHero () {
           <source src='/videos/mw.mp4' type='video/mp4' />
         </video>
       </div> */}
-      <div className='absolute top-0 w-full h-full overflow-hidden bg-gradient-165 from-primary via-black to-black dark:from-primary dark:via-black dark:to-black -z-10'>
+      <div className='absolute top-0 w-full h-full overflow-hidden bg-gradient-165 from-secondary via-black to-black dark:from-primary dark:via-black dark:to-black -z-10'>
         <video
           autoPlay loop muted playsInline className='absolute top-0 right-0 transform lg:h-full -z-10 mix-blend-multiply dark:right-0 -rotate-6 filter'
         >
