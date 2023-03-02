@@ -7,6 +7,7 @@ import Logo from '../svg/Logo'
 // import MainBlog from '../blog/MainBlog'
 import dynamic from 'next/dynamic'
 // import FeatureCard from '../cards/FeatureCard'
+import { useEffect, useState } from 'react'
 import FlowerLogo from '../svg/LogoFlowers'
 
 const features = [
@@ -42,15 +43,16 @@ const features = [
   }
 ]
 
-const DynamicBlog = dynamic(() => import('../blog/MainBlog'), {
-  loading: () => <p className='text-center'>Cargando...</p>
-})
-
-const DynamicFeatureCard = dynamic(() => import('../cards/FeatureCard'), {
-  loading: () => <p className='text-center'>Cargando...</p>
-})
-
 export default function MidSection ({ posts }) {
+  const [pageLoaded, setPageLoaded] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setPageLoaded(true)
+    }, 1500)
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <>
       <div className='z-50 h-32 -mt-10 bg-gradient-to-b from-black via-white to-white dark:from-black dark:to-black md:mt-0' />
@@ -245,9 +247,18 @@ export default function MidSection ({ posts }) {
 
           <div className='mt-12'>
             <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'>
-              {features.map((feature) => (
-                <DynamicFeatureCard key={feature.name} feature={feature} />
-              ))}
+              {pageLoaded && features.map((feature) => {
+                const DynamicFeatures = dynamic(() => import('../cards/FeatureCard'), {
+                  loading: () => <p>Loading...</p>,
+                  ssr: false
+                })
+                return (
+                  <DynamicFeatures
+                    key={feature.name}
+                    feature={feature}
+                  />
+                )
+              })}
             </div>
           </div>
 
@@ -299,7 +310,17 @@ export default function MidSection ({ posts }) {
               Descubre las mejores técnicas de marketing digital, SEO y diseño web en nuestro blog y maximiza tu presencia en línea para atraer más clientes potenciales.
             </p>
           </div>
-          <DynamicBlog posts={posts} postLength={3} />
+          {/* Dynamic load the post component */}
+          {pageLoaded && (function Load () {
+            const DynamicBlogPost = dynamic(() => import('../blog/MainBlog'), {
+              loading: () => <p>Loading...</p>,
+              ssr: false
+            })
+            return (
+              <DynamicBlogPost posts={posts} postLength={3} />
+            )
+          }())}
+
         </div>
 
         <div className='flex justify-center mt-12'>
