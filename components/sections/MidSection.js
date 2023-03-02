@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Logo from '../svg/Logo'
 // import MainBlog from '../blog/MainBlog'
 import dynamic from 'next/dynamic'
-import FeatureCard from '../cards/FeatureCard'
+// import FeatureCard from '../cards/FeatureCard'
 import FlowerLogo from '../svg/LogoFlowers'
 
 const features = [
@@ -43,6 +43,10 @@ const features = [
 ]
 
 const DynamicBlog = dynamic(() => import('../blog/MainBlog'), {
+  loading: () => <p className='text-center'>Cargando...</p>
+})
+
+const DynamicFeatureCard = dynamic(() => import('../cards/FeatureCard'), {
   loading: () => <p className='text-center'>Cargando...</p>
 })
 
@@ -242,7 +246,7 @@ export default function MidSection ({ posts }) {
           <div className='mt-12'>
             <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'>
               {features.map((feature) => (
-                <FeatureCard key={feature.name} feature={feature} />
+                <DynamicFeatureCard key={feature.name} feature={feature} />
               ))}
             </div>
           </div>
