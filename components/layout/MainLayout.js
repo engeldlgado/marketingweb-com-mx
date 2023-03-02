@@ -29,7 +29,7 @@ const Layout = ({ children, title, description, ogType, ogUrl, ogImage, ogDescri
         {/* Canonical */}
         <link rel='canonical' href={ogUrl} />
         {/* Png Favicon / SVG */}
-        <link rel='icon' type='image/png' href='/imagenes/favicon.png' />
+        <link rel='icon' type='image/png' href='/images/favicon.png' />
         <meta name='robots' content='index, follow' />
         <meta name='googlebot' content='index, follow' />
         <meta name='bingbot' content='index, follow' />

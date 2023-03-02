@@ -1,9 +1,19 @@
 import { ChevronRightIcon } from '@heroicons/react/solid'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useRef } from 'react'
 import Calendly from '../buttons/Calendly'
 
 export default function MainHero () {
+  const videoRef = useRef(null)
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (videoRef.current) {
+        videoRef.current.play()
+      }
+    }, 3000)
+  }, [])
   return (
     <div id='home' className='py-12 lg:py-20 lg:overflow-hidden'>
 
@@ -58,7 +68,8 @@ export default function MainHero () {
       </div> */}
       <div className='absolute top-0 w-full h-full overflow-hidden bg-gradient-165 from-secondary via-black to-black dark:from-primary dark:via-black dark:to-black -z-10'>
         <video
-          autoPlay loop muted playsInline className='absolute top-0 right-0 transform lg:h-full -z-10 mix-blend-multiply dark:right-0 -rotate-6 filter'
+          ref={videoRef}
+          loop muted className='absolute top-0 right-0 transform lg:h-full -z-10 mix-blend-multiply dark:right-0 -rotate-6 filter'
         >
           <source src='/videos/search.mp4' type='video/mp4' />
         </video>
