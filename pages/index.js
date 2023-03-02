@@ -5,7 +5,6 @@ import MidSection from '@/components/sections/MidSection'
 import Stats from '@/components/sections/Stats'
 
 export default function Home ({ posts }) {
-  console.log('posts: ', posts)
   return (
     <Layout
       title='Agencia de Posicionamiento Web y SEO para el Marketing Web Digital'
@@ -22,8 +21,6 @@ export default function Home ({ posts }) {
 
 export async function getStaticProps () {
   const res = await fetch('https://marketingweb.com.mx/blog/wp-json/wp/v2/posts/', {
-    // wordpress api cors error
-
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET',

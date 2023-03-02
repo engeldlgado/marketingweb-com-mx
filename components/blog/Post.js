@@ -1,8 +1,8 @@
-import Image from 'next/image'
 import { ClockIcon } from '@heroicons/react/solid'
+import Image from 'next/image'
 
 const Post = ({ heading, children }) => {
-  const { title, author, category, date, bannerImage, excerpt, avatar } = heading
+  const { title, author, category, date, bannerImage, excerpt, avatar } = heading || {}
   return (
     <>
       {/* Header */}
@@ -24,8 +24,8 @@ const Post = ({ heading, children }) => {
           </p>
           <div className='flex items-center justify-center mt-6 text-white drop-shadow sm:justify-start'>
             <div className='flex items-center'>
-              <Image className='w-10 h-10 rounded-full drop-shadow' src={avatar} alt={author.name} width={500} height={500} />
-              <p className='ml-3 text-sm font-medium text-white drop-shadow'>{author.name}</p>
+              <Image className='w-10 h-10 rounded-full drop-shadow' src={avatar} alt={author?.name} width={500} height={500} />
+              <p className='ml-3 text-sm font-medium text-white drop-shadow'>{author?.name}</p>
             </div>
             <time className='flex items-center ml-6 text-sm font-medium text-white drop-shadow' dateTime={date}>
               <ClockIcon className='flex-shrink-0 w-5 h-5 mr-2 text-white drop-shadow' aria-hidden='true' />

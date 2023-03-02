@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Logo from '../svg/Logo'
 // import MainBlog from '../blog/MainBlog'
-import MainBlog from '../blog/MainBlog'
+import dynamic from 'next/dynamic'
 import FeatureCard from '../cards/FeatureCard'
 import FlowerLogo from '../svg/LogoFlowers'
 
@@ -41,6 +41,10 @@ const features = [
     icon: CodeIcon
   }
 ]
+
+const DynamicBlog = dynamic(() => import('../blog/MainBlog'), {
+  loading: () => <p className='text-center'>Cargando...</p>
+})
 
 export default function MidSection ({ posts }) {
   return (
@@ -291,7 +295,7 @@ export default function MidSection ({ posts }) {
               Descubre las mejores técnicas de marketing digital, SEO y diseño web en nuestro blog y maximiza tu presencia en línea para atraer más clientes potenciales.
             </p>
           </div>
-          <MainBlog posts={posts} postLength={3} />
+          <DynamicBlog posts={posts} postLength={3} />
         </div>
 
         <div className='flex justify-center mt-12'>

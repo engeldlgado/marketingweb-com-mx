@@ -11,7 +11,37 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))'
-      }
+      },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            a: {
+              color: theme('colors.primary'),
+              '&:hover': {
+                color: theme('colors.primary')
+              }
+            },
+            code: {
+              backgroundColor: theme('colors.gray.300'),
+              borderRadius: '0.25rem!important',
+              fontWeight: '400!important'
+            },
+            maxWidth: '90ch'
+          }
+        },
+        dark: {
+          css: {
+            code: {
+              color: theme('colors.gray.300'),
+              backgroundColor: theme('colors.black')
+            },
+            pre: {
+              color: theme('colors.gray.300'),
+              backgroundColor: theme('colors.black')
+            }
+          }
+        }
+      })
     }
   },
   darkMode: 'class',
@@ -60,6 +90,7 @@ module.exports = {
     ]
   },
   plugins: [
+    require('@tailwindcss/typography'),
     require('daisyui'),
     require('tailwindcss-gradient')
   ]
