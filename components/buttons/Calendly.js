@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
-import { PopupButton } from 'react-calendly'
+// import { PopupButton } from 'react-calendly'
+import dynamic from 'next/dynamic'
+
+const PopupButton = dynamic(() => import('react-calendly').then(mod => mod.PopupButton), { ssr: false })
 
 export default function Calendly ({ text, className }) {
   const calendlyRef = useRef()
