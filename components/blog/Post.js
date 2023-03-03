@@ -18,18 +18,18 @@ const Post = ({ heading, children }) => {
           <div className='absolute inset-0 bg-gradient-to-br from-secondary to-gray-900 dark:from-primary dark:to-base-100 opacity-80 sm:opacity-60' aria-hidden='true' />
         </div>
         <div className='relative px-4 pt-32 pb-24 mx-auto text-center sm:text-left max-w-7xl sm:pb-24 sm:pt-44 sm:px-6 lg:px-8'>
-          <h1 className='text-2xl font-extrabold tracking-tight text-white md:text-3xl lg:text-3xl'>{title}</h1>
+          <span className='text-2xl font-extrabold tracking-tight text-white md:text-3xl lg:text-3xl'>{title}</span>
           <p className='max-w-3xl mt-6 text-lg text-gray-50 drop-shadow'>
             {excerpt}
           </p>
           <div className='flex items-center justify-center mt-6 text-white drop-shadow sm:justify-start'>
             <div className='flex items-center'>
-              <Image className='w-10 h-10 rounded-full drop-shadow' src={avatar} alt={author?.name} width={500} height={500} />
-              <p className='ml-3 text-sm font-medium text-white drop-shadow'>{author?.name}</p>
+              <Image className='w-10 h-10 rounded-full drop-shadow' src={avatar} alt={author} width={500} height={500} />
+              <p className='ml-3 text-sm font-medium text-white drop-shadow'>{author}</p>
             </div>
             <time className='flex items-center ml-6 text-sm font-medium text-white drop-shadow' dateTime={date}>
               <ClockIcon className='flex-shrink-0 w-5 h-5 mr-2 text-white drop-shadow' aria-hidden='true' />
-              <span>{date}</span>
+              <span>{new Date(date).toLocaleDateString('es-MX', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
             </time>
             <div className='flex items-center ml-6 text-sm font-medium text-white drop-shadow'>
               <span>{category}</span>

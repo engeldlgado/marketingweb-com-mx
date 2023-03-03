@@ -19,16 +19,26 @@ import { getAllPostsFromAPI, getPostContentFromAPI } from '../../utils/functions
 export default function SinglePost ({ content, slug }) {
   // Destructure the content object from WordPress
   const {
-    // title,
-    // excerpt,
-    content: postContent
-    // date,
+    title,
+    excerpt,
+    content: postContent,
+    date,
     // tags,
-    // author_name,
-    // author_avatar,
-    // featured_image_src,
+    author_name: author,
+    author_avatar: avatar,
+    featured_image_src: bannerImage
     // reading_time
   } = content
+
+  const heading = {
+    title: title.rendered,
+    excerpt: excerpt.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 200) + '...',
+    date,
+    author,
+    avatar,
+    bannerImage
+    // reading_time
+  }
 
   // // Prism for code highlighting
 
@@ -81,8 +91,9 @@ export default function SinglePost ({ content, slug }) {
 
   return (
     <MainLayout>
-      <Post>
-        <article className='mx-auto prose prose-img:rounded-md prose-img:shadow-md prose-code:break-words lg:prose-lg dark:prose-dark' dangerouslySetInnerHTML={{ __html: postContent.rendered }} />
+      <Post heading={heading}>
+        {/* remove all styles and classes and div from text */}
+        <article className='mx-auto prose prose-img:rounded-md prose-img:shadow-md prose-img:mx-auto prose-code:break-words lg:prose-lg dark:prose-dark prose-h1:text-3xl' dangerouslySetInnerHTML={{ __html: postContent.rendered.replace(/style="[^"]*"/g, '').replace(/class="[^"]*"/g, '').replace(/<div[^>]*>/g, '').replace(/<\/div>/g, '') }} />
         {/* hashtags */}
         {/* <div className='flex flex-wrap justify-center mt-10'>
           {tags.map((tag, index) => (
@@ -171,6 +182,7 @@ export async function getStaticProps ({ params }) {
     props: {
       post,
       content
-    }
+    },
+    revalidate: 10
   }
 }
