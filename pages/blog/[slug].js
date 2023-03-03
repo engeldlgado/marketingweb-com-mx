@@ -49,10 +49,20 @@ export default function SinglePost ({ content, slug }) {
   // const dateISO = `${dateFormated[2]}-${dateFormated[1]}-${dateFormated[0]}T00:00:00-04:00`
 
   // // tags converted to a single line string
-  const tagsToHashtags = tags.map((tag) => `#${tag.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-')}`).join(' ').toLowerCase()
+  const tagsToHashtags = () => {
+    if (tags && tags.length > 0) {
+      return tags.map((tag) => `#${tag.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-')}`).join(' ').toLowerCase()
+    }
+    return ''
+  }
 
   // // tags converted to a array of strings
-  const tagsToHashtagsArray = (tags) => tags.map((tag) => `${tag.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '')}`).join(' ').toLowerCase().split(' ')
+  const tagsToHashtagsArray = (tags) => {
+    if (tags && tags.length > 0) {
+      return tags.map((tag) => `${tag.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '')}`).join(' ').toLowerCase().split(' ')
+    }
+    return []
+  }
 
   // const structureData = [
   //   {
@@ -97,11 +107,12 @@ export default function SinglePost ({ content, slug }) {
         <article className='mx-auto prose prose-img:rounded-md prose-img:shadow-md prose-img:mx-auto prose-code:break-words lg:prose-lg dark:prose-dark prose-h1:text-3xl' dangerouslySetInnerHTML={{ __html: postContent.rendered.replace(/style="[^"]*"/g, '').replace(/class="[^"]*"/g, '').replace(/<div[^>]*>/g, '').replace(/<\/div>/g, '') }} />
         {/* hashtags */}
         <div className='flex flex-wrap justify-center mt-10'>
-          {tags.map((tag, index) => (
+          {tags && tags.map((tag, index) => (
             <div key={index} className='mr-2 text-sm text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:underline'>
               #{tag.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-').toLowerCase()}
             </div>
           ))}
+
         </div>
         {/* share title */}
         <div className='flex flex-wrap justify-center mt-10'>
