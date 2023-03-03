@@ -49,12 +49,12 @@ export default function SinglePost ({ content, slug }) {
   // const dateISO = `${dateFormated[2]}-${dateFormated[1]}-${dateFormated[0]}T00:00:00-04:00`
 
   // // tags converted to a single line string
-  const tagsToHashtags = () => {
-    if (tags && tags.length > 0) {
-      return tags.map((tag) => `#${tag.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-')}`).join(' ').toLowerCase()
-    }
-    return ''
-  }
+  // const tagsToHashtags = () => {
+  //   if (tags && tags.length > 0) {
+  //     return tags.map((tag) => `#${tag.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-')}`).join(' ').toLowerCase()
+  //   }
+  //   return ''
+  // }
 
   // // tags converted to a array of strings
   const tagsToHashtagsArray = (tags) => {
@@ -111,7 +111,7 @@ export default function SinglePost ({ content, slug }) {
             <div key={index} className='mr-2 text-sm text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:underline'>
               #{tag.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-').toLowerCase()}
             </div>
-          ))}
+          )).slice(0, 3)}
 
         </div>
         {/* share title */}
@@ -122,7 +122,7 @@ export default function SinglePost ({ content, slug }) {
         </div>
         <div className='flex flex-wrap justify-center mt-10'>
           <div className='mr-2 text-sm duration-300 rounded-full hover:shadow-md hover:scale-110'>
-            <FacebookShareButton url={`${url}/blog/${postSlug}`} quote={title.rendered} hashtag={tagsToHashtags()} className='flex items-center'>
+            <FacebookShareButton url={`${url}/blog/${postSlug}`} quote={title.rendered} hashtag={tagsToHashtagsArray(tags)} className='flex items-center'>
               <FacebookIcon size={32} round />
             </FacebookShareButton>
           </div>
