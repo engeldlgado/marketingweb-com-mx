@@ -122,7 +122,7 @@ export default function SinglePost ({ content, slug }) {
         </div>
         <div className='flex flex-wrap justify-center mt-10'>
           <div className='mr-2 text-sm duration-300 rounded-full hover:shadow-md hover:scale-110'>
-            <FacebookShareButton url={`${url}/blog/${postSlug}`} quote={title.rendered} hashtag={tagsToHashtags} className='flex items-center'>
+            <FacebookShareButton url={`${url}/blog/${postSlug}`} quote={title.rendered} hashtag={tagsToHashtags()} className='flex items-center'>
               <FacebookIcon size={32} round />
             </FacebookShareButton>
           </div>
