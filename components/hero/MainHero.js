@@ -19,7 +19,7 @@ export default function MainHero () {
 
       <div className=' mx-auto max-w-[80%] lg:px-8'>
         <div className='lg:grid lg:grid-cols-2 lg:gap-8'>
-          <div className='max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center '>
+          <div className='z-10 max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center'>
             <div className='pt-20 pb-20 lg:pt-36 lg:pb-36'>
               <Link
                 href='#work'
@@ -75,7 +75,7 @@ export default function MainHero () {
         </video>
 
       </div>
-
+      <div className='relative right-0 h-32 -mt-40 -z-10 bg-gradient-to-b from-black via-white to-white dark:from-black dark:to-black md:-mt-40 lg:mt-0' />
     </div>
   )
 }

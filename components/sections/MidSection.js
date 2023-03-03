@@ -55,9 +55,9 @@ export default function MidSection ({ posts }) {
 
   return (
     <>
-      <div className='z-50 h-32 -mt-10 bg-gradient-to-b from-black via-white to-white dark:from-black dark:to-black md:mt-0' />
+
       {/* Feature section with grid */}
-      <div id='ventas' className='relative py-16 -mt-24 bg-transparent dark:bg-base-100 sm:pt-10 lg:pt-24 dark:bg-gradient-to-b dark:from-black dark:to-base-100'>
+      <div id='ventas' className='relative py-16 -mt-24 bg-white dark:bg-base-100 sm:pt-10 lg:pt-14 dark:bg-gradient-to-b dark:from-black dark:to-base-100'>
         <p className='max-w-[90%] md:max-w-[30%] mx-auto text-sm  text-center  font-semibold tracking-wider uppercase dark:text-white text-primary'>Soluciones Innovadoras</p>
         <h1 className='max-w-[90%] md:max-w-[30%] mx-auto text-2xl font-extrabold tracking-tight text-center text-gray-900 dark:text-primary sm:text-4xl'>Servicios de Marketing Digital para tu Negocio</h1>
         <div className='md:pt-10 lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
