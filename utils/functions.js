@@ -41,3 +41,16 @@ export async function getPostContentFromAPI (url, slug) {
     throw new Error(`Failed to fetch post content from API: ${response.status} ${response.statusText}`)
   }
 }
+
+// Get the last 3 posts from WordPress
+export async function getLatestPostsFromAPI (url, qty = 3) {
+  const apiURL = `${url}/wp-json/wp/v2/posts/?per_page=${qty}`
+  const response = await fetch(apiURL)
+
+  if (response.ok) {
+    const posts = await response.json()
+    return posts
+  } else {
+    throw new Error(`Failed to fetch posts from API: ${response.status} ${response.statusText}`)
+  }
+}

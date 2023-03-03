@@ -3,6 +3,7 @@ import Layout from '@/components/layout/MainLayout'
 import { LogoSection } from '@/components/sections/LogoSection'
 import MidSection from '@/components/sections/MidSection'
 import Stats from '@/components/sections/Stats'
+import { getLatestPostsFromAPI } from '@/utils/functions'
 
 export default function Home ({ posts }) {
   return (
@@ -20,15 +21,8 @@ export default function Home ({ posts }) {
 }
 
 export async function getStaticProps () {
-  const res = await fetch('https://marketingweb.com.mx/blog/wp-json/wp/v2/posts/', {
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With'
-    }
-  })
-
-  const posts = await res.json()
+  const BlogURL = process.env.NEXT_PUBLIC_WORDPRESS_URL
+  const posts = await getLatestPostsFromAPI(BlogURL)
 
   return {
     props: {

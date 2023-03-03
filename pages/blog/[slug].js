@@ -1,20 +1,20 @@
-// import {
-//   FacebookIcon,
-//   FacebookShareButton,
-//   LinkedinIcon,
-//   LinkedinShareButton, RedditIcon,
-//   RedditShareButton, TelegramIcon,
-//   TelegramShareButton, TwitterIcon,
-//   TwitterShareButton,
-//   WhatsappIcon,
-//   WhatsappShareButton
-// } from 'react-share'
+import {
+  FacebookIcon,
+  FacebookShareButton,
+  LinkedinIcon,
+  LinkedinShareButton, RedditIcon,
+  RedditShareButton, TelegramIcon,
+  TelegramShareButton, TwitterIcon,
+  TwitterShareButton,
+  WhatsappIcon,
+  WhatsappShareButton
+} from 'react-share'
 import Post from '../../components/blog/Post'
 import MainLayout from '../../components/layout/MainLayout'
 import { getAllPostsFromAPI, getPostContentFromAPI } from '../../utils/functions'
 
 // const HOST = process.env.NEXT_PUBLIC_URL || 'http://localhost:3000'
-
+export const url = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` || 'http://localhost:3000'
 // The page for each post
 export default function SinglePost ({ content, slug }) {
   // Destructure the content object from WordPress
@@ -23,10 +23,11 @@ export default function SinglePost ({ content, slug }) {
     excerpt,
     content: postContent,
     date,
-    // tags,
+    tags,
     author_name: author,
     author_avatar: avatar,
-    featured_image_src: bannerImage
+    featured_image_src: bannerImage,
+    slug: postSlug
     // reading_time
   } = content
 
@@ -48,10 +49,10 @@ export default function SinglePost ({ content, slug }) {
   // const dateISO = `${dateFormated[2]}-${dateFormated[1]}-${dateFormated[0]}T00:00:00-04:00`
 
   // // tags converted to a single line string
-  // const tagsToHashtags = tags.map((tag) => `#${tag.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-')}`).join(' ').toLowerCase()
+  const tagsToHashtags = tags.map((tag) => `#${tag.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-')}`).join(' ').toLowerCase()
 
   // // tags converted to a array of strings
-  // const tagsToHashtagsArray = (tags) => tags.map((tag) => `${tag.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '')}`).join(' ').toLowerCase().split(' ')
+  const tagsToHashtagsArray = (tags) => tags.map((tag) => `${tag.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '')}`).join(' ').toLowerCase().split(' ')
 
   // const structureData = [
   //   {
@@ -95,51 +96,51 @@ export default function SinglePost ({ content, slug }) {
         {/* remove all styles and classes and div from text */}
         <article className='mx-auto prose prose-img:rounded-md prose-img:shadow-md prose-img:mx-auto prose-code:break-words lg:prose-lg dark:prose-dark prose-h1:text-3xl' dangerouslySetInnerHTML={{ __html: postContent.rendered.replace(/style="[^"]*"/g, '').replace(/class="[^"]*"/g, '').replace(/<div[^>]*>/g, '').replace(/<\/div>/g, '') }} />
         {/* hashtags */}
-        {/* <div className='flex flex-wrap justify-center mt-10'>
+        <div className='flex flex-wrap justify-center mt-10'>
           {tags.map((tag, index) => (
             <div key={index} className='mr-2 text-sm text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:underline'>
-              #{tag.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-').toLowerCase()}
+              #{tag.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-').toLowerCase()}
             </div>
           ))}
-        </div> */}
+        </div>
         {/* share title */}
         <div className='flex flex-wrap justify-center mt-10'>
           <div className='mr-2 text-sm text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100'>
             Comparte este artículo con tus amigos en las redes sociales
           </div>
         </div>
-        {/* <div className='flex flex-wrap justify-center mt-10'>
+        <div className='flex flex-wrap justify-center mt-10'>
           <div className='mr-2 text-sm duration-300 rounded-full hover:shadow-md hover:scale-110'>
-            <FacebookShareButton url={`https://engeldelgado.com/post/${slug}`} quote={title} hashtag={tagsToHashtags} className='flex items-center'>
+            <FacebookShareButton url={`${url}/blog/${postSlug}`} quote={title.rendered} hashtag={tagsToHashtags} className='flex items-center'>
               <FacebookIcon size={32} round />
             </FacebookShareButton>
           </div>
           <div className='mr-2 text-sm duration-300 rounded-full hover:shadow-md hover:scale-110'>
-            <TwitterShareButton url={`https://engeldelgado.com/post/${slug}`} title={title} hashtags={tagsToHashtagsArray(tags)} className='flex items-center'>
+            <TwitterShareButton url={`${url}/blog/${postSlug}`} title={title.rendered} hashtags={tagsToHashtagsArray(tags)} className='flex items-center'>
               <TwitterIcon size={32} round />
             </TwitterShareButton>
           </div>
           <div className='mr-2 text-sm duration-300 rounded-full hover:shadow-md hover:scale-110'>
-            <LinkedinShareButton url={`https://engeldelgado.com/post/${slug}`} title={title} summary={excerpt} source='https://engeldelgado.com' className='flex items-center'>
+            <LinkedinShareButton url={`${url}/blog/${postSlug}`} title={title.rendered} summary={heading.excerpt} source='https://marketingweb.com.mx' className='flex items-center'>
               <LinkedinIcon size={32} round />
             </LinkedinShareButton>
           </div>
           <div className='mr-2 text-sm duration-300 rounded-full hover:shadow-md hover:scale-110 md:hidden'>
-            <WhatsappShareButton url={`https://engeldelgado.com/post/${slug}`} title={title} separator=':: ' className='flex items-center'>
+            <WhatsappShareButton url={`${url}/blog/${postSlug}`} title={title.rendered} separator=':: ' className='flex items-center'>
               <WhatsappIcon size={32} round />
             </WhatsappShareButton>
           </div>
           <div className='mr-2 text-sm duration-300 rounded-full hover:shadow-md hover:scale-110'>
-            <TelegramShareButton url={`https://engeldelgado.com/post/${slug}`} title={title} className='flex items-center'>
+            <TelegramShareButton url={`${url}/blog/${postSlug}`} title={title.rendered} className='flex items-center'>
               <TelegramIcon size={32} round />
             </TelegramShareButton>
           </div>
           <div className='mr-2 text-sm duration-300 rounded-full hover:shadow-md hover:scale-110'>
-            <RedditShareButton url={`https://engeldelgado.com/post/${slug}`} title={title} windowWidth={800} windowHeight={600} className='flex items-center'>
+            <RedditShareButton url={`${url}/blog/${postSlug}`} title={title.rendered} windowWidth={800} windowHeight={600} className='flex items-center'>
               <RedditIcon size={32} round />
             </RedditShareButton>
           </div>
-        </div> */}
+        </div>
 
       </Post>
     </MainLayout>
