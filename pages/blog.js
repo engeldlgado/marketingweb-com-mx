@@ -3,12 +3,13 @@ import { useEffect, useState } from 'react'
 import MainBlog from '../components/blog/MainBlog'
 import BlogHero from '../components/hero/BlogHero'
 import MainLayout from '../components/layout/MainLayout'
-import { getPostsFromAPI } from '../utils/functions'
+import { getPostsFromAPI, getPostsFromSearchAPI } from '../utils/functions'
 
 const BlogURL = process.env.NEXT_PUBLIC_WORDPRESS_URL
 
 export default function Blog ({ posts, totalPages, totalPosts }) {
   const [currentPage, setCurrentPage] = useState(0)
+  // const [query, setQuery] = useState('')
   const [postList, setPostList] = useState({
     posts,
     totalPages,
@@ -21,24 +22,73 @@ export default function Blog ({ posts, totalPages, totalPosts }) {
     })
   }, [currentPage])
 
+  useEffect(() => {
+    // check if there query string in the url for search
+    const urlParams = new URLSearchParams(window.location.search)
+    const search = urlParams.get('search')
+    if (search) {
+      getPostsFromSearchAPI(BlogURL, 12, 1, search).then((data) => {
+        setPostList(data)
+      })
+    }
+  }, [])
+
   const structureData = [
     {
-      '@context': 'http://schema.org',
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Agencia de Posicionamiento Web y SEO para el Marketing Web Digital',
+      alternateName: 'Marketing Web',
+      url: 'https://marketingweb.com.mx',
+      logo: 'https://marketingweb.com.mx/images/logo.jpg',
+      sameAs: [
+        'https://www.twitter.com/wwwmarketingweb/',
+        'https://www.instagram.com/mkwagencia/',
+        'https://www.facebook.com/marketingweb/'
+      ]
+    },
+    {
+      '@context': 'https://schema.org',
       '@type': 'WebSite',
-      name: 'Blog de soluciones de desarrollo web y marketing | EngelDelgado',
-      url: 'https://engeldelgado.com/blog',
-      description: 'Aprende a mejorar tu presencia en línea con nuestros artículos de desarrollo web y marketing. Explora nuestras soluciones innovadoras y conviértete en un experto en el tema.',
-      image: 'https://engeldelgado.com/imagenes/logo.jpg'
+      url: 'https://marketingweb.com.mx',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://marketingweb.com.mx/blog?search={search_term_string}',
+        'query-input': 'required name=search_term_string'
+      }
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      url: 'https://marketingweb.com.mx',
+      name: 'Agencia de Posicionamiento Web y SEO para el Marketing Web Digital',
+      description: 'Mejora tu posicionamiento en línea con nuestros servicios de SEO y optimización de sitios web. Agencia Marketing Web y digital. SEO Google.',
+      publisher: {
+        '@type': 'Organization',
+        name: 'Agencia de Posicionamiento Web y SEO para el Marketing Web Digital',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://marketingweb.com.mx/images/logo.jpg'
+        }
+      },
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': 'https://marketingweb.com.mx'
+      },
+      image: {
+        '@type': 'ImageObject',
+        url: 'https://marketingweb.com.mx/images/logo.jpg'
+      }
     }
   ]
   return (
     <MainLayout
-      title='Blog de soluciones innovadoras de desarrollo web y marketing'
-      description='Aprende a mejorar tu presencia en línea con nuestros artículos de desarrollo web y marketing. Explora nuestras soluciones innovadoras y conviértete en un experto en el tema.'
+      title='Blog | Agencia de Posicionamiento Web y SEO para el Marketing Web Digital'
+      description='Mejora tu posicionamiento en línea con nuestros servicios de SEO y optimización de sitios web. Agencia Marketing Web y digital. SEO Google.'
       ogType='website'
-      ogUrl='https://engeldelgado.com/blog'
-      ogImage='https://engeldelgado.com/imagenes/Imagine-og.jpg'
-      ogDescription='Aquí encontrarás contenido actualizado sobre soluciones de desarrollo web y marketing. Explora nuestros artículos y aprende cómo mejorar tu presencia en línea.'
+      ogImage='https://marketingweb.com.mx/images/logo.jpg' // TODO: add image
+      ogUrl='https://marketingweb.com.mx/blog'
+      ogDescription='Mejora tu posicionamiento en línea con nuestros servicios de SEO y optimización de sitios web. Agencia Marketing Web y digital. SEO Google.'
       schemaObject={structureData}
     >
       <BlogHero />

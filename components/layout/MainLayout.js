@@ -33,7 +33,7 @@ const Layout = ({ children, title, description, ogType, ogUrl, ogImage, ogDescri
         <meta name='robots' content='index, follow' />
         <meta name='googlebot' content='index, follow' />
         <meta name='bingbot' content='index, follow' />
-        <link rel='alternate' type='application/rss+xml' href='/rss.xml' title='Blog Feed de soluciones de desarrollo web y marketing | Engel Delgado' />
+        <link rel='alternate' type='application/rss+xml' href='/rss.xml' title={title} />
         {schemaObject && (
           schemaObject.map((item, index) => (
             <script
@@ -45,11 +45,6 @@ const Layout = ({ children, title, description, ogType, ogUrl, ogImage, ogDescri
         )}
 
       </Head>
-      {/* <Navigation
-        theme={theme}
-        setTheme={setTheme}
-      /> */}
-
       <Menu
         theme={theme}
         setTheme={setTheme}
