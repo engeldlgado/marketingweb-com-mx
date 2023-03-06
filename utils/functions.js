@@ -54,3 +54,20 @@ export async function getLatestPostsFromAPI (url, qty = 3) {
     throw new Error(`Failed to fetch posts from API: ${response.status} ${response.statusText}`)
   }
 }
+
+// Get posts from WordPress using navigation
+
+export async function getPostsFromAPI (url, qty = 12, page = 1) {
+  const apiURL = `${url}/wp-json/wp/v2/posts/?per_page=${qty}&page=${page}`
+  const response = await fetch(apiURL)
+
+  if (response.ok) {
+    const posts = await response.json()
+    // get the total number of pages from the response headers
+    const totalPages = response.headers.get('x-wp-totalpages')
+    const totalPosts = response.headers.get('x-wp-total')
+    return { posts, totalPages, totalPosts }
+  } else {
+    throw new Error(`Failed to fetch posts from API: ${response.status} ${response.statusText}`)
+  }
+}

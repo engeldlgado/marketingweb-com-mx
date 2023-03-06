@@ -1,8 +1,26 @@
+import Pagination from '@/components/buttons/Pagination'
+import { useEffect, useState } from 'react'
 import MainBlog from '../components/blog/MainBlog'
 import BlogHero from '../components/hero/BlogHero'
 import MainLayout from '../components/layout/MainLayout'
+import { getPostsFromAPI } from '../utils/functions'
 
-export default function Blog ({ posts }) {
+const BlogURL = process.env.NEXT_PUBLIC_WORDPRESS_URL
+
+export default function Blog ({ posts, totalPages, totalPosts }) {
+  const [currentPage, setCurrentPage] = useState(0)
+  const [postList, setPostList] = useState({
+    posts,
+    totalPages,
+    totalPosts
+  })
+
+  useEffect(() => {
+    getPostsFromAPI(BlogURL, 12, currentPage + 1).then((data) => {
+      setPostList(data)
+    })
+  }, [currentPage])
+
   const structureData = [
     {
       '@context': 'http://schema.org',
@@ -25,40 +43,39 @@ export default function Blog ({ posts }) {
     >
       <BlogHero />
       <div className='relative py-16 bg-gray-50 dark:bg-base-100 sm:py-24 lg:py-24'>
-        <div className='relative'>
+        <div className='relative max-w-[90%] mx-auto'>
           <div className='max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
-            <p className='text-base font-semibold tracking-wider uppercase dark:text-primary text-secondary'>¡Aprende conmigo!</p>
+            <p className='text-base font-semibold tracking-wider uppercase dark:text-primary text-secondary'>¡Crece cada día!</p>
             <h1 className='max-w-2xl mx-auto mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl'>
               Nuestro blog
             </h1>
             <p className='mx-auto mt-5 text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
-              ¿Quieres aprender a destacar en línea? Lee nuestro blog de marketing digital, SEO y diseño web.
+              Encuentra consejos y estrategias en nuestro blog de marketing digital
             </p>
           </div>
-          <MainBlog posts={posts} />
+          <Pagination
+            totalItems={postList.totalPosts}
+            itemsPerPage={12}
+            currentPage={currentPage}
+            totalPages={postList.totalPages}
+            setCurrentPage={setCurrentPage}
+          >
+            <MainBlog posts={postList.posts} />
+          </Pagination>
         </div>
       </div>
     </MainLayout>
   )
 }
 
-export async function getStaticProps () {
-  const res = await fetch('https://marketingweb.com.mx/blog/wp-json/wp/v2/posts/', {
-    // wordpress api cors error
-
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With'
-    }
-  })
-
-  const posts = await res.json()
-
-  return {
-    props: {
-      posts
-    },
-    revalidate: 10
-  }
-}
+// export async function getStaticProps () {
+//   const posts = await getPostsFromAPI(BlogURL, 12, 1)
+//   return {
+//     props: {
+//       posts: posts.posts,
+//       totalPages: posts.totalPages,
+//       totalPosts: posts.totalPosts
+//     },
+//     revalidate: 10
+//   }
+// }
