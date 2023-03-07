@@ -23,6 +23,7 @@ export default function SinglePost ({ content, slug }) {
     excerpt,
     content: postContent,
     date,
+    modified_gmt: modified,
     tags,
     author_name: author,
     author_avatar: avatar,
@@ -64,44 +65,52 @@ export default function SinglePost ({ content, slug }) {
     return []
   }
 
-  // const structureData = [
-  //   {
-  //     '@context': 'https://schema.org/',
-  //     '@type': 'BlogPosting',
-  //     mainEntityOfPage: {
-  //       '@type': 'WebPage',
-  //       '@id': `https://engeldelgado.com/post/${slug}`
-  //     },
-  //     headline: title,
-  //     description: excerpt,
-  //     image: {
-  //       '@type': 'ImageObject',
-  //       url: bannerImage,
-  //       width: '1920',
-  //       height: '1080'
-  //     },
-  //     author: {
-  //       '@type': 'Person',
-  //       name: author,
-  //       url: 'https://engeldelgado.com'
-  //     },
-  //     publisher: {
-  //       '@type': 'Organization',
-  //       name: 'Engelbert Vizcaya',
-  //       logo: {
-  //         '@type': 'ImageObject',
-  //         url: 'https://engeldelgado.com/imagenes/logo.jpg',
-  //         width: '500',
-  //         height: '500'
-  //       }
-  //     },
-  //     datePublished: dateISO,
-  //     dateModified: dateISO
-  //   }
-  // ]
+  const structureData = [
+    {
+      '@context': 'https://schema.org/',
+      '@type': 'BlogPosting',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': `https://marketingweb.com.mx/blog/${slug}`
+      },
+      headline: title.rendered,
+      description: excerpt.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 200) + '...',
+      image: {
+        '@type': 'ImageObject',
+        url: bannerImage,
+        width: '1920',
+        height: '1080'
+      },
+      author: {
+        '@type': 'Person',
+        name: author,
+        url: 'https://marketingweb.com.mx'
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Marketing Web',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://marketingweb.com.mx/images/logo.jpg',
+          width: '500',
+          height: '500'
+        }
+      },
+      datePublished: date,
+      dateModified: modified
+    }
+  ]
 
   return (
-    <MainLayout>
+    <MainLayout
+      title={title.rendered}
+      description={excerpt.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 200) + '...'}
+      ogType='article'
+      ogImage={bannerImage}
+      ogUrl={`${url}/blog/${postSlug}`}
+      ogDescription={excerpt.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 200) + '...'}
+      schemaObject={structureData}
+    >
       <Post heading={heading}>
         {/* remove all styles and classes and div from text */}
         <article className='mx-auto prose prose-img:rounded-md prose-img:shadow-md prose-img:mx-auto prose-code:break-words lg:prose-lg dark:prose-dark prose-h1:text-3xl' dangerouslySetInnerHTML={{ __html: postContent.rendered.replace(/style="[^"]*"/g, '').replace(/class="[^"]*"/g, '').replace(/<div[^>]*>/g, '').replace(/<\/div>/g, '') }} />

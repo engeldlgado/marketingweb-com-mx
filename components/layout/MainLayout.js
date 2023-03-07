@@ -18,10 +18,10 @@ const Layout = ({ children, title, description, ogType, ogUrl, ogImage, ogDescri
         <meta property='og:type' content={ogType} />
         <meta property='og:url' content={ogUrl} />
         <meta property='og:image' content={ogImage} />
-        <meta property='og:site_name' content='Engel Delgado | Full Stack Developer' />
+        <meta property='og:site_name' content='Marketing Web' />
         <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:site' content='@engeldlgado' />
-        <meta name='twitter:creator' content='@engeldlgado' />
+        <meta name='twitter:site' content='@wwwmarketingweb' />
+        <meta name='twitter:creator' content='@wwwmarketingweb' />
         <meta name='twitter:title' content={title} />
         <meta name='twitter:description' content={description} />
         <meta name='twitter:image' content={ogImage} />
