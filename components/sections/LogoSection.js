@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import CohereLogo from '../svg/CohereLogo'
 import MongoLogo from '../svg/MongoLogo'
 import NextLogo from '../svg/NextLogo'
@@ -26,9 +25,7 @@ export const LogoSection = () => {
             <MongoLogo className='h-12 w-36 dark:fill-gray-400 fill-cyan-800' />
           </div>
           <div className='flex justify-center col-span-1 md:col-span-2 lg:col-span-1'>
-            <Link href='https://cohere.ai'>
-              <CohereLogo className='h-12 w-36 dark:fill-gray-400 fill-cyan-800' />
-            </Link>
+            <CohereLogo className='h-12 w-36 dark:fill-gray-400 fill-cyan-800' />
           </div>
           <div className='flex justify-center col-span-1 md:col-span-3 lg:col-span-1'>
             <ReactLogo className='h-12 w-36 dark:fill-gray-400 fill-cyan-400' />

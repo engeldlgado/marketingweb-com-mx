@@ -16,7 +16,7 @@ const solutions = [
   {
     name: 'Optimización SEO',
     description: '¿Quieres estar en los primeros resultados de búsqueda? Optimiza tu página con nosotros.',
-    href: '#',
+    href: '/posicionamiento-web',
     icon: SearchIcon
   },
   {
@@ -112,7 +112,7 @@ export default function Menu ({ setTheme, theme }) {
                       <Popover.Panel className='absolute inset-x-0 z-30 hidden transform shadow-lg bg-gradient-to-b from-[rgba(255,255,255,0.5)] via-white to-white dark:from-transparent dark:via-base-100 dark:to-base-100 md:block top-full'>
                         <div className='grid px-4 py-6 mx-auto max-w-7xl gap-y-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16'>
                           {solutions.map((item) => (
-                            <a
+                            <Link
                               key={item.name}
                               href={item.href}
                               className='flex flex-col justify-between p-3 -m-3 transition-all duration-500 transform rounded-lg hover:shadow-md hover:bg-gray-50 hover:dark:bg-gray-900 hover:-skew-x-1 hover:-skew-y-1 '
@@ -133,7 +133,7 @@ export default function Menu ({ setTheme, theme }) {
                                   </p>
                                 </div>
                               </div>
-                            </a>
+                            </Link>
                           ))}
                         </div>
                         <div className='bg-white dark:bg-base-100'>
