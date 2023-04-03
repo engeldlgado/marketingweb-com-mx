@@ -79,7 +79,7 @@ const sections = [
       { name: 'Automatización de correo electrónico y chatbot.', tiers: { Esencial: true, Premium: true } },
       { name: 'Configuración de Google Analytics y Google Tag Manager.', tiers: { Esencial: true, Premium: true } },
       { name: 'Publicidad en motores de búsqueda (SEM).', tiers: { Premium: true } },
-      { name: 'Diseño y desarrollo de aplicaciones móviles.', tiers: { Premium: true } }
+      { name: 'Diseño y desarrollo de aplicaciones móviles.', tiers: { Premium: 'Cotización especial' } }
     ]
   },
   {

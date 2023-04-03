@@ -34,7 +34,7 @@ const solutions = [
   {
     name: 'Redes sociales',
     description: 'Haz que tus publicaciones sean atractivas y genera un mayor engagement con tus seguidores.',
-    href: '#',
+    href: '/redes-sociales',
     icon: ViewGridIcon
   }
 ]
