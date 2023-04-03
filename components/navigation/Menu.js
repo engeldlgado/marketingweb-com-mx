@@ -28,7 +28,7 @@ const solutions = [
   {
     name: 'Marketing Digital',
     description: 'Lleva tu negocio al siguiente nivel con una estrategia de marketing digital efectiva.',
-    href: '#',
+    href: '/marketing-digital',
     icon: ShieldCheckIcon
   },
   {
