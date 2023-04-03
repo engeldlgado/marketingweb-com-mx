@@ -5,94 +5,11 @@ import { Fragment } from 'react'
 import Calendly from '../buttons/Calendly'
 import { LogoSection } from './LogoSection'
 
-const tiers = [
-  { name: 'Básico', href: '#', priceMonthly: 720, description: 'Optimización básica de SEO en tu sitio web.' },
-  {
-    name: 'Esencial',
-    href: '#',
-    priceMonthly: 1800,
-    description: 'Mejora el posicionamiento en motores de búsqueda con técnicas avanzadas de SEO.'
-  },
-  {
-    name: 'Premium',
-    href: '#',
-    priceMonthly: 4800,
-    description: 'Aumenta tu visibilidad en línea con una estrategia completa de posicionamiento web y SEO.'
-  }
-]
-const sections = [
-  {
-    name: 'Características',
-    features: [
-      { name: 'Optimización SEO básica en tu sitio web.', tiers: { Básico: true, Esencial: true, Premium: true } },
-      { name: 'Análisis de palabras clave para mejor posicionamiento.', tiers: { Básico: true, Esencial: true, Premium: true } },
-      { name: 'Generación de contenido optimizado para SEO.', tiers: { Esencial: true, Premium: true } },
-      { name: 'Auditorías de SEO y mejoras en la optimización.', tiers: { Esencial: 'Hasta 20 interiores', Premium: 'Hasta 50 interiores' } }
-    ]
-  },
-  {
-    name: 'Reportes',
-    features: [
-      { name: 'Reportes detallados del posicionamiento web.', tiers: { Básico: true, Esencial: true, Premium: true } },
-      { name: 'Análisis de la competencia y recomendaciones.', tiers: { Esencial: true, Premium: true } },
-      { name: 'Monitoreo constante del posicionamiento web.', tiers: { Premium: true } },
-      { name: 'Integración con herramientas de análisis y seguimiento.', tiers: { Premium: true } }
-    ]
-  },
-  {
-    name: 'Soporte',
-    features: [
-      { name: 'Soporte técnico especializado en SEO y posicionamiento web.', tiers: { Básico: true, Esencial: true, Premium: true } },
-      { name: 'Asesoramiento en la implementación de técnicas de SEO.', tiers: { Esencial: true, Premium: true } },
-      { name: 'Soporte y monitoreo continuo de la estrategia de SEO.', tiers: { Esencial: true, Premium: true } },
-      { name: 'Soporte telefónico y por correo electrónico.', tiers: { Premium: true } }
-    ]
-  }
-]
-const faqs = [
-  {
-    id: 1,
-    question: '¿Por qué es importante el SEO para mi sitio web?',
-    answer:
-  'El SEO es importante porque ayuda a mejorar la visibilidad y el posicionamiento de tu sitio web en los resultados de búsqueda. Esto puede aumentar el tráfico a tu sitio y ayudarte a llegar a tu público objetivo.'
-  },
-  {
-    id: 2,
-    question: '¿Cómo puedo mejorar el SEO de mi sitio web?',
-    answer:
-  'Para mejorar el SEO de tu sitio web, puedes realizar varias acciones como optimizar el contenido, mejorar la velocidad de carga, utilizar palabras clave relevantes y tener un diseño web responsive.'
-  },
-  {
-    id: 3,
-    question: '¿Qué son las palabras clave?',
-    answer:
-  'Las palabras clave son términos que los usuarios utilizan en los motores de búsqueda para encontrar información relacionada con un tema en particular. Es importante incluir palabras clave relevantes en tu sitio web para mejorar su SEO.'
-  },
-  {
-    id: 4,
-    question: '¿Cómo puedo medir el éxito de mi estrategia de SEO?',
-    answer:
-  'Puedes medir el éxito de tu estrategia de SEO mediante la utilización de herramientas de análisis como Google Analytics, que te permiten ver el tráfico a tu sitio web, el rendimiento de las palabras clave y otras métricas importantes.'
-  },
-  {
-    id: 5,
-    question: '¿Cuánto tiempo se tarda en ver resultados con una estrategia de SEO?',
-    answer:
-  'El tiempo que se tarda en ver resultados con una estrategia de SEO depende de varios factores, como la competencia en tu nicho y la calidad de tu contenido. En general, puede tomar varios meses para ver mejoras significativas en tu posicionamiento en los resultados de búsqueda.'
-  },
-  {
-    id: 6,
-    question: '¿Por qué es importante el contenido de calidad para el SEO?',
-    answer:
-  'El contenido de calidad es importante para el SEO porque los motores de búsqueda valoran el contenido que proporciona valor a los usuarios. El contenido de calidad puede mejorar tu posicionamiento en los resultados de búsqueda y atraer a más visitantes a tu sitio web.'
-  }
-]
-
 // function classNames (...classes) {
 //   return classes.filter(Boolean).join(' ')
 // }
 
-export default function Pricing () {
+export default function Pricing ({ tiers, sections, faqs }) {
   return (
     <div className='bg-white dark:bg-base-100'>
 
@@ -106,7 +23,7 @@ export default function Pricing () {
                 <h2 className='text-lg font-medium leading-6 text-gray-900 dark:text-gray-100'>{tier.name}</h2>
                 <p className='mt-4'>
                   <span className='text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100'>${tier.priceMonthly}</span>
-                  <span className='text-base font-medium text-gray-500 dark:text-gray-100'>/mes</span>
+                  <span className='text-base font-medium text-gray-500 dark:text-gray-100'>/año</span>
                 </p>
                 <p className='mt-4 text-sm text-gray-500 dark:text-gray-100'>{tier.description}</p>
                 {/* <a
@@ -210,7 +127,7 @@ export default function Pricing () {
                       <div>
                         <p>
                           <span className='text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-300'>${tier.priceMonthly}</span>
-                          <span className='text-base font-medium text-gray-500 dark:text-gray-200'>mxn /mes</span>
+                          <span className='text-base font-medium text-gray-500 dark:text-gray-200'>mxn /año</span>
                         </p>
                         <p className='mt-4 text-sm text-gray-500 dark:text-gray-300'>{tier.description}</p>
                       </div>

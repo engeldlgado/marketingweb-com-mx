@@ -22,10 +22,15 @@ const solutions = [
   {
     name: 'Diseño Web',
     description: 'Diseño web adaptado a tus objetivos de negocio para obtener los mejores resultados',
-    href: '#',
+    href: '/diseno-web',
     icon: CursorClickIcon
   },
-  { name: 'Marketing Digital', description: 'Lleva tu negocio al siguiente nivel con una estrategia de marketing digital efectiva.', href: '#', icon: ShieldCheckIcon },
+  {
+    name: 'Marketing Digital',
+    description: 'Lleva tu negocio al siguiente nivel con una estrategia de marketing digital efectiva.',
+    href: '#',
+    icon: ShieldCheckIcon
+  },
   {
     name: 'Redes sociales',
     description: 'Haz que tus publicaciones sean atractivas y genera un mayor engagement con tus seguidores.',
@@ -61,7 +66,7 @@ export default function Menu ({ setTheme, theme }) {
       <div className='relative z-20'>
         <div className='flex items-center justify-between px-4 py-5 mx-auto max-w-7xl sm:px-6 sm:py-4 lg:px-8 md:justify-start md:space-x-10'>
           <div className='-my-2 -mr-2 md:hidden'>
-            <Popover.Button className='inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500'>
+            <Popover.Button className='inline-flex items-center justify-center p-2 text-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500'>
               <span className='sr-only'>Abrir menu</span>
               <MenuIcon className='w-6 h-6' aria-hidden='true' />
             </Popover.Button>
@@ -156,9 +161,9 @@ export default function Menu ({ setTheme, theme }) {
                   </>
                 )}
               </Popover>
-              <a href='#' className='text-base transition-all drop-shadow-[0px_0px_2px_rgba(0,0,0,1)] duration-300 text-white font-medium hover:text-white hover:drop-shadow-[0px_0px_5px_rgba(0,0,0,1)] focus:outline-none focus:ring-0  focus:underline focus:underline-offset-8 dark:focus:text-cyan-500 focus:text-white'>
+              {/* <a href='#' className='text-base transition-all drop-shadow-[0px_0px_2px_rgba(0,0,0,1)] duration-300 text-white font-medium hover:text-white hover:drop-shadow-[0px_0px_5px_rgba(0,0,0,1)] focus:outline-none focus:ring-0  focus:underline focus:underline-offset-8 dark:focus:text-cyan-500 focus:text-white'>
                 Precios
-              </a>
+              </a> */}
               <Link href='/blog' className='text-base transition-all drop-shadow-[0px_0px_2px_rgba(0,0,0,1)] duration-300 text-white font-medium hover:text-white hover:drop-shadow-[0px_0px_5px_rgba(0,0,0,1)] focus:outline-none focus:ring-0  focus:underline focus:underline-offset-8 dark:focus:text-cyan-500 focus:text-white'>
                 Nuestro Blog
               </Link>
