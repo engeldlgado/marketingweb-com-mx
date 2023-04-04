@@ -59,7 +59,7 @@ export default function MidSection ({ posts }) {
       {/* Feature section with grid */}
       <div id='ventas' className='relative py-16 -mt-24 bg-white dark:bg-base-100 sm:pt-10 lg:pt-14 dark:bg-gradient-to-b dark:from-black dark:to-base-100'>
         <p className='max-w-[90%] md:max-w-[30%] mx-auto text-sm  text-center  font-semibold tracking-wider uppercase dark:text-white text-primary'>Soluciones Innovadoras</p>
-        <h1 className='max-w-[90%] md:max-w-[30%] mx-auto text-2xl font-extrabold tracking-tight text-center text-gray-900 dark:text-primary sm:text-4xl'>Servicios de Marketing Digital para tu Negocio</h1>
+        <h1 className='max-w-[90%] md:max-w-[30%] mx-auto text-2xl font-extrabold tracking-tight text-center text-gray-900 dark:text-primary sm:text-3xl'>Marketing Web Agencia de Posicionamiento Web y SEO para el Marketing Digital</h1>
         <div className='md:pt-10 lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
 
           <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
@@ -70,7 +70,7 @@ export default function MidSection ({ posts }) {
               </h2>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
-                  En <b>Marketing Web</b>, estamos orgullosos de ofrecer amplias técnicas de servicio de SEO que brindan a nuestros clientes las herramientas necesarias para mejorar el posicionamiento de sus sitios web en Google. Un ejemplo de esto es el caso de un vendedor de productos de floristería en la Ciudad de México que quería mejorar sus métricas de búsqueda. Con nuestra ayuda, lograron convertirse en el vendedor de flores mejor clasificado en su región. Nuestras prácticas de SEO tuvieron un papel importante en impulsar su sitio web al primer puesto de los resultados de búsqueda.
+                  En <b>Marketing Web</b>, estamos orgullosos de ofrecer amplias técnicas de servicio de <b>SEO</b> que brindan a nuestros clientes las herramientas necesarias para mejorar el <b>posicionamiento web</b> de sus sitios web en Google. Un ejemplo de esto es el caso de un vendedor de productos de floristería en la Ciudad de México que quería mejorar sus métricas de búsqueda. Con nuestra ayuda, lograron convertirse en el vendedor de flores mejor clasificado en su región. Nuestras prácticas de <b>SEO</b> tuvieron un papel importante en impulsar su sitio web al primer puesto de los resultados de búsqueda.
                 </p>
 
               </div>
@@ -108,7 +108,7 @@ export default function MidSection ({ posts }) {
                         <path d='M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z' />
                       </svg>
                       <p className='relative'>
-                        Marketing Web me ayudó a posicionar mi florería en el primer lugar de búsqueda en mi área. Su experiencia en SEO y enfoque personalizado tuvo un impacto significativo en mi negocio. ¡Los recomiendo altamente!
+                        <strong>Marketing Web</strong> me ayudó a posicionar mi florería en el primer lugar de búsqueda en mi área. Su experiencia en <strong>Posicionamiento Web y SEO</strong> y enfoque personalizado tuvo un impacto significativo en mi negocio. ¡Los recomiendo altamente!
                       </p>
                     </div>
 
@@ -133,7 +133,7 @@ export default function MidSection ({ posts }) {
               </h2>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
-                  Nuestro equipo de expertos en diseño web y SEO puede ayudar a crear un sitio web atractivo y fácil de usar que esté optimizado para los motores de búsqueda. Mejore su presencia en línea y aumente sus ventas con nuestro diseño web personalizado.
+                  Nuestro equipo de expertos en diseño web y <strong>Posicionamiento Web SEO</strong> puede ayudar a crear un sitio web atractivo y fácil de usar que esté optimizado para los motores de búsqueda. Mejore su presencia en línea y aumente sus ventas con nuestro diseño web personalizado.
                 </p>
 
               </div>
@@ -181,7 +181,7 @@ export default function MidSection ({ posts }) {
               </h2>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
-                  Optimizamos sus aplicaciones empresariales y mejoramos el rendimiento del código para maximizar la eficiencia y la productividad de su negocio. Aproveche al máximo sus aplicaciones y aumente su visibilidad en línea con Marketing Web.
+                  Optimizamos sus aplicaciones empresariales y mejoramos el rendimiento del código para maximizar la eficiencia y la productividad de su negocio. Aproveche al máximo sus aplicaciones y aumente su visibilidad en línea con <strong>Marketing Web</strong>.
                 </p>
 
               </div>
@@ -225,11 +225,11 @@ export default function MidSection ({ posts }) {
             Soluciones Inmediatas
           </p>
           <p className='mx-auto mt-5 text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
-            En Marketing Web, solucionamos tus problemas de código empresarial y te ayudamos a destacar en línea con nuestros servicios de marketing digital. Agenda una cita ahora con nuestros expertos.
+            En <strong>Marketing Web</strong>, solucionamos tus problemas de código empresarial y te ayudamos a destacar en línea con nuestros servicios de <strong>marketing digital</strong>. Agenda una cita ahora con nuestros expertos.
           </p>
 
           <div className='mt-12'>
-            <Image className='rounded-lg shadow-lg' src='/images/codigo.jpg' alt='Marketing Digital' width='1920' height='980' />
+            <Image className='rounded-lg shadow-lg' src='/images/codigo.jpg' alt='Estrategias de SEO para el éxito del marketing web' width='1920' height='980' />
             <div className='absolute bottom-0 left-0 z-50 w-full h-72 bg-gradient-to-t from-white via-transparent to-transparent dark:from-base-100' />
           </div>
         </div>
@@ -242,7 +242,7 @@ export default function MidSection ({ posts }) {
             Destaca en línea con nuestras soluciones personalizadas.
           </p>
           <p className='mx-auto mt-5 text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
-            En nuestra agencia de marketing digital, nos especializamos en el diseño web, SEO y gestión de redes sociales. Creamos estrategias innovadoras y efectivas para ayudar a tu negocio a sobresalir en línea y atraer más clientes potenciales.
+            En nuestra agencia de <strong>marketing digital</strong>, nos especializamos en el <strong>diseño web</strong>, <strong>SEO</strong> y gestión de redes sociales. Creamos estrategias innovadoras y efectivas para ayudar a tu negocio a sobresalir en línea y atraer más clientes potenciales.
           </p>
 
           <div className='mt-12'>
@@ -263,7 +263,7 @@ export default function MidSection ({ posts }) {
           </div>
 
           <p className='py-16 mx-auto text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
-            En nuestra agencia de marketing digital, te ofrecemos soluciones personalizadas para mejorar la presencia en línea de tu negocio. Contáctanos para obtener más información sobre cómo podemos ayudarte a alcanzar tus objetivos de marketing.
+            En nuestra agencia de <strong>marketing digital</strong>, te ofrecemos soluciones personalizadas para mejorar la presencia en línea de tu negocio. Contáctanos para obtener más información sobre cómo podemos ayudarte a alcanzar tus objetivos de <strong>marketing digital</strong>.
           </p>
         </div>
       </div>
@@ -276,7 +276,7 @@ export default function MidSection ({ posts }) {
               <Image
                 className='object-cover lg:h-full lg:w-full'
                 src='/images/marketing-digital-seo.jpg'
-                alt='Desbloquea el potencial de tu negocio en línea'
+                alt='Agencia de Marketing Digital expertos en SEO'
                 fill
               />
             </div>

@@ -14,7 +14,7 @@ export default function Metricas () {
         <Image
           className='object-cover w-full h-full'
           src='/images/contacto.jpg'
-          alt='Mentoring y soporte especializado'
+          alt='Contancto con Marketing Web Agencia de Posicionamiento Web y SEO para el Marketing Digital'
           width={927}
           height={504}
         />
@@ -31,7 +31,7 @@ export default function Metricas () {
               Obtén datos útiles que te ayudarán a hacer crecer tu negocio
             </p>
             <p className='mt-5 text-lg text-gray-300'>
-              En Marketing Web, nos enfocamos en ofrecer soluciones de calidad en Marketing Digital, Diseño Web y SEO para mejorar la eficiencia y productividad de tu negocio.
+              En <strong>Marketing Web</strong>, nos enfocamos en ofrecer soluciones de calidad en Marketing Digital, Diseño Web y SEO para mejorar la eficiencia y productividad de tu negocio.
             </p>
             <div className='grid grid-cols-1 mt-12 gap-y-12 gap-x-6 sm:grid-cols-2'>
               {metricas.map((item) => (

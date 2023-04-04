@@ -10,7 +10,7 @@ export default function Home ({ posts }) {
     {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: 'Agencia de Posicionamiento Web y SEO para el Marketing Web Digital',
+      name: 'Marketing Web Agencia de Posicionamiento Web y SEO para el Marketing Digital',
       alternateName: 'Marketing Web',
       url: 'https://marketingweb.com.mx',
       logo: 'https://marketingweb.com.mx/images/logo.jpg',
@@ -34,11 +34,11 @@ export default function Home ({ posts }) {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       url: 'https://marketingweb.com.mx',
-      name: 'Agencia de Posicionamiento Web y SEO para el Marketing Web Digital',
-      description: 'Mejora tu posicionamiento en línea con nuestros servicios de SEO y optimización de sitios web. Agencia Marketing Web y digital. SEO Google.',
+      name: 'Marketing Web Agencia de Posicionamiento Web y SEO para el Marketing Digital',
+      description: 'Con Marketing Web mejora tu posicionamiento web en línea con nuestros servicios de SEO y optimización de sitios web. Agencia Marketing digital. SEO Google.',
       publisher: {
         '@type': 'Organization',
-        name: 'Agencia de Posicionamiento Web y SEO para el Marketing Web Digital',
+        name: 'Marketing Web Agencia de Posicionamiento Web y SEO para el Marketing Digital',
         logo: {
           '@type': 'ImageObject',
           url: 'https://marketingweb.com.mx/images/logo.jpg'
@@ -56,8 +56,8 @@ export default function Home ({ posts }) {
   ]
   return (
     <Layout
-      title='Agencia de Posicionamiento Web y SEO para el Marketing Web Digital'
-      description='Mejora tu posicionamiento en línea con nuestros servicios de SEO y optimización de sitios web. Agencia Marketing Web y digital. SEO Google.'
+      title='Marketing Web Agencia de Posicionamiento Web y SEO para el Marketing Digital'
+      description='Con Marketing Web mejora tu posicionamiento web en línea con nuestros servicios de SEO y optimización de sitios web. Agencia Marketing digital. SEO Google.'
       ogType='website'
       ogImage='https://marketingweb.com.mx/images/logo.jpg'
       ogUrl='https://marketingweb.com.mx'
