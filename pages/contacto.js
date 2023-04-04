@@ -1,7 +1,8 @@
+import Calendly from '@/components/buttons/Calendly'
 import ServicesHero from '@/components/hero/ServicesHero'
 import Layout from '@/components/layout/MainLayout'
 import { LocationMarkerIcon, MailOpenIcon, PhoneIcon } from '@heroicons/react/outline'
-import { InlineWidget } from 'react-calendly'
+import Image from 'next/image'
 
 const Contacto = () => {
   return (
@@ -61,13 +62,42 @@ const Contacto = () => {
                   </div>
                 </div>
               </div>
-              <div className='mt-6 text-gray-500'>
-                <InlineWidget
-                  url='https://calendly.com/marketingweb/tienes-dudas-para-emprender-tu-nuevo-proyecto-te-ayudamos'
-                  styles={{
-                    height: '800px'
-                  }}
-                />
+              <div className='mt-16 text-gray-500 bg-white dark:bg-base-100'>
+                <div className='relative'>
+                  <div className='absolute inset-0 flex flex-col' aria-hidden='true'>
+
+                    <div className='flex-1' />
+                  </div>
+                  <div className='relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 md:mb-36'>
+                    <div className='overflow-hidden rounded-lg shadow-xl bg-gradient-to-r from-orange-400 to-pink-500 lg:grid lg:grid-cols-2 lg:gap-4'>
+                      <div className='px-6 pt-10 pb-12 sm:px-16 sm:pt-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20'>
+                        <div className='lg:self-center'>
+                          <h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>
+                            <span className='block'>¿Estás listo para sumergirte?</span>
+                            <span className='block text-red-900'>Solicita tu cotización gratuita ahora</span>
+                          </h2>
+                          <p className='mt-4 text-lg leading-6 text-orange-50'>
+                            Solicita tu cotización gratuita ahora y comienza a disfrutar de todos los beneficios que te ofrece Marketing Web
+                          </p>
+
+                          <Calendly
+                            className='inline-flex items-center px-6 py-3 mt-8 text-base font-medium text-red-600 bg-orange-100 border border-transparent rounded-md shadow hover:text-red-500'
+                            text='Cotización Gratuita'
+                          />
+                        </div>
+                      </div>
+                      <div className='-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1'>
+                        <Image
+                          className='object-cover object-left-top transform translate-x-6 translate-y-6 rounded-md sm:translate-x-16 lg:translate-y-20'
+                          src='/images/search-console.jpg'
+                          alt='Página de Google Search Console con un informe de SEO de una página web de nuestro cliente'
+                          width={1364}
+                          height={1000}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
