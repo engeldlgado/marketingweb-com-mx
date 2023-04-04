@@ -1,12 +1,21 @@
 import { useStore } from '@/Context/Store'
 import Head from 'next/head'
 // import Navigation from '../navigation/Navigation'
+import { useEffect, useState } from 'react'
 import WhatsApp from '../buttons/WhatsApp'
 import Menu from '../navigation/Menu'
 import { Footer } from '../sections/Footer'
 
 const Layout = ({ children, title, description, ogType, ogUrl, ogImage, ogDescription, schemaObject }) => {
   const { theme, setTheme } = useStore()
+  const [pageLoaded, setPageLoaded] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setPageLoaded(true)
+    }, 1500)
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <>
@@ -54,7 +63,9 @@ const Layout = ({ children, title, description, ogType, ogUrl, ogImage, ogDescri
         <section id='contact' data-theme='light' />
         {children}
       </main>
-      <WhatsApp />
+      {/* Dynamic import whatsapp and render it */}
+      {pageLoaded && <WhatsApp />}
+
       <Footer />
     </>
   )
