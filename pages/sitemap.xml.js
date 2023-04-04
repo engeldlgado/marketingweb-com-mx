@@ -1,7 +1,13 @@
 // pages/sitemap.xml.js
+import LRUCache from 'lru-cache'
 import { getAllPostsFromAPI } from '../utils/functions'
 const EXTERNAL_DATA_URL = process.env.NEXT_PUBLIC_WORDPRESS_URL
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
+
+const cache = new LRUCache({
+  max: 1000,
+  maxAge: 1000 * 60 * 60 * 24 // 1 day
+})
 
 function generateSiteMap (posts) {
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -71,16 +77,32 @@ function SiteMap () {
 }
 
 export async function getServerSideProps ({ res }) {
-  // We make an API call to gather the URLs for our site
+  const cacheKey = 'sitemap'
+
+  // Check if the response is already in the cache
+  const cachedResponse = cache.get(cacheKey)
+  if (cachedResponse) {
+    res.setHeader('Content-Type', 'text/xml')
+    res.write(cachedResponse)
+    res.end()
+
+    return {
+      props: {}
+    }
+  }
+
+  // If the response is not in the cache, make the API call
   const request = await getAllPostsFromAPI({
     url: EXTERNAL_DATA_URL
   })
 
-  // We generate the XML sitemap with the posts data
+  // Generate the XML sitemap with the posts data
   const sitemap = generateSiteMap(request)
 
+  // Store the response in the cache
+  cache.set(cacheKey, sitemap)
+
   res.setHeader('Content-Type', 'text/xml')
-  // we send the XML to the browser
   res.write(sitemap)
   res.end()
 
