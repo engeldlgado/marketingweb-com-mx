@@ -167,9 +167,9 @@ export default function Menu ({ setTheme, theme }) {
               <Link href='/blog' className='text-base transition-all drop-shadow-[0px_0px_2px_rgba(0,0,0,1)] duration-300 text-white font-medium hover:text-white hover:drop-shadow-[0px_0px_5px_rgba(0,0,0,1)] focus:outline-none focus:ring-0  focus:underline focus:underline-offset-8 dark:focus:text-cyan-500 focus:text-white'>
                 Nuestro Blog
               </Link>
-              <a href='/contacto' className='text-base transition-all drop-shadow-[0px_0px_2px_rgba(0,0,0,1)] duration-300 text-white font-medium hover:text-white hover:drop-shadow-[0px_0px_5px_rgba(0,0,0,1)] focus:outline-none focus:ring-0  focus:underline focus:underline-offset-8 dark:focus:text-cyan-500 focus:text-white'>
+              <Link href='/contacto' className='text-base transition-all drop-shadow-[0px_0px_2px_rgba(0,0,0,1)] duration-300 text-white font-medium hover:text-white hover:drop-shadow-[0px_0px_5px_rgba(0,0,0,1)] focus:outline-none focus:ring-0  focus:underline focus:underline-offset-8 dark:focus:text-cyan-500 focus:text-white'>
                 Contacto
-              </a>
+              </Link>
 
             </Popover.Group>
 
