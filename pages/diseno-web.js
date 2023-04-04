@@ -128,7 +128,7 @@ const faqs = [
   }
 ]
 
-const PosicionamientoWeb = () => {
+const DisenoWeb = () => {
   const [pageLoaded, setPageLoaded] = useState(false)
 
   useEffect(() => {
@@ -287,4 +287,4 @@ const PosicionamientoWeb = () => {
   )
 }
 
-export default PosicionamientoWeb
+export default DisenoWeb

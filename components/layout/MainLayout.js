@@ -1,6 +1,7 @@
 import { useStore } from '@/Context/Store'
 import Head from 'next/head'
 // import Navigation from '../navigation/Navigation'
+import WhatsApp from '../buttons/WhatsApp'
 import Menu from '../navigation/Menu'
 import { Footer } from '../sections/Footer'
 
@@ -53,6 +54,7 @@ const Layout = ({ children, title, description, ogType, ogUrl, ogImage, ogDescri
         <section id='contact' data-theme='light' />
         {children}
       </main>
+      <WhatsApp />
       <Footer />
     </>
   )

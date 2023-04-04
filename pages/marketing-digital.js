@@ -126,7 +126,7 @@ const faqs = [
   }
 ]
 
-const PosicionamientoWeb = () => {
+const MarketingDigital = () => {
   const [pageLoaded, setPageLoaded] = useState(false)
 
   useEffect(() => {
@@ -285,4 +285,4 @@ const PosicionamientoWeb = () => {
   )
 }
 
-export default PosicionamientoWeb
+export default MarketingDigital

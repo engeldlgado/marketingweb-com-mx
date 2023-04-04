@@ -127,7 +127,7 @@ const faqs = [
   }
 ]
 
-const PosicionamientoWeb = () => {
+const RedesSociales = () => {
   const [pageLoaded, setPageLoaded] = useState(false)
 
   useEffect(() => {
@@ -280,4 +280,4 @@ const PosicionamientoWeb = () => {
   )
 }
 
-export default PosicionamientoWeb
+export default RedesSociales
