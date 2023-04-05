@@ -1,6 +1,7 @@
 import { useStore } from '@/Context/Store'
 import Head from 'next/head'
 // import Navigation from '../navigation/Navigation'
+import Script from 'next/script'
 import { useEffect, useState } from 'react'
 import WhatsApp from '../buttons/WhatsApp'
 import Menu from '../navigation/Menu'
@@ -52,8 +53,20 @@ const Layout = ({ children, title, description, ogType, ogUrl, ogImage, ogDescri
             />
           ))
         )}
-
       </Head>
+      <Script
+        src='https://www.googletagmanager.com/gtag/js?id=G-2L6KQG84QD'
+        strategy='afterInteractive'
+      />
+      <Script id='google-analytics' strategy='afterInteractive'>
+        {`
+           window.dataLayer = window.dataLayer || [];
+           function gtag(){dataLayer.push(arguments);}
+           gtag('js', new Date());
+
+           gtag('config', 'G-2L6KQG84QD');
+        `}
+      </Script>
       <Menu
         theme={theme}
         setTheme={setTheme}
