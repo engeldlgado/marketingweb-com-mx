@@ -56,8 +56,8 @@ export default function Home ({ posts }) {
   ]
   return (
     <Layout
-      title='Marketing Web Agencia de Posicionamiento Web y SEO para el Marketing Digital'
-      description='Con Marketing Web mejora tu posicionamiento web en línea con nuestros servicios de SEO y optimización de sitios web. Agencia Marketing digital. SEO Google.'
+      title='Marketing Web Agencia de Posicionamiento Web, SEO y Marketing Digital'
+      description='Con Marketing Web mejora tu posicionamiento web, servicios de SEO y optimización de sitios web.'
       ogType='website'
       ogImage='https://marketingweb.com.mx/images/logo.jpg'
       ogUrl='https://marketingweb.com.mx'
