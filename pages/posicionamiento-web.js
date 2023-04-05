@@ -142,7 +142,7 @@ const PosicionamientoWeb = () => {
       <ServicesHero
         title='Posicionamiento Web'
         subtitle='Mejora tu posicionamiento en línea con nuestros servicios de SEO y optimización de sitios web. Agencia Marketing Web y digital. SEO Google.'
-        image='/images/posicionamiento-web.jpg'
+        image='/images/agencia-seo-marketing-web.jpg'
         subImage='/images/grafico-seo.png'
       />
 
