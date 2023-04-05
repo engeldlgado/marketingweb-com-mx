@@ -64,13 +64,13 @@ export default function MidSection ({ posts }) {
 
           <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
             <div className='pt-6'>
-              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Llega a los primeros lugares</p>
-              <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-                Incrementa tus ventas
-              </h2>
+              <h2 className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Servicios de SEO</h2>
+              <h3 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+                Mejora tu Posicionamiento en los Motores de Búsqueda
+              </h3>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
-                  En <b>Marketing Web</b>, estamos orgullosos de ofrecer amplias técnicas de servicio de <b>SEO</b> que brindan a nuestros clientes las herramientas necesarias para mejorar el <b>posicionamiento web</b> de sus sitios web en Google. Un ejemplo de esto es el caso de un vendedor de productos de floristería en la Ciudad de México que quería mejorar sus métricas de búsqueda. Con nuestra ayuda, lograron convertirse en el vendedor de flores mejor clasificado en su región. Nuestras prácticas de <b>SEO</b> tuvieron un papel importante en impulsar su sitio web al primer puesto de los resultados de búsqueda.
+                  El <b>SEO</b> es una estrategia clave para mejorar el <b>posicionamiento de tu sitio web</b> en los resultados de búsqueda de Google y otros motores de búsqueda. En nuestra agencia, contamos con <b>expertos en SEO</b> com más de 32 años de experiencia que te ayudarán a optimizar tu sitio web y aumentar su tráfico orgánico.
                 </p>
 
               </div>
@@ -122,18 +122,18 @@ export default function MidSection ({ posts }) {
           </div>
         </div>
       </div>
-      <div id='social' className='relative bg-white dark:bg-base-100'>
+      <div id='diseno-web' className='relative bg-white dark:bg-base-100'>
         <div className=' lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
 
           <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
             <div className='pt-6'>
-              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Destaca entre la competencia con un</p>
-              <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-                Diseño web impactante
-              </h2>
+              <h2 className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Diseño Web</h2>
+              <h3 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+                Un Diseño Web Atractivo y Funcional
+              </h3>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
-                  Nuestro equipo de expertos en diseño web y <strong>Posicionamiento Web SEO</strong> puede ayudar a crear un sitio web atractivo y fácil de usar que esté optimizado para los motores de búsqueda. Mejore su presencia en línea y aumente sus ventas con nuestro diseño web personalizado.
+                  Un diseño web atractivo y funcional es esencial para atraer y retener a los visitantes de tu sitio web. En nuestra agencia de Marketing Web, contamos con diseñadores web expertos que <b>crearán un sitio web adaptado a tus necesidades</b> y objetivos de negocio.
                 </p>
 
               </div>
@@ -160,7 +160,7 @@ export default function MidSection ({ posts }) {
 
                     <footer className='mt-4 text-lg font-medium text-white md:flex-grow'>
                       <p className=' drop-shadow-sm'>
-                        Diseños Únicos y Personalizados
+                        Diseño web con estilo, experiencia y pasión; crea un sitio atractivo, funcional y en acción.
                       </p>
                     </footer>
                   </blockquote>
@@ -175,13 +175,13 @@ export default function MidSection ({ posts }) {
 
           <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
             <div className='pt-6'>
-              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Código de calidad</p>
-              <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-                Aplicaciones Empresariales
-              </h2>
+              <h2 className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Marketing Digital</h2>
+              <h3 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+                Un Conjunto Completo de Técnicas y Estrategias
+              </h3>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
-                  Optimizamos sus aplicaciones empresariales y mejoramos el rendimiento del código para maximizar la eficiencia y la productividad de su negocio. Aproveche al máximo sus aplicaciones y aumente su visibilidad en línea con <strong>Marketing Web</strong>.
+                  El <b>marketing digital</b> es un conjunto de técnicas y estrategias utilizadas para promocionar productos o servicios en línea. En nuestra agencia de <b>Marketing Web</b>, ofrecemos servicios de marketing digital completos, que incluyen desde el diseño web hasta la gestión de redes sociales y publicidad en línea.
                 </p>
 
               </div>
@@ -208,7 +208,55 @@ export default function MidSection ({ posts }) {
 
                     <footer className='mt-4 text-lg font-medium text-white md:flex-grow'>
                       <p className=' drop-shadow-sm'>
-                        Aplicaciones Empresariales a la medida
+                        Potencia tu marca en línea, alcanza tus objetivos; marketing digital completo, una solución efectiva.
+                      </p>
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='social' className='relative bg-white dark:bg-base-100'>
+        <div className=' lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
+
+          <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
+            <div className='pt-6'>
+              <h2 className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Manejo de Redes Sociales</h2>
+              <h3 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+                Conecta con tu Audiencia a través de las Redes Sociales
+              </h3>
+              <div className='mt-6 space-y-6 text-gray-500'>
+                <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
+                  Las redes sociales son una herramienta poderosa para conectar con tu audiencia y promocionar tu marca en línea. En nuestra agencia, nos enfocamos en el manejo efectivo de redes sociales, con el objetivo de aumentar la interacción con tu audiencia y mejorar tu presencia en línea.
+                </p>
+
+              </div>
+            </div>
+
+          </div>
+          <div className='relative order-first py-16 md:order-last lg:py-0 '>
+
+            <div className='relative max-w-md px-4 pb-20 mx-auto sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none'>
+              {/* Testimonial card */}
+              <div className='relative pt-64 pb-10 overflow-hidden duration-500 transform shadow-xl rounded-2xl hover:scale-105 min-h-[550px]'>
+                <Image
+                  className='absolute inset-0 object-cover w-full h-full'
+                  src='/images/manejo-redes-sociales-pymes.jpg'
+                  alt='Manejo de redes sociales para pequeñas y medianas empresas'
+                  width={1152}
+                  height={768}
+                />
+                {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
+                <div className='absolute inset-0 opacity-80 bg-gradient-to-t from-primary to-transparent' />
+                <div className='absolute px-8 bottom-10'>
+
+                  <blockquote className='h-full mt-8'>
+
+                    <footer className='mt-4 text-lg font-medium text-white md:flex-grow'>
+                      <p className=' drop-shadow-sm'>
+                        Conecta con tu audiencia, expande tu marca; maneja tus redes con éxito y llega al top en línea.
                       </p>
                     </footer>
                   </blockquote>
@@ -302,7 +350,7 @@ export default function MidSection ({ posts }) {
       <div className='relative py-16 bg-white dark:bg-base-100 sm:py-24 lg:py-24'>
         <div className='relative'>
           <div className='max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
-            <h3 className='text-base font-semibold tracking-wider uppercase dark:text-primary text-secondary'>Aprende Cada día más</h3>
+            <h3 className='text-base font-semibold tracking-wider uppercase dark:text-primary text-secondary'>Crece Cada día más</h3>
             <p className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl'>
               Recursos Útiles
             </p>
