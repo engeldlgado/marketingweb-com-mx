@@ -138,8 +138,8 @@ const RedesSociales = () => {
   }, [])
   return (
     <Layout
-      title='Servicios de Manejo de Redes Sociales para Mejorar tu Presencia en Línea'
-      description='Mejora tu presencia en línea con nuestros servicios de manejo de redes sociales. Agencia especializada en diseño y estrategias digitales para redes sociales. Diseño de contenido y mucho más.'
+      title='Manejo de redes sociales, Campañas en Facebook Instagram Twitter y TikTok '
+      description='Nuestra agencia ofrece servicios personalizados de manejo de redes sociales y campañas en Facebook, Instagram, Twitter y TikTok. Contáctanos ahora mismo!.'
       canonical='https://marketingweb.com.mx/redes-sociales'
     >
       <ServicesHero
@@ -154,10 +154,10 @@ const RedesSociales = () => {
 
           <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
             <div className='pt-6'>
-              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Estrategias de Manejo de Redes Sociales para Impulsar tu Negocio</p>
-              <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-                Servicios de Manejo de Redes Sociales
-              </h2>
+              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Manejo de Redes Sociales para Impulsar tu Negocio</p>
+              <h1 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+                Manejo de redes sociales
+              </h1>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
                   Ofrecemos soluciones de manejo de redes sociales adaptadas a las necesidades y objetivos de cada cliente. Nuestros servicios incluyen diseño de contenido, estrategias de publicación, análisis de métricas, entre otros.
@@ -203,13 +203,13 @@ const RedesSociales = () => {
         <div className=' lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
           <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
             <div className='pt-6'>
-              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Manejo de Redes Sociales</p>
+              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Campañas de Calidad</p>
               <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-                Gestión Profesional de tus Redes Sociales
+                Campañas en las redes sociales
               </h2>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
-                  Ofrecemos servicios de manejo de redes sociales que incluyen la creación y gestión de perfiles, publicación de contenido y análisis de estadísticas para que puedas llegar a tu audiencia de manera efectiva y aumentar la interacción con tus seguidores.
+                  Creamos y ejecutamos campañas de redes sociales en diversas plataformas, incluyendo Facebook, Instagram, Twitter y TikTok, que se adapten a tus objetivos de negocio y te ayuden a conectarte con tus seguidores y potenciales clientes.
                 </p>
               </div>
             </div>
@@ -243,12 +243,12 @@ const RedesSociales = () => {
       </div>
       <div id='work' className='relative bg-white dark:bg-base-100 sm:pt-10 lg:pt-24'>
         <div className='max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
-          <h2 className='text-base font-semibold tracking-wider uppercase dark:text-white text-primary'>Gestión de Redes Sociales Personalizada para Atraer Más Clientes</h2>
-          <p className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-            Destaca en las redes sociales con nuestras soluciones de gestión de redes sociales.
-          </p>
+          <p className='text-base font-semibold tracking-wider uppercase dark:text-white text-primary'>Precios Competitivos</p>
+          <h3 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+            Precio Manejo de redes sociales
+          </h3>
           <p className='mx-auto mt-5 text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
-            Ofrecemos gestión de redes sociales personalizada para aumentar tu presencia en línea. Creamos contenido y campañas publicitarias para destacar en el mundo digital. Optimizamos la experiencia para aumentar la tasa de conversión y la visibilidad en línea de tu negocio. Haz que tu marca sea la cara de tu negocio en línea con nuestros servicios.
+            Nuestros precios de manejo de redes sociales varían según la cantidad de plataformas que se manejen y la cantidad de publicaciones que se programen. Contáctanos para obtener más información sobre nuestros paquetes de precios.
           </p>
 
           <div className='mt-12'>
@@ -268,8 +268,12 @@ const RedesSociales = () => {
             </div>
           </div>
 
+          <h4 className='mt-20 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-3xl'>
+            Manejo de redes sociales paquetes
+          </h4>
+
           <p className='py-16 mx-auto text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
-            Contáctanos ahora para conocer más sobre cómo podemos ayudarte a crecer en línea a través de nuestra gestión de redes sociales personalizada que atrae a tu público objetivo y mejora la experiencia del usuario en línea.
+            Ofrecemos paquetes de manejo de redes sociales personalizados para satisfacer las necesidades de tu negocio. Ya sea que necesites ayuda para una o varias plataformas, tenemos un paquete que se adapta a ti.
           </p>
         </div>
       </div>
