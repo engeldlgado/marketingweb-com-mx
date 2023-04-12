@@ -3,45 +3,73 @@ const puppeteer = require('puppeteer')
 
 function checkContentQuality (content, key) {
   const keyword = key.toLowerCase()
-  const keywordDensity = (content.match(new RegExp(keyword, 'gi')) || []).length / content.split(' ').length
+  const cleanContent = content.replace(/<[^>]*>/gi, ' ').replace(/class="[^"]*"/gi, '')
+    .replace(/id="[^"]*"/gi, '').replace(/&nbsp;/gi, '')
+  // Remove all the spaces that are repeated more than once
+    .replace(/\s+/g, ' ')
+
+  const keywordDensity = (cleanContent.match(new RegExp(keyword, 'gi')) || []).length / cleanContent.split(' ').length
 
   let score = 0
 
-  if (content.length >= 500) {
+  if (cleanContent.length >= 500) {
     score += 10
+    console.log('content length +10')
   }
 
   if (keywordDensity > 0 && keywordDensity <= 0.02) {
     score += 25
+    console.log('keyword density < 0.02 +25')
   } else if (keywordDensity > 0.02 && keywordDensity <= 0.03) {
     score += 60
+    console.log('keyword density < 0.03 & > 0.02 +60')
   } else if (keywordDensity > 0.03) {
     score += 10
+    console.log('keyword density > 0.03 +10')
   }
 
-  const headings = content.match(/<h[1-6]>.*?<\/h[1-6]>/gi)
+  const headings = content.match(/<h[1-6][^>]*>.*?<\/h[1-6]>/gi)
   if (headings && headings.length > 0) {
-    const h1Count = (content.match(/<h1>.*?<\/h1>/gi) || []).length
+    const h1Count = (content.match(/<h1[^>]*>.*?<\/h1>/gi) || []).length
     if (h1Count === 1) {
       score += 10
+      console.log('h1 count +10')
+    } else {
+      score -= 10
     }
-    const h2Count = (content.match(/<h2>.*?<\/h2>/gi) || []).length
+    const h2Count = (content.match(/<h2[^>]*>.*?<\/h2>/gi) || []).length
     if (h2Count >= 1 && h2Count <= 3) {
       score += 15
+      console.log('h2 count +15')
+    } else {
+      score -= 10
+      console.log('Tiene más de 3 h2')
     }
-    const h3Count = (content.match(/<h3>.*?<\/h3>/gi) || []).length
+    const h3Count = (content.match(/<h3[^>]*>.*?<\/h3>/gi) || []).length
     if (h3Count >= 1 && h3Count <= 5) {
       score += 15
+      console.log('h3 count +15')
+    } else {
+      score -= 10
+      console.log('Tiene más de 5 h3')
     }
   }
 
   if (new Set(content.split(' ')).size > content.split(' ').length * 0.9) {
     score += 10
+    console.log('unique words +10')
   }
 
-  const fleschScore = 206.835 - (1.015 * (content.split(' ').length / (content.split('.').length + content.split('?').length + content.split('!').length))) - (84.6 * (content.match(/[,:;"()[\]{}<>@#$%^&*+=_`~]/g) || []).length / content.split(' ').length)
-  if (fleschScore >= 60) {
-    score += 15
+  // si el contenido es en inglés de acuerdo a la declaracion lang calcular el flesch reading ease
+
+  const lang = content.match(/<html lang=".*?">/gi)
+
+  if (lang && lang[0].includes('en')) {
+    const fleschScore = 206.835 - (1.015 * (content.split(' ').length / (content.split('.').length + content.split('?').length + content.split('!').length))) - (84.6 * (content.match(/[,:;"()[\]{}<>@#$%^&*+=_`~]/g) || []).length / content.split(' ').length)
+    if (fleschScore >= 60) {
+      score += 15
+      console.log('flesch score +15')
+    }
   }
 
   return Math.round((score / 100) * 100)
@@ -250,7 +278,7 @@ function checkHeadersAndHTMLTags (html) {
       new RegExp(`<${tag}[^>]*>.*?</${tag}>`, 'gi')
     )
     if (headerEls && headerEls.length > 0) {
-      score += 10
+      score += 10 / headerEls.length
       headerEls.forEach((header) => {
         const text = header
           .replace(new RegExp(`<${tag}[^>]*>`, 'i'), '')
@@ -288,6 +316,7 @@ function checkHeadersAndHTMLTags (html) {
     if (missingH1toH3 && missingH1toH3.length > 0) {
       // Mostrar solo las etiquetas faltantes de h1 a h3:
       feedback.headerAndHTMLtagsObject.tips[0].sugestions.push(`Se encontraron encabezados faltantes que son importantes para la estructura de la página: ${missingH1toH3.join(', ')}.`)
+      score -= 10
     }
     if (missingH4toH6 && missingH4toH6.length > 0) {
       // Mostrar solo las etiquetas faltantes de h4 a h6:
@@ -443,6 +472,10 @@ function checkHeadersAndHTMLTags (html) {
     feedback.headerAndHTMLtagsObject.tips[0].orderedHeaders = correctOrder
   }
 
+  if (score > 100) {
+    score = 100
+  }
+
   feedback.headerAndHTMLtagsObject.score = score
   return feedback
 }
@@ -515,10 +548,6 @@ async function analyzeContent (url, keyword) {
     const content = html
       .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
       .replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, '')
-      .replace(/<[^>]*>/gi, ' ').replace(/class="[^"]*"/gi, '')
-      .replace(/id="[^"]*"/gi, '').replace(/&nbsp;/gi, '')
-      // Remove all the spaces that are repeated more than once
-      .replace(/\s+/g, ' ')
 
     const contentQuality = checkContentQuality(content, keyword)
     const optimizedTitleAndMeta = optimizeTitleAndMeta(title, metaDescription, keyword, metas, canonical, structuredData)
@@ -538,7 +567,13 @@ async function analyzeContent (url, keyword) {
     const finalScore =
       (contentQuality + optimizedTitleAndMeta.titleAndMetaObject.score + headersAndHTMLTags.headerAndHTMLtagsObject.score) / 3
     result.finalScore = finalScore
-    console.log('finalScore', result.headersAndHTMLTag)
+
+    console.log(result.finalScore)
+    console.log(result.url)
+    console.log(result.keyword)
+    console.log(result.contentQuality)
+    console.log(result.optimizedTitleAndMeta)
+    console.log(result.headersAndHTMLTag.tips)
 
     return result
   } catch (error) {
