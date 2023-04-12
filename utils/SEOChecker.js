@@ -405,7 +405,7 @@ async function analyzeContent (url, keyword) {
     const finalScore =
       (contentQuality + optimizedTitleAndMeta.score + headersAndHTMLTags.headerAndHTMLtagsObject.score) / 3
     result.finalScore = finalScore
-    console.log('finalScore', result)
+    console.log('finalScore', result.headersAndHTMLTags)
 
     return result
   } catch (error) {
@@ -413,4 +413,4 @@ async function analyzeContent (url, keyword) {
   }
 }
 
-analyzeContent('https://marketingweb.com.mx', 'marketing digital')
+analyzeContent('https://marketingweb.com.mx/blog', 'marketing digital')
