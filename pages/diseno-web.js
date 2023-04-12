@@ -163,10 +163,105 @@ const DisenoWeb = () => {
               </h2>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
-                  Ofrecemos servicios de diseño y desarrollo de sitios web personalizados y únicos, adaptados a las necesidades y objetivos de cada cliente.
+                  Nuestra agencia de <strong>diseño web</strong> se especializa en crear sitios únicos y personalizados que satisfacen las necesidades de tu negocio. Nos enfocamos en el desarrollo y la programación a medida para garantizar que cada sitio sea único y se adapte perfectamente a tus necesidades.
                 </p>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
-                  Trabajamos con las últimas tecnologías y tendencias en diseño web para garantizar que su sitio web tenga una apariencia moderna y profesional que lo destaque de la competencia.
+                  Además, utilizamos las últimas tecnologías y tendencias de <strong>diseño web</strong> para asegurarnos de que tu sitio tenga una apariencia moderna y atractiva que destaque frente a la competencia. Confía en nosotros para crear un sitio web que realmente represente a tu negocio.
+                </p>
+
+              </div>
+            </div>
+
+          </div>
+          <div className='relative order-first py-16 md:order-last lg:py-0 '>
+
+            <div className='relative max-w-md px-4 pb-20 mx-auto sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none'>
+              {/* Testimonial card */}
+              <div className='relative pt-64 pb-10 overflow-hidden duration-500 transform shadow-xl rounded-2xl hover:scale-105 min-h-[550px]'>
+                <Image
+                  className='absolute inset-0 object-cover w-full h-full'
+                  src='/images/diseno-web-calidad.jpg'
+                  alt='Diseño Web Personalizado y Único'
+                  width={1152}
+                  height={768}
+                  itemProp='image' itemScope itemType='https://schema.org/ImageObject'
+                />
+                {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
+                <div className='absolute inset-0 opacity-80 bg-gradient-to-t from-black to-transparent' />
+                <div className='absolute px-8 bottom-10'>
+
+                  <blockquote className='h-full mt-8'>
+
+                    <footer className='mt-4 text-lg font-medium text-white md:flex-grow'>
+                      <p className=' drop-shadow-sm'>
+                        Un sitio web atractivo y profesional es fundamental para mejorar la presencia en línea de su negocio. Con nuestro equipo de diseño y desarrollo de sitios web, puede estar seguro de que su sitio web se destacará entre la multitud y brindará una experiencia de usuario excepcional.
+                      </p>
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <article id='coding' className='relative bg-white dark:bg-base-100'>
+        <div className=' lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
+
+          <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
+            <div className='pt-6'>
+              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Diseño Web y Experiencia de Usuario</p>
+              <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+                Crea página web con nuestra agencia de diseño
+              </h2>
+              <div className='mt-6 space-y-6 text-gray-500'>
+                <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
+                  En nuestra agencia de diseño web, nos enfocamos en crear páginas web únicas y personalizadas que se adapten a las necesidades y objetivos de tu negocio. Contamos con un equipo de expertos en diseño y desarrollo web que utilizan las últimas tecnologías y tendencias para garantizar que tu sitio tenga una apariencia moderna y atractiva. ¡Confía en nosotros para crear tu página web perfecta!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className='relative order-first py-16 md:order-first lg:py-16'>
+            <div className='relative max-w-md px-4 pb-20 mx-auto sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none'>
+              {/* Testimonial card */}
+              <div className='relative pt-64 pb-10 overflow-hidden duration-500 transform shadow-xl rounded-2xl hover:scale-105 min-h-[550px]'>
+                <Image
+                  className='absolute inset-0 object-cover w-full h-full'
+                  src='/images/diseno-web-medida.jpg'
+                  alt='Diseño Web y Experiencia de Usuario'
+                  width={1152}
+                  height={768}
+                  itemProp='image' itemScope itemType='https://schema.org/ImageObject'
+                />
+                {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
+                <div className='absolute inset-0 opacity-80 bg-gradient-to-t from-primary to-transparent' />
+                <div className='absolute px-8 bottom-10'>
+                  <blockquote className='h-full mt-8'>
+                    <footer className='mt-4 text-lg font-medium text-white md:flex-grow'>
+                      <p className='drop-shadow-sm'>
+                        En nuestro enfoque de diseño web, nos esforzamos por crear páginas web personalizados y optimizados para la mejor experiencia de usuario posible. Desde la navegación hasta la estética, nos aseguramos de que cada detalle se ajuste a sus necesidades y objetivos.
+                      </p>
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+      <div id='social' className='relative mt-6 bg-white dark:bg-base-100'>
+        <div className='lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
+
+          <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
+            <div className='pt-6'>
+              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Diseño Web Personalizado y Único</p>
+              <h3 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+                Desarrollo de sitios web con programación web personalizada
+              </h3>
+              <div className='mt-6 space-y-6 text-gray-500'>
+                <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
+                  En nuestra agencia de diseño web, ofrecemos soluciones de <strong>programación web</strong> personalizadas para el desarrollo de sitios web. Contamos con un equipo de expertos en <strong>programación web</strong> y diseño que trabajan juntos para crear sitios web únicos y funcionales que se adaptan a tus necesidades
                 </p>
 
               </div>
@@ -204,60 +299,14 @@ const DisenoWeb = () => {
           </div>
         </div>
       </div>
-      <div id='coding' className='relative bg-white dark:bg-base-100'>
-        <div className=' lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
-
-          <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
-            <div className='pt-6'>
-              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Diseño Web y Experiencia de Usuario</p>
-              <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-                Desarrollo Web a la medida, con un enfoque en la experiencia de usuario
-              </h2>
-              <div className='mt-6 space-y-6 text-gray-500'>
-                <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
-                  En nuestra agencia de diseño web, creamos sitios web personalizados que se ajustan a las necesidades de su negocio y a las expectativas de sus clientes. Nos enfocamos en la experiencia de usuario, la accesibilidad y la optimización para motores de búsqueda para asegurar que su sitio web sea fácil de usar, accesible y fácil de encontrar en línea.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className='relative order-first py-16 md:order-first lg:py-16'>
-            <div className='relative max-w-md px-4 pb-20 mx-auto sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none'>
-              {/* Testimonial card */}
-              <div className='relative pt-64 pb-10 overflow-hidden duration-500 transform shadow-xl rounded-2xl hover:scale-105 min-h-[550px]'>
-                <Image
-                  className='absolute inset-0 object-cover w-full h-full'
-                  src='/images/diseno-web-medida.jpg'
-                  alt='Diseño Web y Experiencia de Usuario'
-                  width={1152}
-                  height={768}
-                  itemProp='image' itemScope itemType='https://schema.org/ImageObject'
-                />
-                {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
-                <div className='absolute inset-0 opacity-80 bg-gradient-to-t from-primary to-transparent' />
-                <div className='absolute px-8 bottom-10'>
-                  <blockquote className='h-full mt-8'>
-                    <footer className='mt-4 text-lg font-medium text-white md:flex-grow'>
-                      <p className='drop-shadow-sm'>
-                        En nuestro enfoque de diseño web, nos esforzamos por crear sitios web personalizados y optimizados para la mejor experiencia de usuario posible. Desde la navegación hasta la estética, nos aseguramos de que cada detalle se ajuste a sus necesidades y objetivos.
-                      </p>
-                    </footer>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
       <div id='work' className='relative bg-white dark:bg-base-100 sm:pt-10 lg:pt-24'>
         <div className='max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
-          <h2 className='text-base font-semibold tracking-wider uppercase dark:text-white text-primary'>Diseño Web Personalizado para Atraer Más Clientes</h2>
-          <p className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-            Haz que tu sitio web destaque con nuestras soluciones de diseño web.
-          </p>
+          <p className='text-base font-semibold tracking-wider uppercase dark:text-white text-primary'>Desarrollo Web Personalizado para Atraer Más Clientes</p>
+          <h4 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+            Soluciones de Desarrollo Web a la medida de tus necesidades
+          </h4>
           <p className='mx-auto mt-5 text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
-            En nuestra agencia de diseño web, creamos sitios personalizados que atraen a tu público objetivo y mejoran la experiencia del usuario. Optimizamos la usabilidad y experiencia para aumentar la tasa de conversión y la visibilidad en línea de tu negocio. Haz que tu sitio web sea la cara de tu marca en línea.
+            Ofrecemos soluciones de <strong>desarrollo web</strong> personalizadas y únicas, con un equipo de expertos en programación y diseño, tecnologías modernas y adaptadas a tus objetivos comerciales. ¡Confía en nosotros para el <strong>desarrollo web</strong> de tu sitio!
           </p>
 
           <div className='mt-12'>
@@ -282,6 +331,7 @@ const DisenoWeb = () => {
           </p>
         </div>
       </div>
+
       <Pricing
         tiers={tiers}
         sections={sections}

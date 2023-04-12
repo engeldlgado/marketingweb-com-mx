@@ -137,8 +137,8 @@ const MarketingDigital = () => {
   }, [])
   return (
     <Layout
-      title='Servicios de Marketing Digital para Mejorar tu Presencia en Línea'
-      description='Mejora tu presencia en línea con nuestros servicios de marketing digital. Agencia especializada en diseño y estrategias digitales. Diseño web profesional y mucho más.'
+      title='Cómo una agencia de publicidad puede mejorar tu campaña de marketing digital'
+      description='Descubre cómo una agencia de publicidad puede crear una estrategia de marketing digital efectiva con anuncios, promoción y campañas.'
       canonical='https://marketingweb.com.mx/marketing-digital'
     >
       <ServicesHero
@@ -149,20 +149,17 @@ const MarketingDigital = () => {
       />
 
       <div id='social' className='relative bg-white dark:bg-base-100'>
-        <div className=' lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
+        <div className='lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
 
           <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
             <div className='pt-6'>
               <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Estrategias de Marketing Digital para Impulsar tu Negocio</p>
-              <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-                Servicios de Marketing Digital
-              </h2>
+              <h1 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+                La importancia de trabajar con una agencia de publicidad en tu campaña de marketing digital
+              </h1>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
-                  Ofrecemos soluciones de marketing digital adaptadas a las necesidades y objetivos de cada cliente. Nuestros servicios incluyen estrategias de SEO, publicidad en redes sociales, email marketing, entre otros.
-                </p>
-                <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
-                  Nuestro equipo de expertos en marketing digital está actualizado en las últimas tendencias y tecnologías para garantizar que su negocio tenga una presencia en línea efectiva y atractiva para su audiencia.
+                  Trabajar con una agencia de publicidad es esencial para crear una campaña de marketing digital exitosa. Te ayudarán a definir tu público objetivo, elegir las plataformas publicitarias adecuadas y crear anuncios efectivos. Además, podrán medir los resultados y ajustar la estrategia en función de ellos.
                 </p>
 
               </div>
@@ -207,11 +204,11 @@ const MarketingDigital = () => {
             <div className='pt-6'>
               <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Marketing Digital</p>
               <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-                Creación de Estrategias de Marketing en Línea
+                Anuncios publicitarios y su papel en la promoción de tu negocio en línea
               </h2>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
-                  En nuestra agencia de marketing digital, creamos estrategias de marketing en línea personalizadas que se ajustan a las necesidades de su negocio y a las expectativas de sus clientes. Nos enfocamos en la experiencia de usuario, la optimización para motores de búsqueda y las redes sociales para asegurar que su sitio web sea fácil de encontrar y promover en línea.
+                  Los anuncios publicitarios son esenciales para promocionar tu negocio en línea. Una buena campaña publicitaria puede aumentar la visibilidad de tu marca y atraer a nuevos clientes a tu sitio web. Con una estrategia bien diseñada y la ayuda de una agencia de publicidad, puedes maximizar el potencial de tus anuncios en línea y alcanzar el éxito en tu negocio en línea.
                 </p>
               </div>
             </div>
@@ -246,14 +243,109 @@ const MarketingDigital = () => {
 
         </div>
       </div>
+      <div id='social' className='relative bg-white dark:bg-base-100'>
+        <div className='lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
+
+          <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
+            <div className='pt-6'>
+              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Campañas publicitarias para Impulsar tu Negocio</p>
+              <h3 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+                Creando una campaña publicitaria efectiva con una agencia de marketing digital
+              </h3>
+              <div className='mt-6 space-y-6 text-gray-500'>
+                <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
+                  Trabaja con nuestra agencia de marketing digital para crear una campaña publicitaria efectiva que se adapte a tus objetivos de negocio. Desde la planificación hasta la ejecución, su experiencia y conocimientos pueden ayudarte a maximizar tus resultados y llegar a tu público objetivo de manera efectiva.
+                </p>
+
+              </div>
+            </div>
+
+          </div>
+          <div className='relative order-first py-16 md:order-last lg:py-0 '>
+
+            <div className='relative max-w-md px-4 pb-20 mx-auto sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none'>
+              {/* Testimonial card */}
+              <div className='relative pt-64 pb-10 overflow-hidden duration-500 transform shadow-xl rounded-2xl hover:scale-105 min-h-[550px]'>
+                <Image
+                  className='absolute inset-0 object-cover w-full h-full'
+                  src='/images/marketing-digital.jpg'
+                  alt='Servicios de Marketing Digital'
+                  width={1152}
+                  height={768}
+                  itemProp='image' itemScope itemType='https://schema.org/ImageObject'
+                />
+                {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
+                <div className='absolute inset-0 opacity-80 bg-gradient-to-t from-black to-transparent' />
+                <div className='absolute px-8 bottom-10'>
+
+                  <blockquote className='h-full mt-8'>
+
+                    <footer className='mt-4 text-lg font-medium text-white md:flex-grow'>
+                      <p className=' drop-shadow-sm'>
+                        Una vez que hayas establecido tus objetivos de negocio, nuestra agencia de marketing digital puede ayudarte a identificar las plataformas publicitarias adecuadas para tu campaña, así como a definir los mensajes y el público objetivo.
+                      </p>
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='coding' className='relative bg-white dark:bg-base-100'>
+        <div className=' lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
+
+          <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
+            <div className='pt-6'>
+              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Estrategias de Marketing Digital</p>
+              <h4 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+                Cómo una estrategia de marketing sólida puede aumentar el éxito de tu negocio en línea
+              </h4>
+              <div className='mt-6 space-y-6 text-gray-500'>
+                <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
+                  Una estrategia de marketing sólida es esencial para cualquier negocio en línea. Desde la identificación de tu público objetivo hasta la elección de las plataformas de publicidad adecuadas, una buena estrategia de marketing puede marcar la diferencia en el éxito de tu negocio en línea.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className='relative order-first py-16 md:order-first lg:py-16'>
+            <div className='relative max-w-md px-4 pb-20 mx-auto sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none'>
+              {/* Testimonial card */}
+              <div className='relative pt-64 pb-10 overflow-hidden duration-500 transform shadow-xl rounded-2xl hover:scale-105 min-h-[550px]'>
+                <Image
+                  className='absolute inset-0 object-cover w-full h-full'
+                  src='/images/marketing-digital-calidad.jpg'
+                  alt='Creación de Estrategias de Marketing en Línea'
+                  width={1152}
+                  height={768}
+                  itemProp='image' itemScope itemType='https://schema.org/ImageObject'
+                />
+                {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
+                <div className='absolute inset-0 opacity-60 bg-gradient-to-t from-black to-transparent' />
+                <div className='absolute px-8 bottom-10'>
+                  <blockquote className='h-full mt-8'>
+                    <footer className='mt-4 text-lg font-medium text-white md:flex-grow'>
+                      <p className='drop-shadow-sm'>
+                        Al trabajar con nuestra agencia de marketing digital, puedes estar seguro de que tu estrategia de marketing será sólida y efectiva. Los expertos en marketing pueden ayudarte a desarrollar una estrategia personalizada que se adapte a tus necesidades y objetivos comerciales específicos, lo que puede resultar en un mayor éxito para tu negocio en línea.
+                      </p>
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
       <div id='work' className='relative bg-white dark:bg-base-100 sm:pt-10 lg:pt-24'>
         <div className='max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
-          <h2 className='text-base font-semibold tracking-wider uppercase dark:text-white text-primary'>Marketing Digital Personalizado para Atraer Más Clientes</h2>
-          <p className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-            Haz que tu marca destaque con nuestras soluciones de marketing digital.
-          </p>
+          <p className='text-base font-semibold tracking-wider uppercase dark:text-white text-primary'>Marketing Digital Personalizado para Atraer Más Clientes</p>
+          <h5 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+            La importancia de una estrategia de marketing personalizada en tu campaña publicitaria
+          </h5>
           <p className='mx-auto mt-5 text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
-            En nuestra agencia de marketing digital, creamos estrategias personalizadas que atraen a tu público objetivo y mejoran la experiencia del usuario. Optimizamos la usabilidad y experiencia para aumentar la tasa de conversión y la visibilidad en línea de tu negocio. Haz que tu marca sea la cara de tu negocio en línea.
+            Una estrategia de marketing personalizada te permitirá llegar a tu audiencia con un enfoque único y adaptado a sus necesidades y preferencias. Al comprender a tu público objetivo, podrás crear mensajes publicitarios efectivos que generen interés y acción.
           </p>
 
           <div className='mt-12'>
@@ -272,9 +364,12 @@ const MarketingDigital = () => {
               })}
             </div>
           </div>
+          <h6 className='mt-20 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-3xl'>
+            Trabajando con una agencia de publicidad para crear una estrategia de marketing digital exitosa
+          </h6>
 
           <p className='py-16 mx-auto text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
-            Además de nuestros servicios de marketing digital, también ofrecemos servicios de gestión de redes sociales para ayudarte a aumentar tu presencia en línea. Desde la creación de contenido hasta la implementación de campañas publicitarias en las redes sociales, nuestro equipo de expertos te ayudará a destacar en el mundo digital. Contáctanos ahora para conocer más sobre cómo podemos ayudarte a crecer en línea.
+            Trabajar con nuestra agencia de publicidad es fundamental para crear una estrategia de marketing digital exitosa. Desde la planificación hasta la implementación, una agencia de publicidad puede proporcionar experiencia y conocimientos que son esenciales para el éxito.
           </p>
         </div>
       </div>

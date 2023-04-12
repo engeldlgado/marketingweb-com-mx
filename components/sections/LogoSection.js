@@ -9,9 +9,9 @@ export const LogoSection = () => {
     <div id='tech' className='bg-white dark:bg-base-100'>
       <div className='px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8'>
         <div className='max-w-md px-4 pb-8 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
-          <h3 className='text-base font-semibold tracking-wider uppercase dark:text-primary text-secondary'>Tecnologías de Vanguardia</h3>
+          <p className='text-base font-semibold tracking-wider uppercase dark:text-primary text-secondary'>Tecnologías de Vanguardia</p>
           <p className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl'>
-            Innovación y Tecnología
+            Innovación y Tecnología en el Marketing Digital
           </p>
           <p className='mx-auto mt-5 text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
             Potenciando la innovación a través de soluciones tecnológicas de vanguardia.
