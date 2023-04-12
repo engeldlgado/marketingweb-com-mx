@@ -4,7 +4,6 @@ const puppeteer = require('puppeteer')
 function checkContentQuality (content, key) {
   const keyword = key.toLowerCase()
   const keywordDensity = (content.match(new RegExp(keyword, 'gi')) || []).length / content.split(' ').length
-  console.log('keywordDensity', (content.match(new RegExp(keyword, 'gi')) || []).length)
 
   let score = 0
 
@@ -48,13 +47,56 @@ function checkContentQuality (content, key) {
   return Math.round((score / 100) * 100)
 }
 
-function optimizeTitleAndMeta (title, metaDescription, key) {
+function optimizeTitleAndMeta (title, metaDescription, key, metaTags, canonical, structuredData) {
   let score = 0
+  const feedback = {
+    titleAndMetaObject: {
+      title: title.slice(0, 70),
+      description: metaDescription.slice(0, 155),
+      ogMeta: metaTags?.map((meta) => {
+        if (meta.property === 'og:title') {
+          return {
+            property: meta.property,
+            content: meta.content.slice(0, 70)
+          }
+        } else if (meta.property === 'og:description') {
+          return {
+            property: meta.property,
+            content: meta.content.slice(0, 155)
+          }
+        } else {
+          return meta
+        }
+      }),
+      twitterMeta: metaTags?.map((meta) => {
+        if (meta.name === 'twitter:title') {
+          return {
+            name: meta.name,
+            content: meta.content.slice(0, 70)
+          }
+        } else if (meta.name === 'twitter:description') {
+          return {
+            name: meta.name,
+            content: meta.content.slice(0, 155)
+          }
+        } else {
+          return meta
+        }
+      }),
+      canonical,
+      structuredData,
+      score: 0,
+      sugestions: []
+    }
+  }
 
   if (title.length >= 60 && title.length <= 70) {
     score += 20
   } else if (title.length > 70) {
-    score += 30
+    score -= 10
+    feedback.titleAndMetaObject.sugestions.push(
+      'El título es demasiado largo. Debería tener entre 60 y 70 caracteres.'
+    )
   }
 
   const keyword = key.toLowerCase()
@@ -62,26 +104,106 @@ function optimizeTitleAndMeta (title, metaDescription, key) {
     score += 20
   }
 
-  if (metaDescription.length >= 120 && metaDescription.length <= 155) {
+  if (metaDescription.length >= 110 && metaDescription.length <= 130) {
     score += 20
-  } else if (metaDescription.length > 155) {
+    feedback.titleAndMetaObject.sugestions.push(
+      'La descripción meta es demasiado corta. Debería tener entre 130 y 155 caracteres.'
+    )
+  } else if (metaDescription.length > 130 && metaDescription.length <= 155) {
     score += 30
+  } else if (metaDescription.length > 155) {
+    score -= 10
+    feedback.titleAndMetaObject.sugestions.push(
+      'La descripción meta es demasiado larga. Debería tener entre 130 y 155 caracteres.'
+    )
   }
 
   if (metaDescription.toLowerCase().includes(keyword)) {
     score += 20
   }
 
+  const ogTitle = metaTags.find((meta) => meta.property === 'og:title')
+  if (ogTitle && ogTitle.content) {
+    if (ogTitle.content.length >= 60 && ogTitle.content.length <= 70) {
+      score += 20
+    } else if (ogTitle.content.length > 70) {
+      score -= 10
+      feedback.titleAndMetaObject.sugestions.push(
+        'El título de Open Graph es demasiado largo. Debería tener entre 60 y 70 caracteres.'
+      )
+    }
+  }
+
+  if (ogTitle && ogTitle.content && ogTitle.content.toLowerCase().includes(keyword)) {
+    score += 5
+  }
+
+  const ogDescription = metaTags.find((meta) => meta.property === 'og:description')
+  if (ogDescription && ogDescription.content) {
+    if (ogDescription.content.length >= 110 && ogDescription.content.length <= 130) {
+      score += 5
+    } else if (ogDescription.content.length > 130 && ogDescription.content.length <= 155) {
+      score += 10
+    } else if (ogDescription.content.length > 155) {
+      score -= 10
+      feedback.titleAndMetaObject.sugestions.push(
+        'La descripción de Open Graph es demasiado larga. Debería tener entre 130 y 155 caracteres.'
+      )
+    }
+  }
+
+  if (ogDescription && ogDescription.content && ogDescription.content.toLowerCase().includes(keyword)) {
+    score += 5
+  }
+
+  const twitterTitle = metaTags.find((meta) => meta.name === 'twitter:title')
+  if (twitterTitle && twitterTitle.content) {
+    if (twitterTitle.content.length >= 60 && twitterTitle.content.length <= 70) {
+      score += 20
+    } else if (twitterTitle.content.length > 70) {
+      score -= 10
+      feedback.titleAndMetaObject.sugestions.push(
+        'El título de Twitter es demasiado largo. Debería tener entre 60 y 70 caracteres.'
+      )
+    }
+  }
+
+  if (twitterTitle && twitterTitle.content && twitterTitle.content.toLowerCase().includes(keyword)) {
+    score += 5
+  }
+
+  const twitterDescription = metaTags.find((meta) => meta.name === 'twitter:description')
+  if (twitterDescription && twitterDescription.content) {
+    if (twitterDescription.content.length >= 110 && twitterDescription.content.length <= 130) {
+      score += 5
+    } else if (twitterDescription.content.length > 130 && twitterDescription.content.length <= 155) {
+      score += 10
+    } else if (twitterDescription.content.length > 155) {
+      score -= 10
+      feedback.titleAndMetaObject.sugestions.push(
+        'La descripción de Twitter es demasiado larga. Debería tener entre 130 y 155 caracteres.'
+      )
+    }
+  }
+
+  if (twitterDescription && twitterDescription.content && twitterDescription.content.toLowerCase().includes(keyword)) {
+    score += 5
+  }
+
+  if (canonical) {
+    score += 10
+  }
+
+  if (structuredData) {
+    score += 10
+  }
+
   if (score > 100) {
     score = 100
   }
 
-  // Devolvemos un objeto con el título y la descripción meta optimizados, junto con su puntaje:
-  return {
-    title: title.slice(0, 70),
-    metaDescription: metaDescription.slice(0, 155),
-    score
-  }
+  feedback.titleAndMetaObject.score = score
+  return feedback
 }
 
 function checkHeadersAndHTMLTags (html) {
@@ -206,7 +328,6 @@ function checkHeadersAndHTMLTags (html) {
   importantTags.forEach((tag, index) => {
     const importantEls = $(tag)
     if (importantEls.length > 0) {
-      score += 5 * (index + 1)
       importantEls.each((i, el) => {
         if (tag === 'img') {
           // Obtener la última parte de la ruta que representa el nombre de la imagen (por ejemplo, si la ruta es https://www.example.com/images/image.jpg, el nombre de la imagen es image.jpg, si la ruta es /_next/image?url=%2Fimages%2Fdiseno-web.jpg&w=3840&q=75, el nombre de la imagen es diseno-web.jpg)
@@ -221,6 +342,9 @@ function checkHeadersAndHTMLTags (html) {
             imgName = img
           }
           const alt = $(el).attr('alt')
+          if (alt) {
+            score += 5
+          }
           const imgTag = `<${tag}> ${alt ? `ALT: ${alt}, ` : ''}img SRC: ${imgName}` // Usar el nombre de la imagen en lugar de la ruta completa
           feedback.headerAndHTMLtagsObject.tips[1].currentTags.push(imgTag)
         } else {
@@ -228,6 +352,10 @@ function checkHeadersAndHTMLTags (html) {
             .text()
             .replace(/(\r\n|\n|\r)/gm, ' ')
             .replace(/<[^>]*>/g, '')
+
+          if (tag === 'p' && text.length > 20) {
+            score += 5
+          }
           feedback.headerAndHTMLtagsObject.tips[1].currentTags.push(
             tag === 'p'
               ? `<${tag}>: ${text.replace(/<[^>]*>/g, '').replace(/<style[^>]*>[^<]*<\/style>/gi, '').slice(0, 100)}${text.length > 100 ? '...' : ''}`
@@ -238,7 +366,6 @@ function checkHeadersAndHTMLTags (html) {
         }
       })
     } else if (tag !== 'img') {
-      score -= 5 * (index + 1)
       feedback.headerAndHTMLtagsObject.tips[1].missingTags.push(tag)
     }
   })
@@ -380,6 +507,9 @@ async function analyzeContent (url, keyword) {
 
     const title = html.match(/<title>(.*?)<\/title>/i)[1]
     const metaDescription = html.match(/<meta name="description" content="([^"]*)"/i)[1]
+    const metas = html.match(/<meta name="([^"]*)" content="([^"]*)"/gi)
+    const canonical = html.match(/<link rel="canonical" href="([^"]*)"/i)[1]
+    const structuredData = html.match(/<script type="application\/ld\+json">([^<]*)<\/script>/gi)
 
     // remove all unnecessary tags and code attributes, only keep the text from h1 to h6, p, li, ul, and remove all classes and ids, even if they are not in the tags to be removed (to avoid false positives)
     const content = html
@@ -391,21 +521,24 @@ async function analyzeContent (url, keyword) {
       .replace(/\s+/g, ' ')
 
     const contentQuality = checkContentQuality(content, keyword)
-    const optimizedTitleAndMeta = optimizeTitleAndMeta(title, metaDescription, keyword)
+    const optimizedTitleAndMeta = optimizeTitleAndMeta(title, metaDescription, keyword, metas, canonical, structuredData)
     const headersAndHTMLTags = checkHeadersAndHTMLTags(html)
 
     const result = {
       url,
       keyword,
       contentQuality,
-      optimizedTitleAndMeta,
-      headersAndHTMLTags: headersAndHTMLTags.headerAndHTMLtagsObject.tips.map((tip) => tip)
+      optimizedTitleAndMeta: optimizedTitleAndMeta.titleAndMetaObject,
+      headersAndHTMLTag: {
+        score: headersAndHTMLTags.headerAndHTMLtagsObject.score,
+        tips: headersAndHTMLTags.headerAndHTMLtagsObject.tips
+      }
     }
 
     const finalScore =
-      (contentQuality + optimizedTitleAndMeta.score + headersAndHTMLTags.headerAndHTMLtagsObject.score) / 3
+      (contentQuality + optimizedTitleAndMeta.titleAndMetaObject.score + headersAndHTMLTags.headerAndHTMLtagsObject.score) / 3
     result.finalScore = finalScore
-    console.log('finalScore', result.headersAndHTMLTags)
+    console.log('finalScore', result.headersAndHTMLTag)
 
     return result
   } catch (error) {
@@ -413,4 +546,4 @@ async function analyzeContent (url, keyword) {
   }
 }
 
-analyzeContent('https://marketingweb.com.mx/blog', 'marketing digital')
+analyzeContent('https://marketingweb.com.mx', 'marketing digital')

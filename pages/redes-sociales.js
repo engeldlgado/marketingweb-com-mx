@@ -181,6 +181,7 @@ const RedesSociales = () => {
                   alt='Servicios de Manejo de Redes Sociales'
                   width={1152}
                   height={768}
+                  itemProp='image' itemScope itemType='https://schema.org/ImageObject'
                 />
                 {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
                 <div className='absolute inset-0 opacity-80 bg-gradient-to-t from-black to-transparent' />
@@ -223,6 +224,7 @@ const RedesSociales = () => {
                   alt='Gestión Profesional de tus Redes Sociales'
                   width={1152}
                   height={768}
+                  itemProp='image' itemScope itemType='https://schema.org/ImageObject'
                 />
                 <div className='absolute inset-0 opacity-80 bg-gradient-to-t from-black to-transparent' />
                 <div className='absolute px-8 bottom-10'>

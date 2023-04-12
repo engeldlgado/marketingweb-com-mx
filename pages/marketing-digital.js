@@ -180,6 +180,7 @@ const MarketingDigital = () => {
                   alt='Servicios de Marketing Digital'
                   width={1152}
                   height={768}
+                  itemProp='image' itemScope itemType='https://schema.org/ImageObject'
                 />
                 {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
                 <div className='absolute inset-0 opacity-80 bg-gradient-to-t from-black to-transparent' />
@@ -226,6 +227,7 @@ const MarketingDigital = () => {
                   alt='Creación de Estrategias de Marketing en Línea'
                   width={1152}
                   height={768}
+                  itemProp='image' itemScope itemType='https://schema.org/ImageObject'
                 />
                 {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
                 <div className='absolute inset-0 opacity-60 bg-gradient-to-t from-black to-transparent' />

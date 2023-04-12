@@ -40,6 +40,7 @@ export default function ContactHero () {
                 width={869}
                 height={824}
                 priority // This image is critical to the page, so it should be loaded first
+                itemProp='image' itemScope itemType='https://schema.org/ImageObject'
               />
             </div>
           </div>

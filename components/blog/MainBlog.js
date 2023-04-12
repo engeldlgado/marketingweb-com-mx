@@ -41,7 +41,7 @@ const MainBlog = ({ posts, postLength }) => {
           <article key={index} className='flex flex-col overflow-hidden rounded-lg shadow-lg post'>
             <div className='flex-shrink-0'>
               <Link href={post.slug}>
-                <Image className='object-cover w-full h-48' src={post.featuredImage} alt='blog' width={500} height={500} />
+                <Image className='object-cover w-full h-48' src={post.featuredImage} alt={post.title} width={500} height={500} itemProp='image' itemScope itemType='https://schema.org/ImageObject' />
               </Link>
             </div>
             <div className='flex flex-col justify-between flex-1 p-6 bg-white dark:bg-gray-900'>
@@ -57,7 +57,7 @@ const MainBlog = ({ posts, postLength }) => {
               <div className='flex items-center mt-6'>
                 <div className='flex-shrink-0'>
 
-                  <Image className='w-10 h-10 rounded-full shadow-md' src={post.avatar} alt={post.author} width={500} height={500} />
+                  <Image className='w-10 h-10 rounded-full shadow-md' src={post.avatar} alt={post.author} width={500} height={500} itemProp='image' itemScope itemType='https://schema.org/ImageObject' />
 
                 </div>
                 <div className='ml-3'>

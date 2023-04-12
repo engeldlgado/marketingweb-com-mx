@@ -178,6 +178,7 @@ const PosicionamientoWeb = () => {
                   alt='Diseño Web Personalizado y Único'
                   width={1152}
                   height={768}
+                  itemProp='image' itemScope itemType='https://schema.org/ImageObject'
                 />
                 {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
                 <div className='absolute inset-0 opacity-80 bg-gradient-to-t from-primary to-transparent' />
@@ -226,6 +227,7 @@ const PosicionamientoWeb = () => {
                   alt='Posicionamiento Web y SEO'
                   width={1152}
                   height={768}
+                  itemProp='image' itemScope itemType='https://schema.org/ImageObject'
                 />
                 {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
                 <div className='absolute inset-0 opacity-80 bg-gradient-to-t from-primary to-transparent' />

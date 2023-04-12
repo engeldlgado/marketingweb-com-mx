@@ -17,6 +17,7 @@ export default function Metricas () {
           alt='Contancto con Marketing Web Agencia de Posicionamiento Web y SEO para el Marketing Digital'
           width={927}
           height={504}
+          itemProp='image' itemScope itemType='https://schema.org/ImageObject'
         />
         <div
           aria-hidden='true'

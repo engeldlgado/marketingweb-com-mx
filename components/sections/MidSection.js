@@ -88,6 +88,7 @@ export default function MidSection ({ posts }) {
                   alt='Posicionamiento en Google'
                   width={768}
                   height={768}
+                  itemProp='image' itemScope itemType='https://schema.org/ImageObject'
                 />
                 {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
                 <div className='absolute inset-0 opacity-80 bg-gradient-to-t from-primary to-transparent' />
@@ -151,6 +152,7 @@ export default function MidSection ({ posts }) {
                   alt='Diseño Web Personalizado y Único'
                   width={1152}
                   height={768}
+                  itemProp='image' itemScope itemType='https://schema.org/ImageObject'
                 />
                 {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
                 <div className='absolute inset-0 opacity-80 bg-gradient-to-t from-primary to-transparent' />
@@ -199,6 +201,7 @@ export default function MidSection ({ posts }) {
                   alt='Aplicaciones Empresariales'
                   width={1152}
                   height={768}
+                  itemProp='image' itemScope itemType='https://schema.org/ImageObject'
                 />
                 {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
                 <div className='absolute inset-0 opacity-80 bg-gradient-to-t from-primary to-transparent' />
@@ -247,6 +250,7 @@ export default function MidSection ({ posts }) {
                   alt='Manejo de redes sociales para pequeñas y medianas empresas'
                   width={1152}
                   height={768}
+                  itemProp='image' itemScope itemType='https://schema.org/ImageObject'
                 />
                 {/* <div className='absolute inset-0 bg-primary mix-blend-multiply' /> */}
                 <div className='absolute inset-0 opacity-80 bg-gradient-to-t from-primary to-transparent' />
@@ -277,7 +281,7 @@ export default function MidSection ({ posts }) {
           </p>
 
           <div className='mt-12'>
-            <Image className='rounded-lg shadow-lg' src='/images/codigo.jpg' alt='Estrategias de SEO para el éxito del marketing web' width='1920' height='980' />
+            <Image className='rounded-lg shadow-lg' src='/images/codigo.jpg' alt='Estrategias de SEO para el éxito del marketing web' width='1920' height='980' itemProp='image' itemScope itemType='https://schema.org/ImageObject' />
             <div className='absolute bottom-0 left-0 z-50 w-full h-72 bg-gradient-to-t from-white via-transparent to-transparent dark:from-base-100' />
           </div>
         </div>
@@ -326,6 +330,7 @@ export default function MidSection ({ posts }) {
                 src='/images/marketing-digital-seo.jpg'
                 alt='Agencia de Marketing Digital expertos en SEO'
                 fill
+                itemProp='image' itemScope itemType='https://schema.org/ImageObject'
               />
             </div>
             <div className='relative lg:col-span-1'>

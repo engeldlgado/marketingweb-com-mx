@@ -12,6 +12,7 @@ export default function ServicesHero ({ title, subtitle, image, subImage }) {
         alt={`${title} de Marketing Web`}
         width={1920}
         height={1080}
+        itemProp='image' itemScope itemType='https://schema.org/ImageObject'
       />
       <div className='relative'>
         {/* Overlay gradient opacity */}
@@ -47,7 +48,7 @@ export default function ServicesHero ({ title, subtitle, image, subImage }) {
               </p>
             </div>
             <div className='w-full max-w-xl xl:px-8 xl:w-5/6'>
-              <Image src={subImage} alt={subtitle} width={500} height={500} />
+              <Image src={subImage} alt={subtitle} width={500} height={500} itemProp='image' itemScope itemType='https://schema.org/ImageObject' />
             </div>
           </div>
         </div>

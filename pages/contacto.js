@@ -93,6 +93,7 @@ const Contacto = () => {
                           alt='Página de Google Search Console con un informe de SEO de una página web de nuestro cliente'
                           width={1364}
                           height={1000}
+                          itemProp='image' itemScope itemType='https://schema.org/ImageObject'
                         />
                       </div>
                     </div>
