@@ -268,8 +268,8 @@ const MarketingDigital = () => {
               <div className='relative pt-64 pb-10 overflow-hidden duration-500 transform shadow-xl rounded-2xl hover:scale-105 min-h-[550px]'>
                 <Image
                   className='absolute inset-0 object-cover w-full h-full'
-                  src='/images/marketing-digital.jpg'
-                  alt='Servicios de Marketing Digital'
+                  src='/images/campanas-publicitarias.jpg'
+                  alt='Campañas publicitarias para Impulsar tu Negocio'
                   width={1152}
                   height={768}
                   itemProp='image' itemScope itemType='https://schema.org/ImageObject'
@@ -315,7 +315,7 @@ const MarketingDigital = () => {
               <div className='relative pt-64 pb-10 overflow-hidden duration-500 transform shadow-xl rounded-2xl hover:scale-105 min-h-[550px]'>
                 <Image
                   className='absolute inset-0 object-cover w-full h-full'
-                  src='/images/marketing-digital-calidad.jpg'
+                  src='/images/estrategias-marketing-digital.jpg'
                   alt='Creación de Estrategias de Marketing en Línea'
                   width={1152}
                   height={768}

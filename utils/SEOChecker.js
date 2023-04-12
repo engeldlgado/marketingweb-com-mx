@@ -581,4 +581,4 @@ async function analyzeContent (url, keyword) {
   }
 }
 
-analyzeContent('https://marketingweb.com.mx/diseno-web', 'marketing digital')
+analyzeContent('https://marketingweb.com.mx/marketing-digital', 'marketing digital')
