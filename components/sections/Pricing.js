@@ -20,7 +20,7 @@ export default function Pricing ({ tiers, sections, faqs }) {
           {tiers.map((tier) => (
             <section key={tier.name}>
               <div className='px-4 mb-8'>
-                <h2 className='text-lg font-medium leading-6 text-gray-900 dark:text-gray-100'>{tier.name}</h2>
+                <h5 className='text-lg font-medium leading-6 text-gray-900 dark:text-gray-100'>{tier.name}</h5>
                 <p className='mt-4'>
                   <span className='text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100'>${tier.priceMonthly}</span>
                   <span className='text-base font-medium text-gray-500 dark:text-gray-100'>/año</span>
@@ -210,7 +210,7 @@ export default function Pricing ({ tiers, sections, faqs }) {
       <div className='bg-gray-50 dark:bg-gray-900'>
         {/* FAQ */}
         <div className='px-4 py-16 mx-auto max-w-7xl sm:py-24 sm:px-6 lg:px-8'>
-          <h2 className='text-3xl font-bold tracking-tight text-center text-gray-900 dark:text-gray-100'>Preguntas Frecuentes</h2>
+          <h6 className='text-3xl font-bold tracking-tight text-center text-gray-900 dark:text-gray-100'>Preguntas Frecuentes</h6>
           <div className='mt-12'>
             <dl className='space-y-10 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-x-8 md:gap-y-12 md:space-y-0 lg:grid-cols-3'>
               {faqs.map((faq) => (

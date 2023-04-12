@@ -139,25 +139,27 @@ const DisenoWeb = () => {
   }, [])
   return (
     <Layout
-      title='Servicios de Diseño Web para Mejorar tu Presencia en Línea'
-      description='Mejora tu presencia en línea con nuestros servicios de diseño web. Agencia de diseño web y marketing digital. Diseño web profesional.'
+      title='Agencia de Diseño Web que crea páginas web personalizadas mediante el desarrollo y la programación.'
+      description='Nuestra agencia de diseño web se enfoca en crear sitios web únicos y personalizados que satisfagan las necesidades de tu negocio. Con nuestro enfoque en el desarrollo y la programación personalizada, podemos garantizar que cada sitio web que creamos sea único y se adapte a tus necesidades específicas.'
       canonical='https://marketingweb.com.mx/diseno-web'
     >
       <ServicesHero
         title='Diseño Web Profesional'
-        subtitle='Mejora tu presencia en línea con nuestros servicios de diseño web. Agencia de diseño web y marketing digital. Diseño web profesional.'
+        subtitle='Nuestra agencia de diseño web crea páginas web únicas con un enfoque en el desarrollo y programación. Mejora tu presencia en línea con nosotros.'
         image='/images/diseno-web-calidad.jpg'
         subImage='/images/grafico-diseno-web.png'
       />
 
-      <div id='social' className='relative bg-white dark:bg-base-100'>
-        <div className=' lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
+      <div id='social' className='relative mt-6 bg-white dark:bg-base-100'>
+        <p className='max-w-[90%] md:max-w-[30%] mx-auto text-sm  text-center  font-semibold tracking-wider uppercase dark:text-white text-primary'>Soluciones Innovadoras en Diseño Web</p>
+        <h1 className='max-w-[90%] md:max-w-[30%] mx-auto text-2xl font-extrabold tracking-tight text-center text-gray-900 dark:text-primary sm:text-3xl'>Agencia de Diseño Web que crea páginas web únicas mediante el desarrollo y la programación personalizada</h1>
+        <div className='mt-10 lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
 
           <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
             <div className='pt-6'>
               <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Diseño Web Personalizado y Único</p>
               <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-                Desarrollo de sitios web
+                Crea una presencia en línea efectiva con nuestra agencia de diseño web
               </h2>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
@@ -209,7 +211,7 @@ const DisenoWeb = () => {
             <div className='pt-6'>
               <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Diseño Web y Experiencia de Usuario</p>
               <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-                Creación de Sitios Web a Medida
+                Desarrollo Web a la medida, con un enfoque en la experiencia de usuario
               </h2>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>

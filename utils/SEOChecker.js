@@ -538,10 +538,10 @@ async function analyzeContent (url, keyword) {
     const html = await page.content()
     await browser.close()
 
-    const title = html.match(/<title>(.*?)<\/title>/i)[1]
-    const metaDescription = html.match(/<meta name="description" content="([^"]*)"/i)[1]
-    const metas = html.match(/<meta name="([^"]*)" content="([^"]*)"/gi)
-    const canonical = html.match(/<link rel="canonical" href="([^"]*)"/i)[1]
+    const title = html?.match(/<title>(.*?)<\/title>/i)[1]
+    const metaDescription = html?.match(/<meta name="description" content="([^"]*)"/i)[1]
+    const metas = html?.match(/<meta name="([^"]*)" content="([^"]*)"/gi)
+    const canonical = html?.match(/<link rel="canonical" href="([^"]*)"/i)
     const structuredData = html.match(/<script type="application\/ld\+json">([^<]*)<\/script>/gi)
 
     // remove all unnecessary tags and code attributes, only keep the text from h1 to h6, p, li, ul, and remove all classes and ids, even if they are not in the tags to be removed (to avoid false positives)
@@ -581,4 +581,4 @@ async function analyzeContent (url, keyword) {
   }
 }
 
-analyzeContent('https://marketingweb.com.mx', 'marketing digital')
+analyzeContent('https://marketingweb.com.mx/diseno-web', 'marketing digital')

@@ -136,7 +136,7 @@ const PosicionamientoWeb = () => {
   return (
     <Layout
       title='Agencia de Posicionamiento Web y SEO para el Marketing Web Digital'
-      description='Mejora tu posicionamiento en línea con nuestros servicios de SEO y optimización de sitios web. Agencia Marketing Web y digital. SEO Google.'
+      description='Mejora tu posicionamiento Web en línea con nuestros servicios de SEO y optimización de sitios web. Agencia Marketing Web y digital. SEO Google.'
       canonical='https://marketingweb.com.mx/posicionamiento-web'
     >
       <ServicesHero
@@ -152,9 +152,9 @@ const PosicionamientoWeb = () => {
           <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
             <div className='pt-6'>
               <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Incrementa tus ventas</p>
-              <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-                Optimización en buscadores
-              </h2>
+              <h1 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+                Mejora tu visibilidad en línea con Posicionamiento Web y SEO
+              </h1>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
                   Con una buena optimización en buscadores usted podrá llegar a todos esos clientes potenciales que están en búsqueda de sus productos.
@@ -198,18 +198,18 @@ const PosicionamientoWeb = () => {
           </div>
         </div>
       </div>
-      <div id='coding' className='relative bg-white dark:bg-base-100'>
+      <article id='coding' className='relative bg-white dark:bg-base-100'>
         <div className=' lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
 
           <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
             <div className='pt-6'>
               <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Posicionamiento Web y SEO</p>
-              <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-                Optimización de Aplicaciones Empresariales
-              </h2>
+              <h3 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+                Descubre cómo una agencia de SEO puede impulsar tu presencia en línea
+              </h3>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
-                  En Marketing Web, optimizamos sus aplicaciones empresariales y mejoramos el rendimiento del código para maximizar la eficiencia y la productividad de su negocio. Además, nos aseguramos de que su sitio web tenga una estructura optimizada para el SEO y que su contenido esté optimizado para los motores de búsqueda. De esta manera, aumentará la visibilidad en línea de su empresa y atraerá a más clientes potenciales.
+                  El SEO (Search Engine Optimization) es el proceso de optimizar tu sitio web para que los motores de búsqueda entiendan mejor tu contenido y lo muestren a los usuarios en los resultados de búsqueda. Es importante para aumentar la visibilidad, atraer tráfico, mejorar la experiencia del usuario y tener una ventaja competitiva en línea.
                 </p>
 
               </div>
@@ -246,13 +246,14 @@ const PosicionamientoWeb = () => {
             </div>
           </div>
         </div>
-      </div>
+      </article>
       <div id='work' className='relative bg-white dark:bg-base-100 sm:pt-10 lg:pt-24'>
         <div className='max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
-          <h2 className='text-base font-semibold tracking-wider uppercase dark:text-white text-primary'>Servicios de Posicionamiento Web y SEO para tu Negocio</h2>
-          <p className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-            Atrae más clientes con nuestras soluciones personalizadas.
-          </p>
+          <p className='text-base font-semibold tracking-wider uppercase dark:text-white text-primary'>Atrae más clientes con nuestras soluciones personalizadas.</p>
+          <h4 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+
+            Aprende a mejorar tu posicionamiento en Google con estrategias de SEO
+          </h4>
           <p className='mx-auto mt-5 text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
             En nuestra agencia de posicionamiento web y SEO, nos especializamos en mejorar el rendimiento y la visibilidad de tu sitio web en los motores de búsqueda. Implementamos técnicas de SEO efectivas para atraer tráfico orgánico y aumentar la tasa de conversión de tu sitio web.
           </p>
