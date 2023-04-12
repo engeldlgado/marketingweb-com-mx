@@ -67,10 +67,12 @@ const Layout = ({ children, title, description, ogType, ogUrl, ogImage, ogDescri
            gtag('config', 'G-2L6KQG84QD');
         `}
       </Script>
-      <Menu
-        theme={theme}
-        setTheme={setTheme}
-      />
+      <header>
+        <Menu
+          theme={theme}
+          setTheme={setTheme}
+        />
+      </header>
       <main>
         <section id='contact' data-theme='light' />
         {children}

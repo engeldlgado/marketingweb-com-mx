@@ -38,7 +38,7 @@ const MainBlog = ({ posts, postLength }) => {
       {limitPosts(orderedPosts, postLength).map((post, index) => {
         return (
 
-          <div key={index} className='flex flex-col overflow-hidden rounded-lg shadow-lg post'>
+          <article key={index} className='flex flex-col overflow-hidden rounded-lg shadow-lg post'>
             <div className='flex-shrink-0'>
               <Link href={post.slug}>
                 <Image className='object-cover w-full h-48' src={post.featuredImage} alt='blog' width={500} height={500} />
@@ -75,7 +75,7 @@ const MainBlog = ({ posts, postLength }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </article>
 
         )
       })}

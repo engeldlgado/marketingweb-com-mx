@@ -71,7 +71,7 @@ export default function MainHero () {
           ref={videoRef}
           loop muted className='absolute top-0 right-0 transform lg:h-full -z-10 mix-blend-multiply dark:right-0 -rotate-6 filter'
         >
-          <source src='/videos/search.mp4' type='video/mp4' />
+          <source src='https://res.cloudinary.com/dxhsmq1pv/video/upload/v1681135207/marketingweb/video/search.mp4' type='video/mp4' />
         </video>
 
       </div>

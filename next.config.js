@@ -76,7 +76,7 @@ const nextConfig = {
     ]
   },
   images: {
-    domains: ['mlrsjyafnwfj.i.optimole.com', 'secure.gravatar.com']
+    domains: ['mlrsjyafnwfj.i.optimole.com', 'secure.gravatar.com', 'res.cloudinary.com']
   },
   env: {
     NEXT_PUBLIC_WORDPRESS_URL: process.env.NEXT_PUBLIC_WORDPRESS_URL
