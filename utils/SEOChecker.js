@@ -9,7 +9,7 @@ function checkContentQuality (content, key) {
     .replace(/\s+/g, ' ')
 
   const keywordDensity = (cleanContent.match(new RegExp(keyword, 'gi')) || []).length / cleanContent.split(' ').length
-
+  // empieza el conteo de puntos
   let score = 0
 
   if (cleanContent.length >= 500) {
