@@ -64,10 +64,10 @@ export default function MidSection ({ posts }) {
 
           <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
             <div className='pt-6'>
-              <h2 className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Servicios de SEO</h2>
-              <h3 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Servicios de SEO</p>
+              <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
                 Mejora tu Posicionamiento en los Motores de Búsqueda
-              </h3>
+              </h2>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
                   El <b>SEO</b> es una estrategia clave para mejorar el <b>posicionamiento de tu sitio web</b> en los resultados de búsqueda de Google y otros motores de búsqueda. En nuestra agencia, contamos con <b>expertos en SEO</b> com más de 32 años de experiencia que te ayudarán a optimizar tu sitio web y aumentar su tráfico orgánico.
@@ -128,10 +128,10 @@ export default function MidSection ({ posts }) {
 
           <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
             <div className='pt-6'>
-              <h2 className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Diseño Web</h2>
-              <h3 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Diseño Web</p>
+              <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
                 Un Diseño Web Atractivo y Funcional
-              </h3>
+              </h2>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
                   Un diseño web atractivo y funcional es esencial para atraer y retener a los visitantes de tu sitio web. En nuestra agencia de Marketing Web, contamos con diseñadores web expertos que <b>crearán un sitio web adaptado a tus necesidades</b> y objetivos de negocio.
@@ -177,7 +177,7 @@ export default function MidSection ({ posts }) {
 
           <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
             <div className='pt-6'>
-              <h2 className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Marketing Digital</h2>
+              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Marketing Digital</p>
               <h3 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
                 Un Conjunto Completo de Técnicas y Estrategias
               </h3>
@@ -226,10 +226,10 @@ export default function MidSection ({ posts }) {
 
           <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
             <div className='pt-6'>
-              <h2 className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Manejo de Redes Sociales</h2>
-              <h3 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Manejo de Redes Sociales</p>
+              <h4 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
                 Conecta con tu Audiencia a través de las Redes Sociales
-              </h3>
+              </h4>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
                   Las redes sociales son una herramienta poderosa para conectar con tu audiencia y promocionar tu marca en línea. En nuestra agencia, nos enfocamos en el manejo efectivo de redes sociales, con el objetivo de aumentar la interacción con tu audiencia y mejorar tu presencia en línea.
@@ -272,10 +272,10 @@ export default function MidSection ({ posts }) {
       </div>
       <div id='code' className='relative bg-white dark:bg-base-100 sm:pt-10 lg:pt-6'>
         <div className='max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
-          <h2 className='text-base font-semibold tracking-wider uppercase dark:text-white text-primary'>Servicios Garantizado</h2>
-          <p className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-            Soluciones Inmediatas
-          </p>
+          <p className='text-base font-semibold tracking-wider uppercase dark:text-white text-primary'>Servicios Garantizado</p>
+          <h5 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+            Destaca en línea con Marketing Web: Tu agencia de marketing digital
+          </h5>
           <p className='mx-auto mt-5 text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
             En <strong>Marketing Web</strong>, solucionamos tus problemas de código empresarial y te ayudamos a destacar en línea con nuestros servicios de <strong>marketing digital</strong>. Agenda una cita ahora con nuestros expertos.
           </p>
@@ -289,12 +289,12 @@ export default function MidSection ({ posts }) {
 
       <div id='work' className='relative bg-white dark:bg-base-100 sm:pt-10 lg:pt-24'>
         <div className='max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
-          <h2 className='text-base font-semibold tracking-wider uppercase dark:text-white text-primary'>Servicios de Marketing Digital para tu Negocio</h2>
-          <p className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-            Destaca en línea con nuestras soluciones personalizadas.
-          </p>
+          <p className='text-base font-semibold tracking-wider uppercase dark:text-white text-primary'>Servicios de Marketing Digital para tu Negocio</p>
+          <h6 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+            Crea una campaña publicitaria efectiva y aumenta tus ventas
+          </h6>
           <p className='mx-auto mt-5 text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
-            En nuestra agencia de <strong>marketing digital</strong>, nos especializamos en el <strong>diseño web</strong>, <strong>SEO</strong> y gestión de redes sociales. Creamos estrategias innovadoras y efectivas para ayudar a tu negocio a sobresalir en línea y atraer más clientes potenciales.
+            En nuestra agencia de <strong>marketing digital</strong>, nos especializamos en el <strong>diseño web</strong>, <strong>SEO</strong> y gestión de redes sociales. Creamos estrategias innovadoras y efectivas para ayudar a tu negocio a sobresalir en línea y atraer más clientes potenciales a tu sitio web.
           </p>
 
           <div className='mt-12'>
@@ -355,7 +355,7 @@ export default function MidSection ({ posts }) {
       <div className='relative py-16 bg-white dark:bg-base-100 sm:py-24 lg:py-24'>
         <div className='relative'>
           <div className='max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
-            <h3 className='text-base font-semibold tracking-wider uppercase dark:text-primary text-secondary'>Crece Cada día más</h3>
+            <p className='text-base font-semibold tracking-wider uppercase dark:text-primary text-secondary'>Crece Cada día más</p>
             <p className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl'>
               Recursos Útiles
             </p>
