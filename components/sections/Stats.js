@@ -27,7 +27,7 @@ export default function Metricas () {
       <div className='relative max-w-md px-4 py-8 mx-auto sm:max-w-7xl sm:px-6 sm:py-8 md:py-28 lg:px-8 lg:py-8'>
         <div className='md:ml-auto md:w-1/2 md:pl-10'>
           <div className='relative pt-12 pb-24 sm:pt-24 sm:pb-24 xl:col-start-1 xl:pb-24'>
-            <h2 className='text-sm font-semibold tracking-wide uppercase text-primary dark:text-blue-600'>Métricas Valiosas</h2>
+            <p className='text-sm font-semibold tracking-wide uppercase text-primary dark:text-blue-600'>Métricas Valiosas</p>
             <p className='mt-3 text-3xl font-extrabold text-white'>
               Obtén datos útiles que te ayudarán a hacer crecer tu negocio
             </p>
