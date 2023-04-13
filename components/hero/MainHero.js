@@ -32,10 +32,10 @@ export default function MainHero () {
                 <span className='ml-4 md:text-sm text-[0.6rem]'>Explora nuestros servicios</span>
                 <ChevronRightIcon className='w-5 h-5 ml-2 text-gray-500' aria-hidden='true' />
               </Link>
-              <h2 className='mt-4 text-4xl font-extrabold tracking-tight text-center text-white transition-colors duration-500 dark:text-white md:text-left sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl'>
+              <p className='mt-4 text-4xl font-extrabold tracking-tight text-center text-white transition-colors duration-500 dark:text-white md:text-left sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl'>
                 <span className='block'>Tu página en el</span>
                 <span className='block text-primary dark:text-primary'> Primer Lugar</span>
-              </h2>
+              </p>
               <p className='mt-3 text-base text-center text-gray-100 md:text-left dark:text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl'>
                 En nuestra agencia de marketing digital, diseño web y SEO, creemos en el poder de la creatividad y la innovación para llevar a nuestros clientes al éxito en línea. Confía en nuestro equipo de expertos para diseñar estrategias efectivas y personalizadas para tu negocio.
               </p>
