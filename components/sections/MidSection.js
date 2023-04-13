@@ -8,7 +8,6 @@ import Logo from '../svg/Logo'
 import dynamic from 'next/dynamic'
 // import FeatureCard from '../cards/FeatureCard'
 import { useEffect, useRef } from 'react'
-import FeatureCard from '../cards/FeatureCard'
 import FlowerLogo from '../svg/LogoFlowers'
 
 const features = [
@@ -302,8 +301,15 @@ export default function MidSection ({ posts }) {
           <div className='mt-12'>
             <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'>
               {pageLoaded && features.map((feature) => {
+                const DynamicFeatures = dynamic(() => import('../cards/FeatureCard'), {
+                  loading: () => <p>Loading...</p>,
+                  ssr: false
+                })
                 return (
-                  <FeatureCard key={feature.name} feature={feature} />
+                  <DynamicFeatures
+                    key={feature.name}
+                    feature={feature}
+                  />
                 )
               })}
             </div>
