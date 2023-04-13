@@ -1,10 +1,9 @@
-import { useState } from 'react'
+import { memo, useCallback, useState } from 'react'
 
-const FeatureCard = ({ feature }) => {
+const FeatureCard = memo(({ feature }) => {
   const [isHovered, setIsHovered] = useState(false)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  console.log('Loaded feature card')
-  const onMouseMove = (event) => {
+  const onMouseMove = useCallback((event) => {
     const x = (window.innerWidth / 2 - event.clientX) / 50
     const y = (window.innerHeight / 2 - event.clientY) / 50
     const rotateX = y
@@ -23,14 +22,14 @@ const FeatureCard = ({ feature }) => {
     // Modificar el estilo de la tarjeta con los valores calculados
     event.currentTarget.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale}) translateX(${translateX}px) translateY(${translateY}px)`
     event.currentTarget.querySelector('.card-pointer').style.opacity = 1
-  }
+  }, [])
 
-  const onMouseLeave = (event) => {
+  const onMouseLeave = useCallback((event) => {
     // Restablecer el estilo de la tarjeta al valor original
     event.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1) translateX(0) translateY(0)'
     event.currentTarget.style.zIndex = 0
     event.currentTarget.querySelector('.card-pointer').style.opacity = 0
-  }
+  }, [])
 
   return (
     <div
@@ -78,6 +77,8 @@ const FeatureCard = ({ feature }) => {
 
     </div>
   )
-}
+})
+
+FeatureCard.displayName = 'FeatureCard'
 
 export default FeatureCard
