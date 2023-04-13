@@ -1,22 +1,46 @@
 import { useStore } from '@/Context/Store'
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
-// import Navigation from '../navigation/Navigation'
 import Script from 'next/script'
-import { useEffect, useState } from 'react'
-import WhatsApp from '../buttons/WhatsApp'
+import { useEffect, useRef, useState } from 'react'
 import Menu from '../navigation/Menu'
 import { Footer } from '../sections/Footer'
 
 const Layout = ({ children, title, description, ogType, ogUrl, ogImage, ogDescription, schemaObject }) => {
   const { theme, setTheme } = useStore()
   const [pageLoaded, setPageLoaded] = useState(false)
+  const whatsappRef = useRef(null)
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setPageLoaded(true)
-    }, 1500)
+    }, 3000)
     return () => clearTimeout(timer)
   }, [])
+
+  const handleIntersection = (entries) => {
+    const [entry] = entries
+    if (entry.isIntersecting) {
+      setPageLoaded(true)
+    }
+  }
+
+  const observer = useRef(null)
+
+  useEffect(() => {
+    if (whatsappRef.current && typeof window !== 'undefined') {
+      observer.current = new IntersectionObserver(handleIntersection, {
+        rootMargin: '0px',
+        threshold: 0.5
+      })
+      observer.current.observe(whatsappRef.current)
+    }
+    return () => {
+      if (observer.current && whatsappRef.current) {
+        observer.current.unobserve(whatsappRef.current)
+      }
+    }
+  }, [whatsappRef])
 
   return (
     <>
@@ -77,12 +101,16 @@ const Layout = ({ children, title, description, ogType, ogUrl, ogImage, ogDescri
         <section id='contact' data-theme='light' />
         {children}
       </main>
-      {/* Dynamic import whatsapp and render it */}
+      {/* Lazy load WhatsApp button */}
+      <div id='whatsapp-container' ref={whatsappRef} />
       {pageLoaded && <WhatsApp />}
-
       <Footer />
     </>
   )
 }
+
+const WhatsApp = dynamic(() => import('../buttons/WhatsApp'), {
+  ssr: false
+})
 
 export default Layout

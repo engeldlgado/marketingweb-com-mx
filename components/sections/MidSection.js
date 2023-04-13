@@ -7,7 +7,8 @@ import Logo from '../svg/Logo'
 // import MainBlog from '../blog/MainBlog'
 import dynamic from 'next/dynamic'
 // import FeatureCard from '../cards/FeatureCard'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef } from 'react'
+import FeatureCard from '../cards/FeatureCard'
 import FlowerLogo from '../svg/LogoFlowers'
 
 const features = [
@@ -44,12 +45,13 @@ const features = [
 ]
 
 export default function MidSection ({ posts }) {
-  const [pageLoaded, setPageLoaded] = useState(false)
+  const pageLoaded = useRef(false)
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setPageLoaded(true)
+      pageLoaded.current = true
     }, 1500)
+
     return () => clearTimeout(timer)
   }, [])
 
@@ -300,15 +302,8 @@ export default function MidSection ({ posts }) {
           <div className='mt-12'>
             <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'>
               {pageLoaded && features.map((feature) => {
-                const DynamicFeatures = dynamic(() => import('../cards/FeatureCard'), {
-                  loading: () => <p>Loading...</p>,
-                  ssr: false
-                })
                 return (
-                  <DynamicFeatures
-                    key={feature.name}
-                    feature={feature}
-                  />
+                  <FeatureCard key={feature.name} feature={feature} />
                 )
               })}
             </div>

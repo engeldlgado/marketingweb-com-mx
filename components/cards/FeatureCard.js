@@ -4,7 +4,6 @@ const FeatureCard = memo(({ feature }) => {
   const [isHovered, setIsHovered] = useState(false)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const cardRef = useRef(null)
-  console.log('render')
   const updateCardStyle = useCallback((rotateX, rotateY, scale, translateX, translateY, opacity) => {
     cardRef.current.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale}) translateX(${translateX}px) translateY(${translateY}px)`
     cardRef.current.querySelector('.card-pointer').style.opacity = opacity

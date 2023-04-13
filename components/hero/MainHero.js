@@ -62,14 +62,6 @@ export default function MainHero () {
           </div>
         </div>
       </div>
-      {/* <div className='absolute top-0 w-full h-full bg-gradient-165 from-primary via-white to-white dark:from-primary dark:via-black dark:to-black -z-10'>
-        <video
-          autoPlay loop muted playsInline className='absolute top-0 right-0 transform lg:h-full -z-10 -scale-x-100 mix-blend-difference filter hue-rotate-0 dark:hue-rotate-0'
-          poster='/videos/mw.jpg'
-        >
-          <source src='/videos/mw.mp4' type='video/mp4' />
-        </video>
-      </div> */}
       <div className='absolute top-0 w-full h-full overflow-hidden bg-gradient-165 from-secondary via-black to-black dark:from-primary dark:via-black dark:to-black -z-10'>
         <video
           ref={videoRef}
