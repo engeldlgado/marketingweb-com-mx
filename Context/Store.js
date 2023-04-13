@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 
 const Context = createContext({
-  theme: null
+  theme: 'dark'
 })
 
 export function StoreProvider ({ children }) {
@@ -22,7 +22,18 @@ export function StoreProvider ({ children }) {
       const root = document.documentElement
       root.setAttribute('data-theme', theme)
       root.classList.toggle('dark', theme === 'dark')
+    }
+  }, [theme])
+
+  useEffect(() => {
+    function saveThemeBeforeUnload () {
       localStorage.setItem('theme', theme)
+    }
+
+    window.addEventListener('beforeunload', saveThemeBeforeUnload)
+
+    return () => {
+      window.removeEventListener('beforeunload', saveThemeBeforeUnload)
     }
   }, [theme])
 
