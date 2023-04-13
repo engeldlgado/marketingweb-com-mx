@@ -3,7 +3,7 @@ import { useState } from 'react'
 const FeatureCard = ({ feature }) => {
   const [isHovered, setIsHovered] = useState(false)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-
+  console.log('Loaded feature card')
   const onMouseMove = (event) => {
     const x = (window.innerWidth / 2 - event.clientX) / 50
     const y = (window.innerHeight / 2 - event.clientY) / 50
