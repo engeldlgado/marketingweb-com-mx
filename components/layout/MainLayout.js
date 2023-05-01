@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react'
 import Menu from '../navigation/Menu'
 import { Footer } from '../sections/Footer'
 
-const Layout = ({ children, title, description, ogType, ogUrl, ogImage, ogDescription, schemaObject }) => {
+const Layout = ({ children, title, description, keywords, ogType, ogUrl, ogImage, ogDescription, schemaObject }) => {
   const { theme, setTheme } = useStore()
   const [pageLoaded, setPageLoaded] = useState(false)
   const whatsappRef = useRef(null)
@@ -48,6 +48,7 @@ const Layout = ({ children, title, description, ogType, ogUrl, ogImage, ogDescri
         <title>{title}</title>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta name='description' content={description} />
+        {keywords && <meta name='keywords' content={keywords} />}
         <meta property='og:title' content={title} />
         <meta property='og:description' content={ogDescription} />
         <meta property='og:type' content={ogType} />

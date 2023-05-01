@@ -105,6 +105,7 @@ export default function SinglePost ({ content, slug }) {
     <MainLayout
       title={title.rendered}
       description={excerpt.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 200) + '...'}
+      keywords='Agencia SEO, Agencia de Posicionamiento Web, Diseño Web, Desarrollo Web, Manejo de Redes Sociales, SEO, POSICIONAMIENTO WEB, SEO Guadalajara, SEO Ciudad de México, SEO, SEO Querétaro, SEO Cancún, SEO Aguascalientes, Marketing Web, Marketing Digital, Agencia de Marketing Digital, Diseño Web Guadalajara, Diseño Web Zapopan, Diseño Web Ciudad de México, Manejo de Redes Sociales Ciudad de México.'
       ogType='article'
       ogImage={bannerImage}
       ogUrl={`${url}/blog/${postSlug}`}
