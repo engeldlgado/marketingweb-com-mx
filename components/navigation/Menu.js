@@ -251,21 +251,20 @@ export default function Menu ({ setTheme, theme }) {
             </div>
             <div className='px-5 py-6'>
               <div className='grid grid-cols-2 gap-4'>
-                <a href='#' className='text-base font-medium text-gray-900 rounded-md hover:text-gray-700'>
+                {/* <a href='#' className='text-base font-medium text-gray-900 rounded-md hover:text-gray-700'>
                   Precios
-                </a>
+                </a> */}
 
-                <a href='#' className='text-base font-medium text-gray-900 rounded-md hover:text-gray-700'>
+                {/* <a href='#' className='text-base font-medium text-gray-900 rounded-md hover:text-gray-700'>
                   Utilidades
-                </a>
+                </a> */}
 
-                <a href='#' className='text-base font-medium text-gray-900 rounded-md hover:text-gray-700'>
+                <Link href='/blog' className='text-base font-medium text-gray-900 rounded-md hover:text-gray-700'>
                   Blog
-                </a>
-
-                <a href='#' className='text-base font-medium text-gray-900 rounded-md hover:text-gray-700'>
+                </Link>
+                <Link href='/contacto' className='text-base font-medium text-gray-900 rounded-md hover:text-gray-700'>
                   Contacto
-                </a>
+                </Link>
 
               </div>
               <div className='mt-6'>
