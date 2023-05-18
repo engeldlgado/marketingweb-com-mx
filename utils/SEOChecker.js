@@ -581,4 +581,4 @@ async function analyzeContent (url, keyword) {
   }
 }
 
-analyzeContent('https://marketingweb.com.mx', 'marketing digital')
+analyzeContent('https://www.dekoruz.com', 'marketing digital')
