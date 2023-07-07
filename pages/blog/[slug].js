@@ -14,7 +14,7 @@ import MainLayout from '../../components/layout/MainLayout'
 import { getAllPostsFromAPI, getPostContentFromAPI } from '../../utils/functions'
 
 // const HOST = process.env.NEXT_PUBLIC_URL || 'http://localhost:3000'
-export const url = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` || 'http://localhost:3000'
+export const url = `https://${process.env.NEXT_PUBLIC_BASE_URL}` || 'http://localhost:3000'
 // The page for each post
 export default function SinglePost ({ content, slug }) {
   // Destructure the content object from WordPress
