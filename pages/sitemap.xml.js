@@ -1,6 +1,6 @@
-// pages/sitemap.xml.js
 import LRUCache from 'lru-cache'
 import { getAllPostsFromAPI } from '../utils/functions'
+
 const EXTERNAL_DATA_URL = process.env.NEXT_PUBLIC_WORDPRESS_URL
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
 
@@ -58,10 +58,11 @@ function generateSiteMap (posts) {
 
      ${posts
        .map(({ slug, modified_gmt: modified }) => {
+         const isoModified = new Date(modified).toISOString()
          return `
        <url>
            <loc>${`${BASE_URL}/blog/${slug}`}</loc>
-           <lastmod>${modified}</lastmod>
+           <lastmod>${isoModified}</lastmod>
             <changefreq>weekly</changefreq>
             <priority>0.8</priority>
        </url>
