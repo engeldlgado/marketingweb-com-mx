@@ -42,17 +42,17 @@ const features = [
 ]
 
 const tiers = [
-  { name: 'Básico', href: '#', priceMonthly: 8600, description: 'Optimización básica de SEO en tu sitio web.' },
+  { name: 'Básico', href: '#', priceMonthly: 6000, description: 'Optimización básica de SEO en tu sitio web.' },
   {
     name: 'Esencial',
     href: '#',
-    priceMonthly: 14600,
+    priceMonthly: 12000,
     description: 'Mejora el posicionamiento en motores de búsqueda con técnicas avanzadas de SEO.'
   },
   {
     name: 'Premium',
     href: '#',
-    priceMonthly: 18400,
+    priceMonthly: 16000,
     description: 'Aumenta tu visibilidad en línea con una estrategia completa de posicionamiento web y SEO.'
   }
 ]

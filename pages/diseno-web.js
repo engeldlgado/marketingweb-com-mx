@@ -46,17 +46,17 @@ const features = [
 ]
 
 const tiers = [
-  { name: 'Básico', href: '#', priceMonthly: 2000, description: 'Diseño web básico con hasta 5 interiores.' },
+  { name: 'Básico', href: '#', priceMonthly: 6800, description: 'Diseño web básico con hasta 5 interiores.' },
   {
     name: 'Esencial',
     href: '#',
-    priceMonthly: 4100,
+    priceMonthly: 8300,
     description: 'Diseño web avanzado con hasta 10 interiores y funcionalidades adicionales.'
   },
   {
     name: 'Premium',
     href: '#',
-    priceMonthly: 8600,
+    priceMonthly: 12600,
     description: 'Diseño web personalizado con funcionalidades avanzadas y hasta 20 interiores.'
   }
 ]

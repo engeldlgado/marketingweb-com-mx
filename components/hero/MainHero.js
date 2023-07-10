@@ -41,7 +41,7 @@ export default function MainHero () {
               </p>
               <div className='flex flex-col items-center gap-6 mt-10 text-center duration-700 transform md:flex-row sm:mt-12 hover:scale-110'>
                 {/* CTA for sales */}
-                <span className='text-4xl tracking-tight text-white'>Desde <span className='text-4xl font-extrabold'>4.000$</span> <small className='font-normal'>MXN</small> al año</span>
+                <span className='text-4xl tracking-tight text-white'>Desde <span className='text-4xl font-extrabold'>4.600$</span> <small className='font-normal'>MXN</small> al año</span>
                 <Calendly text='Agenda una Cita' className='inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white border border-transparent rounded-md shadow-sm -z-10 bg-primary hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary sm:px-10' />
 
               </div>

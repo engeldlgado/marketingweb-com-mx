@@ -47,17 +47,17 @@ const features = [
 ]
 
 const tiers = [
-  { name: 'Básico', href: '#', priceMonthly: 2000, description: 'Plan básico con servicios de marketing digital esenciales.' },
+  { name: 'Básico', href: '#', priceMonthly: 7200, description: 'Plan básico con servicios de marketing digital esenciales.' },
   {
     name: 'Esencial',
     href: '#',
-    priceMonthly: 4100,
+    priceMonthly: 8900,
     description: 'Plan avanzado con servicios de marketing digital más completos y funcionalidades adicionales.'
   },
   {
     name: 'Premium',
     href: '#',
-    priceMonthly: 8600,
+    priceMonthly: 12700,
     description: 'Plan personalizado con servicios de marketing digital avanzados y funcionalidades especiales.'
   }
 ]
