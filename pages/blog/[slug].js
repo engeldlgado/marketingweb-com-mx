@@ -33,8 +33,8 @@ export default function SinglePost ({ content, slug }) {
   } = content
 
   const heading = {
-    title: title.rendered,
-    excerpt: excerpt.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 200) + '...',
+    title: title?.rendered,
+    excerpt: excerpt?.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 200) + '...',
     date,
     author,
     avatar,
@@ -73,8 +73,8 @@ export default function SinglePost ({ content, slug }) {
         '@type': 'WebPage',
         '@id': `https://marketingweb.com.mx/blog/${slug}`
       },
-      headline: title.rendered,
-      description: excerpt.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 200) + '...',
+      headline: title?.rendered,
+      description: excerpt?.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 200) + '...',
       image: {
         '@type': 'ImageObject',
         url: bannerImage,
@@ -103,18 +103,18 @@ export default function SinglePost ({ content, slug }) {
 
   return (
     <MainLayout
-      title={title.rendered}
-      description={excerpt.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 200) + '...'}
+      title={title?.rendered}
+      description={excerpt?.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 200) + '...'}
       keywords='Agencia SEO, Agencia de Posicionamiento Web, Diseño Web, Desarrollo Web, Manejo de Redes Sociales, SEO, POSICIONAMIENTO WEB, SEO Guadalajara, SEO Ciudad de México, SEO, SEO Querétaro, SEO Cancún, SEO Aguascalientes, Marketing Web, Marketing Digital, Agencia de Marketing Digital, Diseño Web Guadalajara, Diseño Web Zapopan, Diseño Web Ciudad de México, Manejo de Redes Sociales Ciudad de México.'
       ogType='article'
       ogImage={bannerImage}
       ogUrl={`${url}/blog/${postSlug}`}
-      ogDescription={excerpt.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 200) + '...'}
+      ogDescription={excerpt?.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 200) + '...'}
       schemaObject={structureData}
     >
       <Post heading={heading}>
         {/* remove all styles and classes and div from text */}
-        <article className='mx-auto prose prose-img:rounded-md prose-img:shadow-md prose-img:mx-auto prose-code:break-words lg:prose-lg dark:prose-dark prose-h1:text-3xl' dangerouslySetInnerHTML={{ __html: postContent.rendered.replace(/style="[^"]*"/g, '').replace(/class="[^"]*"/g, '').replace(/<div[^>]*>/g, '').replace(/<\/div>/g, '') }} />
+        <article className='mx-auto prose prose-img:rounded-md prose-img:shadow-md prose-img:mx-auto prose-code:break-words lg:prose-lg dark:prose-dark prose-h1:text-3xl' dangerouslySetInnerHTML={{ __html: postContent.rendered?.replace(/style="[^"]*"/g, '').replace(/class="[^"]*"/g, '').replace(/<div[^>]*>/g, '').replace(/<\/div>/g, '') }} />
         {/* hashtags */}
         <div className='flex flex-wrap justify-center mt-10'>
           {tags && tags.map((tag, index) => (

@@ -1,6 +1,7 @@
 import { useStore } from '@/Context/Store'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
+import Script from 'next/script'
 import { useEffect, useRef, useState } from 'react'
 import Menu from '../navigation/Menu'
 import { Footer } from '../sections/Footer'
@@ -78,6 +79,22 @@ const Layout = ({ children, title, description, keywords, ogType, ogUrl, ogImage
           ))
         )}
       </Head>
+      {/* Global Site Tag (gtag.js) - Google Analytics */}
+      <Script
+        strategy='lazyOnload'
+        src='https://www.googletagmanager.com/gtag/js?id=G-2L6KQG84QD'
+      />
+      <Script
+        strategy='lazyOnload'
+        id='gtag-init'
+        dangerouslySetInnerHTML={{
+          __html: ` window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-2L6KQG84QD');`
+        }}
+      />
       {/* FB Pixel Script */}
       <header>
         <Menu
