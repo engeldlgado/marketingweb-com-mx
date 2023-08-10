@@ -65,13 +65,13 @@ export default function MidSection ({ posts }) {
 
           <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
             <div className='pt-6'>
-              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Servicios de SEO</p>
+              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Nuestra Trayectoria</p>
               <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-                Mejora tu Posicionamiento en los Motores de Búsqueda
+                La Trayectoria de 32 años en Marketing Web
               </h2>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
-                  El <b>SEO</b> es una estrategia clave para mejorar el <b>posicionamiento de tu sitio web</b> en los resultados de búsqueda de Google y otros motores de búsqueda. En nuestra agencia, contamos con <b>expertos en SEO</b> com más de 32 años de experiencia que te ayudarán a optimizar tu sitio web y aumentar su tráfico orgánico.
+                  Con más de <b>32 años</b> de experiencia, nuestra agencia ha demostrado ser una fuerza líder en el mundo del <b>Marketing Digital</b>. Desde los primeros días de la web, hemos estado a la vanguardia, adaptándonos y evolucionando con los tiempos y las tecnologías.
                 </p>
 
               </div>
@@ -129,13 +129,13 @@ export default function MidSection ({ posts }) {
 
           <div className='relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0'>
             <div className='pt-6'>
-              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Diseño Web</p>
-              <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-                Un Diseño Web Atractivo y Funcional
-              </h2>
+              <p className='text-sm font-semibold tracking-wider uppercase dark:text-white text-primary'>Trabajemos Juntos</p>
+              <h3 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+                ¿Por qué elegir nuestra Agencia de Posicionamiento Web?
+              </h3>
               <div className='mt-6 space-y-6 text-gray-500'>
                 <p className='mx-auto mt-5 text-lg text-gray-500 dark:text-gray-50 max-w-prose'>
-                  Un diseño web atractivo y funcional es esencial para atraer y retener a los visitantes de tu sitio web. En nuestra agencia de Marketing Web, contamos con diseñadores web expertos que <b>crearán un sitio web adaptado a tus necesidades</b> y objetivos de negocio.
+                  En un mundo saturado de opciones, nuestra <b>Agencia de Posicionamiento Web</b> se destaca no solo por nuestra vasta experiencia, sino también por nuestro equipo de <b>programadores avanzados</b>. Estos expertos aseguran que no solo entendemos las teorías detrás del <b>SEO</b> y el <b>Marketing Digital</b>, sino que también las implementamos con precisión.
                 </p>
 
               </div>
@@ -274,11 +274,11 @@ export default function MidSection ({ posts }) {
       <div id='code' className='relative bg-white dark:bg-base-100 sm:pt-10 lg:pt-6'>
         <div className='max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
           <p className='text-base font-semibold tracking-wider uppercase dark:text-white text-primary'>Servicios Garantizado</p>
-          <h5 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-            Destaca en línea con Marketing Web: Tu agencia de marketing digital
-          </h5>
+          <h4 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+            SEO: Un Pilar en nuestro Legado Digital
+          </h4>
           <p className='mx-auto mt-5 text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
-            En <strong>Marketing Web</strong>, solucionamos tus problemas de código empresarial y te ayudamos a destacar en línea con nuestros servicios de <strong>marketing digital</strong>. Agenda una cita ahora con nuestros expertos.
+            El <b>SEO</b> no es solo una palabra de moda para nosotros. Durante más de tres décadas, hemos demostrado que comprendemos los entresijos del <b>SEO</b>, posicionando a nuestros clientes en la cima de los motores de búsqueda y manteniéndolos allí.
           </p>
 
           <div className='mt-12'>
@@ -291,11 +291,11 @@ export default function MidSection ({ posts }) {
       <div id='work' className='relative bg-white dark:bg-base-100 sm:pt-10 lg:pt-24'>
         <div className='max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
           <p className='text-base font-semibold tracking-wider uppercase dark:text-white text-primary'>Servicios de Marketing Digital para tu Negocio</p>
-          <h6 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
-            Crea una campaña publicitaria efectiva y aumenta tus ventas
-          </h6>
+          <h5 className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-primary sm:text-4xl'>
+            Compromiso de Avanzada con el Marketing Digital
+          </h5>
           <p className='mx-auto mt-5 text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
-            En nuestra agencia de <strong>marketing digital</strong>, nos especializamos en el <strong>diseño web</strong>, <strong>SEO</strong> y gestión de redes sociales. Creamos estrategias innovadoras y efectivas para ayudar a tu negocio a sobresalir en línea y atraer más clientes potenciales a tu sitio web.
+            El <b>Marketing Digital</b> ha experimentado cambios drásticos en las últimas tres décadas. Nuestro compromiso con la formación continua y la adaptabilidad nos ha permitido mantenernos a la vanguardia, ofreciendo siempre las mejores soluciones en <b>Marketing Web</b>.
           </p>
 
           <div className='mt-12'>
@@ -316,7 +316,7 @@ export default function MidSection ({ posts }) {
           </div>
 
           <p className='py-16 mx-auto text-xl text-gray-500 dark:text-gray-50 max-w-prose'>
-            En nuestra agencia de <strong>marketing digital</strong>, te ofrecemos soluciones personalizadas para mejorar la presencia en línea de tu negocio. Contáctanos para obtener más información sobre cómo podemos ayudarte a alcanzar tus objetivos de <strong>marketing digital</strong>.
+            Nuestro viaje de <b>32 años</b> en el universo del <b>Marketing Web</b> y <b>SEO</b> refleja nuestro compromiso inquebrantable con la excelencia. Al elegir nuestra <b>Agencia de Posicionamiento Web</b>, eliges décadas de experiencia, un equipo de programadores avanzados y un verdadero entendimiento del mundo del <b>Marketing Digital</b>.
           </p>
         </div>
       </div>
