@@ -53,7 +53,7 @@ export default function MainHero () {
             <div className='max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0'>
               {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
               <Image
-                src='/images/hero.svg' className='z-0 hidden duration-500 transform md:flex hover:scale-105 ' alt='Agencia de Diseño Web y Marketing Digital' width={800} height={800}
+                src='/images/disenos-alta-calidad.png' className='z-0 hidden duration-500 transform md:flex hover:scale-105 ' alt='Agencia de Diseño Web y Marketing Digital' width={800} height={800}
                 priority
                 itemProp='image' itemScope itemType='https://schema.org/ImageObject'
               />
