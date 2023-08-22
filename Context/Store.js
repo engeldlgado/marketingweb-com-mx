@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 
 const Context = createContext({
-  theme: 'dark'
+  theme: 'light' // Cambio aquí
 })
 
 export function StoreProvider ({ children }) {
@@ -12,8 +12,8 @@ export function StoreProvider ({ children }) {
     if (storedTheme) {
       setTheme(storedTheme)
     } else {
-      localStorage.setItem('theme', 'dark')
-      setTheme('dark')
+      localStorage.setItem('theme', 'light') // Cambio aquí
+      setTheme('light') // Cambio aquí
     }
   }, [])
 
